@@ -21,6 +21,12 @@ import path from "node:path";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const CHECK_DIST = process.argv.includes("--dist");
+const arg = (name) => {
+  const hit = process.argv.find((a) => a.startsWith(`--${name}=`));
+  return hit ? hit.slice(name.length + 3) : "";
+};
+// Matches the base path used for a GitHub Pages project site build.
+const BASE = (arg("base") || process.env.SITE_BASE || "/").replace(/\/?$/, "/");
 
 const stripBom = (s) => s.replace(/^\uFEFF/, "");
 const readJson = (p, fallback) => {
@@ -266,8 +272,9 @@ if (CHECK_DIST) {
       const hrefs = [...html.matchAll(/href="([^"]+)"/g)].map((m) => m[1]);
       for (const href of hrefs) {
         if (/^(https?:|mailto:|tel:|#|data:)/.test(href)) continue;
-        const clean = href.split("#")[0].split("?")[0];
+        let clean = href.split("#")[0].split("?")[0];
         if (!clean) continue;
+        if (BASE !== "/" && clean.startsWith(BASE)) clean = `/${clean.slice(BASE.length)}`;
         const resolved = path.join(dist, clean.replace(/^\//, ""));
         const target = clean.endsWith("/") || clean === "" ? path.join(resolved, "index.html") : resolved;
         if (!fs.existsSync(target)) fail(`${path.relative(dist, file)}: broken internal link "${href}"`);
