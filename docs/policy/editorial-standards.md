@@ -67,5 +67,6 @@ retrieval or review date on the affected page.
 
 AI models may draft editorial. Every draft passes the validator, then a human
 review against the park's official page. AI is never credited as an author, and
-no page claims human authorship it does not have. See
-`how-the-ai-team-works.md` for the governance model.
+no page claims human authorship it does not have. As of 2026-11-19 the
+multi-model approval process is retired for this repository: changes are
+checked by the validator and the CEO, and land directly on `main`.

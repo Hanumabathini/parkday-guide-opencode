@@ -9,8 +9,7 @@
     "validate": "node scripts/validate_content.mjs",
     "build": "node site/build.mjs",
     "build:pages": "node site/build.mjs --base=/parkday-guide-opencode/ --url=https://hanumabathini.github.io/parkday-guide-opencode",
-    "check": "node scripts/validate_content.mjs --dist",
-    "board": "node scripts/validate_command_board.mjs"
+    "check": "node scripts/validate_content.mjs --dist"
   },
   "engines": {
     "node": ">=20"

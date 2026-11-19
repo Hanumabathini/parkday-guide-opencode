@@ -99,7 +99,8 @@ FTC and affiliate rules: `docs/policy/ftc-disclosure.md`,
 Photo licensing: `docs/policy/photo-licensing.md`.
 Chatbot scope: `docs/policy/chatbot-scope.md`.
 
-The original board and AI-team documents remain at the repo root
-(`index.html`, `ai-dashboard.html`, `how-the-ai-team-works.md`,
-`parkday-scope-day1.md`, `parkday-uniqueness-brief.md`). The board is
-coordination history; it is not the product site and is not deployed.
+Early research notes (scope, uniqueness brief, competitor references) live in
+`docs/research/`. The team board and multi-model approval documents were
+removed from this repository on 2026-11-19; the board remains in its own
+repository. Changes no longer wait for multi-model approval: the validator and
+the CEO are the checks, and work lands directly on `main`.
