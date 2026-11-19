@@ -536,9 +536,164 @@
   }
 
   /* ---------------------------------------------------------------------- */
+  /* Best-day check                                                         */
+  /* Uses the National Weather Service forecast (api.weather.gov) for the   */
+  /* park's NPS coordinate. Nothing is requested until the visitor asks.    */
+  /* The score is a stated heuristic, shown with its reasons, never a fact. */
+  /* ---------------------------------------------------------------------- */
+
+  var BAD_WORDS = [
+    { re: /thunder|t-storm/i, pts: 25, why: "thunderstorms in the forecast" },
+    { re: /snow|sleet|freezing|ice/i, pts: 20, why: "snow or ice in the forecast" },
+    { re: /heavy rain/i, pts: 12, why: "heavy rain in the forecast" },
+    { re: /fog/i, pts: 6, why: "fog may limit views" }
+  ];
+
+  function maxWind(text) {
+    var nums = String(text || "").match(/\d+/g);
+    if (!nums) return 0;
+    return Math.max.apply(null, nums.map(Number));
+  }
+
+  function toF(t, unit) { return unit === "C" ? t * 9 / 5 + 32 : t; }
+
+  function scoreDay(day, night, isWeekend) {
+    var score = 100;
+    var reasons = [];
+    var rain = day.probabilityOfPrecipitation && day.probabilityOfPrecipitation.value;
+    rain = typeof rain === "number" ? rain : 0;
+    score -= rain * 0.55;
+    if (rain >= 50) reasons.push(rain + "% chance of rain or snow");
+    else if (rain <= 20) reasons.push("low chance of rain (" + rain + "%)");
+    else reasons.push(rain + "% chance of rain");
+
+    var high = toF(day.temperature, day.temperatureUnit);
+    if (high > 88) { score -= (high - 88) * 1.6; reasons.push("hot, high near " + Math.round(high) + "°F"); }
+    else if (high < 45) { score -= (45 - high) * 1.2; reasons.push("cold, high near " + Math.round(high) + "°F"); }
+    else reasons.push("comfortable high near " + Math.round(high) + "°F");
+
+    var wind = maxWind(day.windSpeed);
+    if (wind >= 20) { score -= (wind - 15) * 1.2; reasons.push("wind up to " + wind + " mph"); }
+
+    BAD_WORDS.forEach(function (w) {
+      if (w.re.test(day.shortForecast || "")) { score -= w.pts; reasons.push(w.why); }
+    });
+
+    if (night && toF(night.temperature, night.temperatureUnit) < 25) {
+      score -= 5; reasons.push("hard freeze overnight");
+    }
+
+    if (isWeekend) { score -= 8; reasons.push("weekend, so expect more visitors"); }
+    else reasons.push("weekday, usually quieter");
+
+    return { score: Math.max(0, Math.min(100, Math.round(score))), reasons: reasons };
+  }
+
+  function dayLabel(score) {
+    if (score >= 75) return { text: "Good day", tone: "good" };
+    if (score >= 50) return { text: "Workable", tone: "ok" };
+    return { text: "Hard day", tone: "poor" };
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  function initBestDay() {
+    var box = document.querySelector("[data-bestday]");
+    if (!box) return;
+    var button = box.querySelector("[data-bestday-run]");
+    var out = box.querySelector("[data-bestday-out]");
+    var status = box.querySelector("[data-bestday-status]");
+    var lat = Number(box.getAttribute("data-lat"));
+    var lng = Number(box.getAttribute("data-lng"));
+    var fallback = box.getAttribute("data-fallback");
+    if (!button || !out || !isFinite(lat) || !isFinite(lng)) return;
+
+    function fail(msg) {
+      status.textContent = "";
+      out.innerHTML = '<p class="bestday-error">' + escapeHtml(msg) +
+        ' <a href="' + escapeHtml(fallback) + '" target="_blank" rel="noopener noreferrer">Open the National Weather Service forecast ↗</a></p>';
+      button.disabled = false;
+      button.textContent = "Try again";
+    }
+
+    var dateFmt = function (d) {
+      return d.toLocaleDateString(undefined, { weekday: "long", month: "short", day: "numeric" });
+    };
+
+    button.addEventListener("click", function () {
+      button.disabled = true;
+      button.textContent = "Checking…";
+      status.textContent = "Fetching the National Weather Service forecast for this park.";
+      out.innerHTML = "";
+      track("bestday_check", { park: box.getAttribute("data-park") });
+
+      var headers = { Accept: "application/geo+json" };
+      fetch("https://api.weather.gov/points/" + lat.toFixed(4) + "," + lng.toFixed(4), { headers: headers })
+        .then(function (r) { if (!r.ok) throw new Error("points " + r.status); return r.json(); })
+        .then(function (pt) {
+          var f = pt && pt.properties && pt.properties.forecast;
+          if (!f) throw new Error("no forecast url");
+          return fetch(f, { headers: headers });
+        })
+        .then(function (r) { if (!r.ok) throw new Error("forecast " + r.status); return r.json(); })
+        .then(function (data) {
+          var periods = (data && data.properties && data.properties.periods) || [];
+          var days = [];
+          for (var i = 0; i < periods.length; i++) {
+            var p = periods[i];
+            if (!p.isDaytime) continue;
+            var next = periods[i + 1] && !periods[i + 1].isDaytime ? periods[i + 1] : null;
+            var d = new Date(p.startTime);
+            var dow = d.getDay();
+            var s = scoreDay(p, next, dow === 0 || dow === 6);
+            days.push({ date: d, short: p.shortForecast || "", score: s.score, reasons: s.reasons });
+          }
+          if (!days.length) throw new Error("no daytime periods");
+          var best = days.reduce(function (a, b) { return b.score > a.score ? b : a; });
+          var updated = data.properties.updateTime || data.properties.generatedAt;
+          var bl = dayLabel(best.score);
+
+          out.innerHTML =
+            '<div class="bestday-pick bestday-pick--' + bl.tone + '">' +
+              '<p class="eyebrow">Best day in the forecast</p>' +
+              '<h3>' + escapeHtml(dateFmt(best.date)) + '</h3>' +
+              '<p class="bestday-score"><span>' + best.score + '</span>/100 · ' + escapeHtml(bl.text) + ' · ' + escapeHtml(best.short) + '</p>' +
+              '<ul class="bestday-reasons">' + best.reasons.map(function (r) { return "<li>" + escapeHtml(r) + "</li>"; }).join("") + '</ul>' +
+            '</div>' +
+            '<ol class="bestday-strip" aria-label="Every day in the forecast">' +
+            days.map(function (d) {
+              var l = dayLabel(d.score);
+              return '<li class="bestday-day bestday-day--' + l.tone + (d === best ? " is-best" : "") + '" title="' + escapeHtml(d.reasons.join(", ")) + '">' +
+                '<span class="bestday-dow">' + escapeHtml(d.date.toLocaleDateString(undefined, { weekday: "short" })) + '</span>' +
+                '<span class="bestday-date">' + escapeHtml(d.date.toLocaleDateString(undefined, { month: "short", day: "numeric" })) + '</span>' +
+                '<span class="bestday-num">' + d.score + '</span>' +
+                '<span class="bestday-sky">' + escapeHtml(d.short) + '</span>' +
+              '</li>';
+            }).join("") +
+            '</ol>' +
+            '<p class="bestday-note">Forecast from the National Weather Service' +
+            (updated ? ", updated " + escapeHtml(new Date(updated).toLocaleString()) : "") +
+            ". It is for the park's official map point; conditions change with elevation and across a large park. " +
+            "The score weighs rain chance, temperature, wind, storms and weekends. It is a planning aid, not a guarantee.</p>";
+          status.textContent = "Best day: " + dateFmt(best.date) + ", score " + best.score + " out of 100.";
+          button.disabled = false;
+          button.textContent = "Check again";
+        })
+        .catch(function () {
+          fail("The forecast could not be loaded for this park right now. A few remote park locations are outside the National Weather Service forecast grid.");
+        });
+    });
+  }
+
+  /* ---------------------------------------------------------------------- */
 
   ready(function () {
     initNav();
+    initBestDay();
     initDirectory({
       search: "[data-park-search]",
       grid: "[data-park-grid]",

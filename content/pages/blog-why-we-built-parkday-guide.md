@@ -14,7 +14,7 @@ We wanted one place that follows the same question from start to finish. What sh
 
 ## A defined scope
 
-The guide covers 64 scoped national parks and their gateway towns. A fixed scope keeps the work honest. It tells you what is in and what is not, and it lets us finish a park properly before moving to the next one. We would rather have a well checked page for one park than a shallow page for every park. Every park and town in scope now has a page, and the pre-launch work is about rechecking and improving what is there.
+The guide covers 64 national parks and their gateway towns. A fixed scope keeps the work honest. It tells you what is in and what is not, and it lets us finish a park properly before moving to the next one. We would rather have a well checked page for one park than a shallow page for every park. Every park and town in scope now has a page, and the pre-launch work is about rechecking and improving what is there.
 
 ## Facts you can trace
 

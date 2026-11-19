@@ -1,0 +1,21 @@
+{
+  "_about": "Official facts the NPS parks API does not carry, copied in our own words from the park's own NPS.gov page. Each entry names its source and retrieval date. Facts only, no editorial.",
+  "great-smoky-mountains": {
+    "feeBadge": "No entrance fee · parking tag required",
+    "title": "Parking tag required",
+    "summary": "There is no entrance fee, but any vehicle parked in the park for longer than 15 minutes must display a paper parking tag. The tag is not an entrance fee, and America the Beautiful passes do not replace it.",
+    "items": [
+      "Daily tag $5, weekly tag $15, annual tag $40, the same for every vehicle size.",
+      "Daily and weekly tags can be bought on Recreation.gov and printed at home. Annual tags are sold online and shipped.",
+      "Tags are also sold in person and at parking tag machines, but most trailheads have no machine, so buy before you drive in.",
+      "Display the physical tag on the lower passenger side of the dashboard or windshield. Digital copies are not accepted.",
+      "One tag covers one vehicle and must match its license plate. A tag does not guarantee a parking spot.",
+      "Daily and weekly tags expire at 11:59 p.m. Eastern time on the printed date."
+    ],
+    "source": {
+      "title": "Fees & Passes, Great Smoky Mountains National Park",
+      "url": "https://www.nps.gov/grsm/planyourvisit/fees.htm",
+      "retrieved": "2026-11-19"
+    }
+  }
+}

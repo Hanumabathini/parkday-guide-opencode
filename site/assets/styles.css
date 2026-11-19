@@ -750,3 +750,61 @@ details.disclosure[open] summary { margin-bottom: 10px; }
   .nav, .footer, .chat-dialog, .hero-actions { display: none !important; }
   body { background: #fff; }
 }
+
+/* --------------------------------------------------------------------------
+   Best-day check
+   -------------------------------------------------------------------------- */
+.bestday-section { border-bottom: 1px solid var(--line); }
+.bestday {
+  background: var(--white);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-lg);
+  padding: clamp(20px, 3vw, 34px);
+  box-shadow: var(--shadow);
+}
+.bestday-head { display: flex; gap: 24px; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; }
+.bestday-head h2 { margin: 0 0 8px; }
+.bestday-head .lede { max-width: 60ch; margin: 0; }
+.bestday-head .btn { flex-shrink: 0; }
+.bestday-out:empty { display: none; }
+.bestday-out { margin-top: 24px; }
+.bestday-pick {
+  border-left: 4px solid var(--pine);
+  background: color-mix(in srgb, var(--pine) 6%, var(--white));
+  padding: 18px 20px;
+  border-radius: var(--radius);
+}
+.bestday-pick--ok { border-left-color: var(--sand); background: color-mix(in srgb, var(--sand) 14%, var(--white)); }
+.bestday-pick--poor { border-left-color: var(--clay); background: color-mix(in srgb, var(--clay) 6%, var(--white)); }
+.bestday-pick .eyebrow { margin-bottom: 4px; }
+.bestday-pick h3 { margin: 0 0 6px; }
+.bestday-score { margin: 0 0 10px; color: var(--ink-soft); }
+.bestday-score span { font-family: var(--serif); font-size: 1.6em; color: var(--ink); }
+.bestday-reasons { margin: 0; padding-left: 1.1em; color: var(--ink-soft); font-size: 15px; }
+.bestday-strip {
+  list-style: none; padding: 0; margin: 18px 0 0;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(118px, 1fr)); gap: 8px;
+}
+.bestday-day {
+  border: 1px solid var(--line); border-radius: var(--radius); padding: 10px 12px;
+  display: grid; gap: 2px; background: var(--paper);
+}
+.bestday-day.is-best { border-color: var(--pine); box-shadow: inset 0 0 0 1px var(--pine); }
+.bestday-dow { font-weight: 600; }
+.bestday-date { font-size: 13px; color: var(--ink-faint); }
+.bestday-num { font-family: var(--serif); font-size: 26px; line-height: 1.1; }
+.bestday-day--good .bestday-num { color: var(--pine); }
+.bestday-day--ok .bestday-num { color: var(--ink-soft); }
+.bestday-day--poor .bestday-num { color: var(--clay-deep); }
+.bestday-sky { font-size: 12.5px; color: var(--ink-soft); }
+.bestday-note, .bestday-error { margin-top: 16px; font-size: 13.5px; color: var(--ink-faint); }
+.bestday-error { color: var(--ink-soft); }
+@media (max-width: 560px) {
+  .bestday-head .btn { width: 100%; }
+  .bestday-strip { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Official facts the NPS API omits */
+.official-note p { margin: 0 0 8px; }
+.official-note ul { margin: 6px 0 0; padding-left: 1.1em; }
+.official-note li { margin: 3px 0; }

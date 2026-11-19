@@ -25,6 +25,16 @@ At the time of this build:
   GitHub may keep standard request logs under its own privacy statement; we do
   not receive or store them.
 
+## The forecast check on park pages
+
+Each park page has a forecast button. Nothing is requested until you
+press it. When you do, your browser asks the National Weather Service
+(api.weather.gov, a US government service) for the forecast at the park's
+official map point. That request goes from your browser straight to the
+National Weather Service, which sees your IP address as any website would. We
+do not receive the request, your location or the result. The park's location is
+sent, never yours.
+
 ## The chatbot
 
 "Ask the guide" runs entirely in your browser. Your question is matched against

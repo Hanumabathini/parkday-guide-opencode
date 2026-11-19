@@ -1,6 +1,6 @@
 ---
 title: "About Parkday Guide"
-description: "A from-scratch guide to all 64 scoped US national parks and their gateway towns, covering planning, the visit, and what comes after."
+description: "A from-scratch guide to all 64 US national parks and their gateway towns, covering planning, the visit, and what comes after."
 slug: "about"
 updated: "2026-11-19"
 kind: "page"

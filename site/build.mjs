@@ -248,6 +248,8 @@ const towns = readJson(path.join(ROOT, "content", "towns", "registry.json"), [])
 const townEditorial = parkEditorial; // same merged store: editorial files hold parks + towns
 
 const byId = new Map(parks.map((p) => [p.id, p]));
+// Official facts the NPS parks API omits (e.g. the Smokies parking tag), sourced per entry.
+const officialNotes = readJson(path.join(ROOT, "data", "official-notes.json"), {});
 const townsByPark = new Map();
 for (const t of towns) {
   for (const pid of t.parks) {
@@ -383,7 +385,7 @@ function footer() {
         <div>
           <a class="brand" href="${url()}">Parkday<span>Guide</span></a>
           <p style="max-width:34ch;margin-top:12px;color:var(--ink-soft);font-size:14.5px;">
-            A from-scratch guide to all 64 scoped US national parks and the towns
+            A from-scratch guide to all 64 US national parks and the towns
             that make them reachable. Plan, visit, and know what to do after.
           </p>
         </div>
@@ -450,7 +452,7 @@ function chatDialog() {
 
 function layout({ title, description, body, active = "", canonical = "", ogImage = "", noindex = false }) {
   const fullTitle = title ? `${title} · Parkday Guide` : "Parkday Guide: all 64 national parks, planned properly";
-  const desc = description || "A from-scratch guide to all 64 scoped US national parks, their gateway towns, and what to do after the park.";
+  const desc = clip(description) || "A from-scratch guide to all 64 US national parks, their gateway towns, and what to do after the park.";
   const canonicalUrl = canonical === null ? "" : canonical ? `${SITE_URL}${canonical}` : `${SITE_URL}/`;
   return `<!doctype html>
 <html lang="en">
@@ -502,7 +504,71 @@ function heroMedia(p) {
   return `<div class="hero-media"><img src="${esc(img.url)}" alt="${esc(img.alt || `${p.fullName} landscape`)}" fetchpriority="high" /></div>`;
 }
 
+// Cut text at a word boundary so meta descriptions never end mid-word.
+function clip(text, max = 158) {
+  const s = String(text || "").replace(/\s+/g, " ").trim();
+  if (s.length <= max) return s;
+  const cut = s.slice(0, max - 1);
+  const atSentence = cut.lastIndexOf(". ");
+  if (atSentence > max * 0.6) return cut.slice(0, atSentence + 1);
+  return cut.slice(0, cut.lastIndexOf(" ")).replace(/[,;:.\s]+$/, "") + "…";
+}
+
+// Great-circle distance between two parks' NPS coordinates, used only to order
+// the "closest parks" list. The number itself is never printed.
+function distanceKm(a, b) {
+  const R = 6371;
+  const rad = (d) => (d * Math.PI) / 180;
+  const dLat = rad(b.lat - a.lat);
+  const dLng = rad(b.lng - a.lng);
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(rad(a.lat)) * Math.cos(rad(b.lat)) * Math.sin(dLng / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(h));
+}
+
+function bestDaySection(p) {
+  const c = p.coordinates;
+  if (!c || !Number.isFinite(c.lat) || !Number.isFinite(c.lng)) return "";
+  const lat = c.lat.toFixed(4);
+  const lng = c.lng.toFixed(4);
+  const fallback = `https://forecast.weather.gov/MapClick.php?lat=${lat}&lon=${lng}`;
+  return `
+  <section class="section section--tight bestday-section" id="best-day">
+    <div class="wrap">
+      <div class="bestday" data-bestday data-park="${esc(p.id)}" data-lat="${lat}" data-lng="${lng}" data-fallback="${esc(fallback)}">
+        <div class="bestday-head">
+          <div>
+            <p class="eyebrow">Start here</p>
+            <h2>Which day this week is best for ${esc(p.name)}?</h2>
+            <p class="lede">Rank the next seven days by rain chance, temperature, wind, storms and weekend crowds, using the live National Weather Service forecast for the park.</p>
+          </div>
+          <button class="btn" type="button" data-bestday-run>Find the best day</button>
+        </div>
+        <p class="sr-only" role="status" aria-live="polite" data-bestday-status></p>
+        <div class="bestday-out" data-bestday-out></div>
+        <noscript><p><a href="${esc(fallback)}">Open the National Weather Service forecast for this park ↗</a></p></noscript>
+      </div>
+    </div>
+  </section>`;
+}
+
+function officialNotesSection(p) {
+  const n = officialNotes[p.id];
+  if (!n || !n.title) return "";
+  return `
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="callout official-note">
+        <strong>${esc(n.title)}</strong>
+        <p>${esc(n.summary)}</p>
+        ${n.items?.length ? `<ul>${n.items.map((i) => `<li>${esc(i)}</li>`).join("")}</ul>` : ""}
+        <p class="mono" style="margin-top:12px">Source: <a href="${esc(n.source.url)}" target="_blank" rel="noopener noreferrer">${esc(n.source.title)} ↗</a>, retrieved ${esc(n.source.retrieved)}</p>
+      </div>
+    </div>
+  </section>`;
+}
+
 function feeSummary(p) {
+  if (officialNotes[p.id]?.feeBadge) return officialNotes[p.id].feeBadge;
   const entrance = p.fees?.entrance || [];
   const vehicle = entrance.find((f) => /private vehicle/i.test(f.title) && f.costUsd != null);
   if (vehicle) return `${money(vehicle.costUsd)} per vehicle`;
@@ -569,7 +635,8 @@ function checklistPanel() {
 
 function pageHome() {
   const heroPark = byId.get("glacier") || parks[0];
-  const hero = parkImage(heroPark, 1) || parkImage(heroPark);
+  // Index 0 is the Glacier ridge-and-valley landscape; index 1 was a ranger portrait.
+  const hero = parkImage(heroPark, 0);
   const featured = ["yellowstone", "acadia", "zion", "glacier", "yosemite", "great-smoky-mountains"]
     .map((id) => byId.get(id))
     .filter(Boolean);
@@ -583,7 +650,7 @@ function pageHome() {
       <div class="hero-inner">
         <p class="eyebrow">All 64 parks · one plan</p>
         <h1>Plan the park day properly, then the days around it.</h1>
-        <p class="lede">Parkday Guide covers every scoped US national park, the gateway towns that make each one reachable, and the part most guides skip: what to do after you leave.</p>
+        <p class="lede">Parkday Guide covers every US national park, the gateway towns that make each one reachable, and the part most guides skip: what to do after you leave.</p>
         <div class="hero-actions">
           <a class="btn" href="${url("parks/")}">Browse all 64 parks</a>
           <a class="btn btn--ghost" href="${url("checklist/")}">Get the planning checklist</a>
@@ -728,7 +795,7 @@ function pageParksIndex() {
       <div class="hero-inner" style="padding:clamp(48px,8vw,88px) 0 clamp(28px,4vw,44px);">
         <p class="eyebrow">Directory</p>
         <h1>All 64 parks</h1>
-        <p class="lede">Every scoped national park, with the fees and hours the Park Service lists, the towns that work as a base, and a plan for the day.</p>
+        <p class="lede">Every national park, with the fees and hours the Park Service lists, the towns that work as a base, and a plan for the day.</p>
       </div>
     </div>
   </section>
@@ -759,7 +826,7 @@ function pageParksIndex() {
 
   return layout({
     title: "All 64 national parks",
-    description: "Directory of all 64 scoped US national parks with official NPS fees, hours, gateway towns and day plans.",
+    description: "Directory of all 64 US national parks with official NPS fees, hours, gateway towns and day plans.",
     body,
     active: "Parks",
     canonical: "/parks/",
@@ -774,9 +841,14 @@ function pagePark(p) {
   const reservations = p.fees?.reservation || [];
   const other = p.fees?.other || [];
   const passes = p.entrancePasses || [];
-  const nearby = parks
-    .filter((x) => x.region === p.region && x.id !== p.id)
-    .slice(0, 3);
+  const nearby = p.coordinates
+    ? parks
+        .filter((x) => x.id !== p.id && x.coordinates)
+        .map((x) => ({ x, d: distanceKm(p.coordinates, x.coordinates) }))
+        .sort((a, b) => a.d - b.d)
+        .slice(0, 3)
+        .map((o) => o.x)
+    : parks.filter((x) => x.region === p.region && x.id !== p.id).slice(0, 3);
   const hasFeeTable = entrance.length || reservations.length || other.length || passes.length;
   const ogImage = img?.url || "";
 
@@ -801,6 +873,10 @@ function pagePark(p) {
       </div>
     </div>
   </section>
+
+  ${bestDaySection(p)}
+
+  ${officialNotesSection(p)}
 
   <section class="section section--tight">
     <div class="wrap">
@@ -964,6 +1040,7 @@ function pagePark(p) {
           <h2>What this page is based on</h2>
           <ul class="source-list">
             <li><a href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">${esc(p.fullName)} on NPS.gov</a>: official fees, hours and contact information, retrieved ${NPS_RETRIEVED}.</li>
+            ${officialNotes[p.id]?.source ? `<li><a href="${esc(officialNotes[p.id].source.url)}" target="_blank" rel="noopener noreferrer">${esc(officialNotes[p.id].source.title)}</a>: ${esc(officialNotes[p.id].title.toLowerCase())}, retrieved ${esc(officialNotes[p.id].source.retrieved)}.</li>` : ""}
             <li><a href="https://www.nps.gov/subjects/planyourvisit/fees.htm" target="_blank" rel="noopener noreferrer">NPS fees and passes</a>: national fee policy context.</li>
             <li><a href="https://www.recreation.gov" target="_blank" rel="noopener noreferrer">Recreation.gov</a>: federal reservations, permits and camping.</li>
           </ul>
@@ -971,7 +1048,7 @@ function pagePark(p) {
         </div>
         <div>
           <p class="eyebrow">Keep going</p>
-          <h3>Nearby in ${esc(p.region)}</h3>
+          <h3>Closest national parks</h3>
           <div class="stack">
             ${nearby
               .map(
@@ -986,7 +1063,7 @@ function pagePark(p) {
 
   return layout({
     title: p.fullName,
-    description: `${p.fullName} in ${p.stateNames.join(", ")}: official NPS fees and hours, gateway towns, and a one-day plan. ${e.whyGo}`.slice(0, 158),
+    description: clip(`${p.fullName} in ${p.stateNames.join(", ")}: find the best day this week, official NPS fees and hours, gateway towns, and a one-day plan.`),
     body,
     active: "Parks",
     canonical: `/parks/${p.id}/`,
@@ -1036,7 +1113,7 @@ function pageTownsIndex() {
   </section>`;
   return layout({
     title: "Gateway towns",
-    description: `All ${towns.length} gateway towns for the 64 scoped national parks, with honest notes on what to confirm before arriving.`,
+    description: `All ${towns.length} gateway towns for the 64 national parks, with honest notes on what to confirm before arriving.`,
     body,
     active: "Towns",
     canonical: "/towns/",
@@ -1362,13 +1439,15 @@ function buildSearchIndex() {
   }
 
   // A few computed answers that the retrieval alone would answer badly.
-  const noFee = parks.filter((p) => !(p.fees?.entrance || []).length).map((p) => p.name);
+  const noFee = parks
+    .filter((p) => !(p.fees?.entrance || []).length)
+    .map((p) => (officialNotes[p.id]?.title ? `${p.name} (${officialNotes[p.id].title.toLowerCase()})` : p.name));
   docs.push({
     id: "faq:no-fee",
     type: "faq",
     title: "Parks where NPS lists no entrance fee",
     url: "parks/",
-    text: `The Park Service lists no entrance fee for these scoped parks: ${noFee.join(", ")}. Separate permits, tours or camping can still cost money.`,
+    text: `The Park Service lists no entrance fee for these parks: ${noFee.join(", ")}. Separate permits, tours or camping can still cost money.`,
   });
 
   const withRes = parks

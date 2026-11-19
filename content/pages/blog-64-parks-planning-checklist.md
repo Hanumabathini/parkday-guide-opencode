@@ -1,6 +1,6 @@
 ---
 title: "How to Use the 64 Parks Planning Checklist"
-description: "A practical walkthrough of the free 64 Parks Planning Checklist and how to use it while planning trips across the scoped national parks."
+description: "A practical walkthrough of the free 64 Parks Planning Checklist and how to use it while planning trips across the national parks."
 slug: "blog-64-parks-planning-checklist"
 updated: "2026-11-19"
 kind: "post"
