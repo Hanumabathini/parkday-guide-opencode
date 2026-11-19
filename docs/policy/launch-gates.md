@@ -18,7 +18,7 @@ concerns only if the concern is written down here with an owner and a date.
 ## 1. Fact-check
 
 - 64/64 park records synced from the NPS API with a retrieval date.
-- 64/64 park pages and 119/119 gateway town pages carry editorial.
+- 64/64 park pages and 123/123 gateway town pages carry editorial.
 - Fee fields classified into entrance, reservation and other.
 - The sync refuses a scope that is not 64.
 - Editorial is reviewed against the park's official page before release.
@@ -56,7 +56,7 @@ agreement before the checklist form is enabled.
   URL from the fact layer.
 - No redirect wrapper, no link shortener, no tracking parameter on an official
   link.
-- 208 pages built, 0 broken internal links, 207 sitemap URLs.
+- 215 pages built, 0 broken internal links. Guide and blog canonicals fixed on 2026-11-19 (they were missing a slash).
 
 ## 5. Photo licensing
 

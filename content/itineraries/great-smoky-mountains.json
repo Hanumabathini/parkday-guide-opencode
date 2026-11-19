@@ -1,0 +1,168 @@
+{
+  "park": "great-smoky-mountains",
+  "checked": "2026-11-19",
+  "photos": {
+    "cades-cove": {
+      "url": "https://www.nps.gov/grsm/planyourvisit/images/2-1CadesCove_PublicDomainFlickr_WBielenberg.jpg?maxwidth=1300&autorotate=false",
+      "alt": "Flowers in the foreground and a rolling mountain view behind them in Cades Cove.",
+      "credit": "NPS Photo",
+      "source": "https://www.nps.gov/grsm/planyourvisit/cadescove.htm"
+    },
+    "oconaluftee": {
+      "url": "https://www.nps.gov/grsm/planyourvisit/images/2-1Oconaluftee_NPS-Photo_1.jpg?maxwidth=1300&autorotate=false",
+      "alt": "Rolling mountains behind a large grassy field, seen past a porch railing at Oconaluftee.",
+      "credit": "NPS Photo",
+      "source": "https://www.nps.gov/grsm/planyourvisit/oconaluftee.htm"
+    },
+    "cataloochee": {
+      "url": "https://www.nps.gov/grsm/planyourvisit/images/2-1Cataloochee-Balsam_Heintooga-Overlook_NPS-Photo.jpg?maxwidth=1300&autorotate=false",
+      "alt": "Wide mountain views under a mostly clear sky, with trees in the foreground.",
+      "credit": "NPS Photo",
+      "source": "https://www.nps.gov/grsm/planyourvisit/cataloochee-balsam.htm"
+    },
+    "grotto-falls": {
+      "url": "https://www.nps.gov/grsm/planyourvisit/images/Grotto-Falls-Photo.jpg?maxwidth=650&autorotate=false",
+      "alt": "A waterfall dropping into a pool in the forest at Grotto Falls.",
+      "credit": "NPS",
+      "source": "https://www.nps.gov/grsm/planyourvisit/roaringfork.htm"
+    },
+    "roaring-fork": {
+      "url": "https://www.nps.gov/grsm/planyourvisit/images/Place-of-1000-Drips-carr_photo-3.jpg?maxwidth=650&autorotate=false",
+      "alt": "Water trickling around boulders on a rock face at the Place of a Thousand Drips.",
+      "credit": "NPS / Bob Carr",
+      "source": "https://www.nps.gov/grsm/planyourvisit/roaringfork.htm"
+    },
+    "deep-creek": {
+      "url": "https://www.nps.gov/grsm/planyourvisit/images/2-1Deep-Creek_JuneyWhankFalls_BCarr.jpg?maxwidth=1300&autorotate=false",
+      "alt": "Juney Whank Falls fanning over rock, framed by trees.",
+      "credit": "NPS / Bob Carr",
+      "source": "https://www.nps.gov/grsm/planyourvisit/deepcreek.htm"
+    },
+    "high-ridges": {
+      "url": "https://www.nps.gov/common/uploads/structured_data/62D22291-ECC1-C9C6-D4C249F41BC599CC.jpg",
+      "alt": "Snow on the high ridges of the Smokies under a clear sky.",
+      "credit": "NPS / Bob Carr",
+      "source": "https://www.nps.gov/grsm/index.htm"
+    }
+  },
+  "places": {
+    "gatlinburg": { "name": "Gatlinburg", "kind": "town", "lat": 35.714, "lng": -83.510 },
+    "townsend": { "name": "Townsend", "kind": "town", "lat": 35.675, "lng": -83.755 },
+    "cherokee": { "name": "Cherokee", "kind": "town", "lat": 35.474, "lng": -83.315 },
+    "bryson-city": { "name": "Bryson City", "kind": "town", "lat": 35.428, "lng": -83.447 },
+    "maggie-valley": { "name": "Maggie Valley", "kind": "town", "lat": 35.519, "lng": -83.098 },
+    "sugarlands": { "name": "Sugarlands Visitor Center", "lat": 35.6853, "lng": -83.5367 },
+    "newfound-gap": { "name": "Newfound Gap", "lat": 35.611, "lng": -83.4251 },
+    "kuwohi": { "name": "Kuwohi", "lat": 35.5628, "lng": -83.4985 },
+    "roaring-fork": { "name": "Roaring Fork Motor Nature Trail", "lat": 35.681, "lng": -83.497 },
+    "grotto-falls": { "name": "Grotto Falls", "lat": 35.6801, "lng": -83.4618 },
+    "elkmont": { "name": "Elkmont and Little River Trail", "lat": 35.6563, "lng": -83.5806 },
+    "cades-cove": { "name": "Cades Cove Loop", "lat": 35.604, "lng": -83.774 },
+    "cable-mill": { "name": "Cable Mill and Cades Cove Visitor Center", "lat": 35.5866, "lng": -83.8445 },
+    "tremont": { "name": "Tremont", "lat": 35.642, "lng": -83.688 },
+    "look-rock": { "name": "Foothills Parkway and Look Rock", "lat": 35.633, "lng": -83.94 },
+    "oconaluftee": { "name": "Oconaluftee Visitor Center", "lat": 35.5132, "lng": -83.3066 },
+    "farm-museum": { "name": "Mountain Farm Museum", "lat": 35.514, "lng": -83.307 },
+    "kephart-prong": { "name": "Kephart Prong Trail", "lat": 35.588, "lng": -83.364 },
+    "deep-creek": { "name": "Deep Creek waterfalls loop", "lat": 35.4641, "lng": -83.4344 },
+    "cataloochee": { "name": "Cataloochee Valley", "lat": 35.63, "lng": -83.087 }
+  },
+  "itineraries": [
+    {
+      "slug": "great-smoky-mountains-one-day",
+      "title": "One day in the Smokies: across the ridge",
+      "days": 1,
+      "base": "Gatlinburg",
+      "baseTown": "gatlinburg-tn",
+      "photo": "high-ridges",
+      "summary": "A first visit that crosses the park on Newfound Gap Road, with the high ridge in the middle of the day and a waterfall walk that replaces the closed Laurel Falls.",
+      "bestFor": ["First-timers", "Drive-based trips", "Mixed abilities"],
+      "season": "Built for April to Nov. 29, when Kuwohi Road and Roaring Fork are open. Winter swaps are given at each stop that closes.",
+      "plan": [
+        {
+          "label": "Day 1",
+          "theme": "Sugarlands to the state line and back",
+          "stops": [
+            { "place": "sugarlands", "part": "Early morning", "text": "Buy your parking tag here if you do not have one, check the closures board, and walk the short nature trail behind the building.", "status": "Open year-round" },
+            { "place": "newfound-gap", "part": "Morning", "text": "Drive Newfound Gap Road up to the state line. The overlook has the Rockefeller Memorial and an Appalachian Trail crossing. Expect it to be much colder and windier than town.", "status": "Open year-round, closes for snow and ice", "live": true },
+            { "place": "kuwohi", "part": "Midday", "text": "Take Kuwohi Road out to the park's highest point. The paved walk to the tower is short but steep.", "status": "Road open Apr 1 to Nov 29 (2026)", "seasonal": true, "swap": "From Nov. 30 to spring the road is closed. Drive down to Elkmont and walk Little River Trail toward Huskey Branch Falls instead." },
+            { "place": "elkmont", "part": "Afternoon", "text": "Walk past the restored cabins of the old Elkmont community and follow Little River Trail upstream. The park suggests this walk while Laurel Falls is closed.", "status": "Open" },
+            { "place": "roaring-fork", "photo": "roaring-fork", "part": "Late afternoon", "text": "Loop the one-way Roaring Fork Motor Nature Trail past old homesteads and the Place of a Thousand Drips, then come out at the edge of Gatlinburg.", "status": "Open Apr 17 to Nov 29 (2026). No buses, trailers or motor homes.", "seasonal": true, "swap": "In winter, walk the Gatlinburg Trail from Sugarlands instead. It is one of two park trails that allow dogs." }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "great-smoky-mountains-two-days",
+      "title": "Two days on the quiet side: Cades Cove and Elkmont",
+      "days": 2,
+      "base": "Townsend",
+      "baseTown": "townsend-tn",
+      "photo": "cades-cove",
+      "summary": "Two slower days based in Townsend, built around Cades Cove at first light, with the Foothills Parkway for sunset and a history walk at Elkmont.",
+      "bestFor": ["Couples", "Photographers", "Wildlife watchers"],
+      "season": "Works all year. Abrams Falls Trail was closed through Sept. 30, 2026, so confirm it has reopened before you plan on it.",
+      "plan": [
+        {
+          "label": "Day 1",
+          "theme": "Cades Cove from first light",
+          "stops": [
+            { "place": "cades-cove", "photo": "cades-cove", "part": "Early morning", "text": "Start the one-way loop as early as you can. Fog in the fields and deer, turkeys and bears are most likely early. Use pullouts only and stay in your car around bear jams.", "status": "Open year-round. Car-free on Wednesdays May 6 to Sept 30 (2026)." },
+            { "place": "cable-mill", "part": "Late morning", "text": "Stop midway at the Cable Mill and visitor center for the historic buildings and restrooms.", "status": "Open year-round" },
+            { "place": "tremont", "part": "Afternoon", "text": "Drive back out and turn up Tremont Road for a quiet streamside walk and the small visitor center at the institute.", "status": "Open year-round" },
+            { "place": "look-rock", "part": "Evening", "text": "Drive the Foothills Parkway for open ridge views and walk up to the Look Rock tower before sunset.", "status": "Open, closes in bad weather", "live": true }
+          ]
+        },
+        {
+          "label": "Day 2",
+          "theme": "Little River Road and Elkmont",
+          "stops": [
+            { "place": "elkmont", "part": "Morning", "text": "Walk the restored cabins of the Elkmont historic district, then follow Little River Trail toward Huskey Branch Falls.", "status": "Open. Access is limited during the late-May firefly event." },
+            { "place": "sugarlands", "part": "Afternoon", "text": "Continue along Little River Road to Sugarlands for the exhibits and film, and pick up the Junior Ranger book if you have children.", "status": "Open year-round" }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "great-smoky-mountains-three-days",
+      "title": "Three days across both states",
+      "days": 3,
+      "base": "Townsend, then Cherokee or Bryson City",
+      "baseTown": "bryson-city-nc",
+      "photo": "oconaluftee",
+      "summary": "Cades Cove on the Tennessee side, the ridge crossing on the second day, and the North Carolina side for elk and waterfalls. This replaces the older plan that used Laurel Falls on day one.",
+      "bestFor": ["Families", "First full visit", "Elk and waterfalls"],
+      "season": "Days one and three work all year. Day two uses Kuwohi Road, which is open Apr 1 to Nov 29 (2026); a winter swap is given.",
+      "plan": [
+        {
+          "label": "Day 1",
+          "theme": "Tennessee side: Cades Cove",
+          "stops": [
+            { "place": "cades-cove", "photo": "cades-cove", "part": "Early morning", "text": "Drive the Cades Cove Loop early, when fog sits in the fields and deer, turkeys and bears are most often seen from the car.", "status": "Open year-round. Car-free on Wednesdays May 6 to Sept 30 (2026)." },
+            { "place": "cable-mill", "part": "Late morning", "text": "Walk the Cable Mill area and stop at the visitor center.", "status": "Open year-round" },
+            { "place": "look-rock", "part": "Evening", "text": "Finish on the Foothills Parkway at Look Rock.", "status": "Open, closes in bad weather", "live": true }
+          ]
+        },
+        {
+          "label": "Day 2",
+          "theme": "Over the ridge to North Carolina",
+          "stops": [
+            { "place": "sugarlands", "part": "Early morning", "text": "Check closures at Sugarlands before you cross the ridge.", "status": "Open year-round" },
+            { "place": "newfound-gap", "part": "Morning", "text": "Stop at the state line overlook on Newfound Gap Road.", "status": "Open year-round, closes for snow and ice", "live": true },
+            { "place": "kuwohi", "part": "Midday", "text": "Walk up to the Kuwohi tower on the park's highest point.", "status": "Road open Apr 1 to Nov 29 (2026)", "seasonal": true, "swap": "In winter, walk the Kephart Prong Trail on the North Carolina side instead, past the remains of an old Civilian Conservation Corps camp." },
+            { "place": "farm-museum", "photo": "oconaluftee", "part": "Afternoon", "text": "Walk the flat paths of the Mountain Farm Museum beside Oconaluftee Visitor Center. Nearby Mingus Mill is temporarily closed.", "status": "Open year-round" },
+            { "place": "oconaluftee", "part": "Evening", "text": "Watch for elk in the fields near the visitor center as the light drops. Stay at least 25 yards away.", "status": "Open year-round" }
+          ]
+        },
+        {
+          "label": "Day 3",
+          "theme": "North Carolina side: waterfalls or elk",
+          "stops": [
+            { "place": "deep-creek", "photo": "deep-creek", "part": "Morning", "text": "Walk the Deep Creek loop past Juney Whank, Tom Branch and Indian Creek falls, an easy-to-moderate walk the park suggests while Laurel Falls is closed. Rocks by the water are slick.", "status": "Open year-round" },
+            { "place": "cataloochee", "photo": "cataloochee", "part": "Alternative day", "text": "If you base in Maggie Valley instead, spend the day in Cataloochee Valley for elk at dawn or dusk and old frame buildings. The road in is narrow and partly gravel, so leave in daylight.", "status": "Valley open year-round. Several trails damaged by Hurricane Helene." }
+          ]
+        }
+      ]
+    }
+  ]
+}

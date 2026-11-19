@@ -55,12 +55,14 @@ const readJson = (file, fallback = null) => {
   }
 };
 
-const readDirJson = (dir) => {
+// byFile keys each file's contents by its basename instead of merging them.
+const readDirJson = (dir, { byFile = false } = {}) => {
   if (!fs.existsSync(dir)) return {};
   const merged = {};
   for (const name of fs.readdirSync(dir).filter((n) => n.endsWith(".json"))) {
     const data = readJson(path.join(dir, name), {});
-    Object.assign(merged, data);
+    if (byFile) merged[name.replace(/\.json$/, "")] = data;
+    else Object.assign(merged, data);
   }
   return merged;
 };
@@ -250,6 +252,17 @@ const townEditorial = parkEditorial; // same merged store: editorial files hold 
 const byId = new Map(parks.map((p) => [p.id, p]));
 // Official facts the NPS parks API omits (e.g. the Smokies parking tag), sourced per entry.
 const officialNotes = readJson(path.join(ROOT, "data", "official-notes.json"), {});
+// Flagship research facts and prebuilt itineraries, one file per park.
+const flagship = readDirJson(path.join(ROOT, "data", "flagship"), { byFile: true });
+const itineraryFiles = readDirJson(path.join(ROOT, "content", "itineraries"), { byFile: true });
+const itineraries = Object.values(itineraryFiles).flatMap((f) =>
+  (f.itineraries || []).map((it) => ({ ...it, parkId: f.park, photos: f.photos || {}, places: f.places || {}, checked: f.checked })),
+);
+const itinerariesByPark = new Map();
+for (const it of itineraries) {
+  if (!itinerariesByPark.has(it.parkId)) itinerariesByPark.set(it.parkId, []);
+  itinerariesByPark.get(it.parkId).push(it);
+}
 const townsByPark = new Map();
 for (const t of towns) {
   for (const pid of t.parks) {
@@ -350,6 +363,7 @@ const missingTownEditorial = towns.filter((t) => !townEditorial[t.id]?.intro);
 const NAV = [
   ["Parks", "parks/"],
   ["Towns", "towns/"],
+  ["Itineraries", "itineraries/"],
   ["Guides", "guides/"],
   ["Blog", "blog/"],
   ["About", "about/"],
@@ -450,7 +464,7 @@ function chatDialog() {
   </dialog>`;
 }
 
-function layout({ title, description, body, active = "", canonical = "", ogImage = "", noindex = false }) {
+function layout({ title, description, body, active = "", canonical = "", ogImage = "", noindex = false, schema = null }) {
   const fullTitle = title ? `${title} · Parkday Guide` : "Parkday Guide: all 64 national parks, planned properly";
   const desc = clip(description) || "A from-scratch guide to all 64 US national parks, their gateway towns, and what to do after the park.";
   const canonicalUrl = canonical === null ? "" : canonical ? `${SITE_URL}${canonical}` : `${SITE_URL}/`;
@@ -469,6 +483,7 @@ function layout({ title, description, body, active = "", canonical = "", ogImage
   <meta property="og:url" content="${esc(canonicalUrl)}" />
   ${ogImage ? `<meta property="og:image" content="${esc(ogImage)}" />` : ""}
   <meta name="theme-color" content="#f7f3ea" />
+  ${schema ? `<script type="application/ld+json">${JSON.stringify(schema).replace(/</g, "\\u003c")}</script>` : ""}
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2316211c'/%3E%3Cpath d='M6 24l7-12 5 8 3-5 5 9z' fill='%23f7f3ea'/%3E%3Ccircle cx='23' cy='9' r='2.4' fill='%23b9482a'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="${url("assets/styles.css")}" />
   <script>window.PARKDAY_BASE = ${JSON.stringify(BASE)};</script>
@@ -565,6 +580,338 @@ function officialNotesSection(p) {
       </div>
     </div>
   </section>`;
+}
+
+/* Trust labels: "official" rows were checked against NPS; "approximate" never reads as fact. */
+function trustBadge(label) {
+  return label === "official"
+    ? `<span class="trust trust--official">Official · NPS</span>`
+    : `<span class="trust trust--approx">Approximate</span>`;
+}
+
+function flagshipSection(p) {
+  const f = flagship[p.id];
+  if (!f) return "";
+  const list = (rows) =>
+    `<ul class="fact-list">${rows
+      .map((r) => `<li>${r.label ? trustBadge(r.label) : ""}${r.name ? `<strong>${esc(r.name)}.</strong> ` : ""}${esc(r.text)}</li>`)
+      .join("")}</ul>`;
+  return `
+  <section class="section section--paper flagship" id="before-you-go">
+    <div class="wrap">
+      <p class="eyebrow">Before you go · checked ${esc(f.checked)}</p>
+      <h2>What to know before you drive in</h2>
+      <div class="split mt-2">
+        <div>
+          <h3>Pre-trip musts</h3>
+          ${list(f.preTrip)}
+          <h3 style="margin-top:28px">Reservations and permits</h3>
+          ${list(f.reservations)}
+        </div>
+        <div>
+          <h3>Closures to plan around</h3>
+          ${list(f.closures)}
+          <div class="callout callout--pine" style="margin-top:16px"><strong>Closures change every week</strong>Check the <a href="${esc(f.liveClosuresUrl)}" target="_blank" rel="noopener noreferrer">live NPS closures page ↗</a> the day before you go.</div>
+        </div>
+      </div>
+
+      <h3 style="margin-top:40px">Seasonal roads (${esc(f.seasonalRoads.year)})</h3>
+      <p style="font-size:14.5px;color:var(--ink-soft)">${esc(f.seasonalRoads.note)}</p>
+      <div class="table-wrap"><table class="fee-table">
+        <thead><tr><th>Road</th><th>Opens</th><th>Closes</th></tr></thead>
+        <tbody>${f.seasonalRoads.rows.map((r) => `<tr><td>${esc(r.road)}</td><td>${esc(r.open)}</td><td>${esc(r.close)}</td></tr>`).join("")}</tbody>
+      </table></div>
+
+      <h3 style="margin-top:40px">Visitor centers</h3>
+      <div class="grid grid--3 mt-2">
+        ${f.visitorCenters
+          .map((v) => `<article class="card"><h4 style="margin:0 0 6px">${esc(v.name)}</h4><p style="margin:0 0 8px;font-size:13.5px;color:var(--ink-faint)">${esc(v.where)}</p><p style="margin:0">${esc(v.services)}</p></article>`)
+          .join("")}
+      </div>
+      <p style="margin-top:14px;font-size:14.5px;color:var(--ink-soft)">${esc(f.partnerCenters)}</p>
+
+      <h3 style="margin-top:40px">Seasons at a glance</h3>
+      <div class="table-wrap"><table class="fee-table">
+        <thead><tr><th>Season</th><th>What is good</th><th>Watch out for</th></tr></thead>
+        <tbody>${f.seasons.map((r) => `<tr><td><strong>${esc(r.season)}</strong></td><td>${esc(r.good)}</td><td>${esc(r.watch)}</td></tr>`).join("")}</tbody>
+      </table></div>
+
+      <h3 style="margin-top:40px">Accessibility</h3>
+      ${list(f.accessibility)}
+
+      <details class="disclosure" style="margin-top:28px"><summary>Sources for this section</summary>
+        <ul class="source-list">${f.sources.map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)}</a></li>`).join("")}</ul>
+      </details>
+    </div>
+  </section>`;
+}
+
+/* ---------- Itineraries ---------- */
+
+const DAY_COLORS = ["#2c5a43", "#b9482a", "#3f6f86"];
+
+// Schematic stop map: equirectangular projection of the park's approximate
+// coordinates. It shows order and rough position, never a road route.
+function itineraryMap(it, { compact = false } = {}) {
+  // Zoom to this itinerary's own stops, then show any town that falls inside.
+  const usedPts = it.plan.flatMap((d) => d.stops.map((st) => it.places[st.place])).filter(Boolean);
+  const lats = usedPts.map((p) => p.lat);
+  const lngs = usedPts.map((p) => p.lng);
+  const padLat = Math.max(0.035, (Math.max(...lats) - Math.min(...lats)) * 0.18);
+  const padLng = Math.max(0.05, (Math.max(...lngs) - Math.min(...lngs)) * 0.12);
+  const minLat = Math.min(...lats) - padLat, maxLat = Math.max(...lats) + padLat;
+  const minLng = Math.min(...lngs) - padLng, maxLng = Math.max(...lngs) + padLng;
+  const inside = (p) => p.lat >= minLat && p.lat <= maxLat && p.lng >= minLng && p.lng <= maxLng;
+  const k = Math.cos(((minLat + maxLat) / 2) * Math.PI / 180);
+  const W = 480;
+  const H = Math.max(200, Math.round((W * (maxLat - minLat)) / ((maxLng - minLng) * k)));
+  const r1 = (v) => Math.round(v * 10) / 10;
+  const x = (lng) => r1(((lng - minLng) / (maxLng - minLng)) * W);
+  const y = (lat) => r1(((maxLat - lat) / (maxLat - minLat)) * H);
+
+  let n = 0;
+  const placed = [];
+  const numbered = it.plan.map((day, di) =>
+    day.stops.map((s) => {
+      const pl = it.places[s.place];
+      if (!pl) return { ...s, n: ++n, di, p: null };
+      let px = x(pl.lng), py = y(pl.lat);
+      // Nudge a marker that would sit on top of an earlier one so both numbers show.
+      while (placed.some(([qx, qy]) => Math.hypot(qx - px, qy - py) < 22)) px = r1(px + 24);
+      placed.push([px, py]);
+      return { ...s, n: ++n, di, p: pl, px, py };
+    }),
+  );
+  const used = new Set(it.plan.flatMap((d) => d.stops.map((s) => s.place)));
+
+  const towns = Object.entries(it.places)
+    .filter(([, p]) => p.kind === "town" && inside(p))
+    .map(([, p]) => `<g class="map-town"><rect x="${r1(x(p.lng) - 5)}" y="${r1(y(p.lat) - 5)}" width="10" height="10" rx="2"/><text x="${r1(x(p.lng) + 9)}" y="${r1(y(p.lat) + 4.5)}" text-anchor="start">${esc(p.name)}</text></g>`)
+    .join("");
+  const others = Object.entries(it.places)
+    .filter(([id, p]) => p.kind !== "town" && !used.has(id) && inside(p))
+    .map(([, p]) => `<circle class="map-other" cx="${x(p.lng)}" cy="${y(p.lat)}" r="3.5"/>`)
+    .join("");
+  const lines = numbered
+    .map((stops, di) => {
+      const valid = stops.filter((s) => s.p);
+      if (valid.length < 2) return "";
+      return `<polyline class="map-line" stroke="${DAY_COLORS[di % DAY_COLORS.length]}" points="${valid.map((s) => `${s.px},${s.py}`).join(" ")}"/>`;
+    })
+    .join("");
+  const markers = numbered
+    .flat()
+    .filter((s) => s.p)
+    .map((s) => `<g class="map-stop"><circle cx="${s.px}" cy="${s.py}" r="12" fill="${DAY_COLORS[s.di % DAY_COLORS.length]}"/><text x="${s.px}" y="${s.py}" text-anchor="middle" dominant-baseline="central">${s.n}</text></g>`)
+    .join("");
+
+  const legend = numbered
+    .map(
+      (stops, di) => `<li><span class="map-key" style="background:${DAY_COLORS[di % DAY_COLORS.length]}"></span><strong>${esc(it.plan[di].label)}:</strong> ${stops
+        .map((s) => `${s.n}. ${esc(s.p?.name || s.place)}`)
+        .join(" · ")}</li>`,
+    )
+    .join("");
+
+  return `
+  <figure class="itin-map${compact ? " itin-map--compact" : ""}">
+    <svg viewBox="-24 -24 ${W + 130} ${H + 48}" role="img" aria-labelledby="map-${esc(it.slug)}-t">
+      <title id="map-${esc(it.slug)}-t">Map of the stops in ${esc(it.title)}, numbered in order</title>
+      <rect class="map-bg" x="-24" y="-24" width="${W + 130}" height="${H + 48}" rx="10"/>
+      ${others}${lines}${towns}${markers}
+    </svg>
+    <figcaption>
+      <ol class="map-legend">${legend}</ol>
+      <p>Approximate positions from park coordinates. Lines show the order of stops, not the road route. Use a navigation app or the NPS park map to drive.</p>
+    </figcaption>
+  </figure>`;
+}
+
+function photoFigure(ph, { eager = false } = {}) {
+  if (!ph) return "";
+  return `<figure class="itin-photo"><img src="${esc(ph.url)}" alt="${esc(ph.alt)}" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} /><figcaption>${esc(ph.credit)}</figcaption></figure>`;
+}
+
+function itineraryCard(it) {
+  const ph = it.photos[it.photo];
+  return `
+  <article class="card itin-card">
+    ${ph ? `<a class="itin-card-media" href="${url(`itineraries/${it.slug}/`)}" tabindex="-1" aria-hidden="true"><img src="${esc(ph.url)}" alt="" loading="lazy" /></a>` : ""}
+    <div class="itin-card-body">
+      <span class="park-card-meta">${it.days} ${it.days === 1 ? "day" : "days"} · base: ${esc(it.base)}</span>
+      <h3><a href="${url(`itineraries/${it.slug}/`)}">${esc(it.title)}</a></h3>
+      <p>${esc(it.summary)}</p>
+      <ul class="chips">${it.bestFor.map((b) => `<li class="chip">${esc(b)}</li>`).join("")}</ul>
+    </div>
+  </article>`;
+}
+
+function itinerarySection(p) {
+  const list = itinerariesByPark.get(p.id);
+  if (!list?.length) return "";
+  return `
+  <section class="section" id="itineraries">
+    <div class="wrap">
+      <p class="eyebrow">Ready-made plans</p>
+      <h2>Itineraries for ${esc(p.name)}</h2>
+      <p class="lede" style="margin-bottom:26px">Day-by-day plans with photos, a stop map and winter swaps for the roads that close. Save any of them as a PDF to use without signal.</p>
+      <div class="grid grid--3">${list.map(itineraryCard).join("")}</div>
+    </div>
+  </section>`;
+}
+
+function pageItinerary(it) {
+  const p = byId.get(it.parkId);
+  const hero = it.photos[it.photo];
+  const note = officialNotes[it.parkId];
+  const baseTown = towns.find((t) => t.id === it.baseTown);
+  let n = 0;
+  const days = it.plan
+    .map(
+      (day, di) => `
+      <section class="itin-day" aria-labelledby="day-${di}">
+        <header class="itin-day-head" style="border-color:${DAY_COLORS[di % DAY_COLORS.length]}">
+          <p class="eyebrow" style="margin:0">${esc(day.label)}</p>
+          <h2 id="day-${di}">${esc(day.theme)}</h2>
+        </header>
+        <ol class="itin-stops">
+          ${day.stops
+            .map((s) => {
+              const place = it.places[s.place];
+              const ph = s.photo ? it.photos[s.photo] : null;
+              const tone = s.seasonal ? "seasonal" : s.live ? "live" : "open";
+              return `
+          <li class="itin-stop${ph ? " has-photo" : ""}">
+            <span class="itin-num" style="background:${DAY_COLORS[di % DAY_COLORS.length]}">${++n}</span>
+            <div class="itin-stop-body">
+              <p class="itin-part">${esc(s.part)}</p>
+              <h3>${esc(place?.name || s.place)}</h3>
+              <p>${esc(s.text)}</p>
+              <p class="itin-status itin-status--${tone}">${esc(s.status)}${s.live ? " · check conditions on the day" : ""}</p>
+              ${s.swap ? `<div class="callout itin-swap"><strong>Winter swap</strong>${esc(s.swap)}</div>` : ""}
+            </div>
+            ${photoFigure(ph)}
+          </li>`;
+            })
+            .join("")}
+        </ol>
+      </section>`,
+    )
+    .join("");
+
+  const photoSources = [...new Set(Object.values(it.photos).map((ph) => ph.source))];
+  const body = `
+  <section class="park-hero itin-hero">
+    ${hero ? `<div class="hero-media"><img src="${esc(hero.url)}" alt="${esc(hero.alt)}" fetchpriority="high" /></div>` : ""}
+    <div class="wrap">
+      <div class="hero-inner">
+        <nav class="breadcrumbs" aria-label="Breadcrumb" style="color:rgba(247,243,234,.65)">
+          <a href="${url("itineraries/")}" style="color:rgba(247,243,234,.8)">Itineraries</a><span>/</span>
+          <a href="${url(`parks/${p.id}/`)}" style="color:rgba(247,243,234,.8)">${esc(p.name)}</a>
+        </nav>
+        <p class="eyebrow" style="color:rgba(247,243,234,.7)">${it.days} ${it.days === 1 ? "day" : "days"} · base: ${esc(it.base)}</p>
+        <h1>${esc(it.title)}</h1>
+        <p class="lede" style="max-width:62ch">${esc(it.summary)}</p>
+        <div class="hero-actions">
+          <button class="btn" type="button" data-print>Save as PDF</button>
+          <a class="btn btn--ghost" href="${url(`parks/${p.id}/#best-day`)}">Find the best day</a>
+        </div>
+        ${hero ? `<p class="hero-credit">Photo: ${esc(hero.credit)}</p>` : ""}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <p class="eyebrow">Season</p>
+          <p class="lede" style="color:var(--ink)">${esc(it.season)}</p>
+          ${note ? `<div class="callout" style="margin-top:18px"><strong>${esc(note.title)}</strong>${esc(note.summary)}</div>` : ""}
+          ${baseTown ? `<p style="margin-top:18px">Where to stay: <a href="${url(`towns/${baseTown.id}/`)}">${esc(baseTown.name)}</a>. See all <a href="${url(`parks/${p.id}/#before-you-go`)}">${esc(p.name)} closures and seasonal roads</a>.</p>` : ""}
+        </div>
+        <div>
+          <p class="eyebrow">Best for</p>
+          <ul class="chips">${it.bestFor.map((b) => `<li class="chip">${esc(b)}</li>`).join("")}</ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper section--tight">
+    <div class="wrap">
+      <p class="eyebrow">The route</p>
+      ${itineraryMap(it)}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap itin-days">${days}</div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="wrap">
+      <p class="eyebrow">Sources</p>
+      <h2>What this plan is based on</h2>
+      <ul class="source-list">
+        ${(flagship[it.parkId]?.sources || []).map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)}</a></li>`).join("")}
+        ${photoSources.map((u) => `<li>Photos: <a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(u.replace(/^https:\/\//, ""))}</a></li>`).join("")}
+      </ul>
+      <p style="margin-top:18px;font-size:13.5px;color:var(--ink-faint)">Plan checked ${esc(it.checked)}. Closures and road dates come from the National Park Service and change often; times of day are suggestions, not schedules.</p>
+    </div>
+  </section>`;
+
+  return layout({
+    title: it.title,
+    description: clip(`${it.title}: a ${it.days}-day ${p.name} plan with photos, a stop map, winter swaps and a printable PDF. ${it.summary}`),
+    body,
+    active: "Itineraries",
+    canonical: `/itineraries/${it.slug}/`,
+    ogImage: hero?.url || "",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "TouristTrip",
+      name: it.title,
+      description: it.summary,
+      touristType: it.bestFor,
+      url: `${SITE_URL}/itineraries/${it.slug}/`,
+      itinerary: {
+        "@type": "ItemList",
+        itemListElement: it.plan.flatMap((d) => d.stops).map((s, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          item: { "@type": "TouristAttraction", name: it.places[s.place]?.name || s.place },
+        })),
+      },
+    },
+  });
+}
+
+function pageItinerariesIndex() {
+  const byPark = [...itinerariesByPark.entries()];
+  const body = `
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Itineraries</p>
+      <h1>Ready-made park plans</h1>
+      <p class="lede" style="max-width:62ch">Day-by-day plans built from the park's own closures and road dates, with photos, a stop map and a winter swap wherever a road closes. Each one saves as a PDF for places without signal.</p>
+      ${byPark
+        .map(([pid, list]) => {
+          const p = byId.get(pid);
+          return `<h2 style="margin-top:40px"><a href="${url(`parks/${pid}/`)}">${esc(p.fullName)}</a></h2>
+          <div class="grid grid--3 mt-2">${list.map(itineraryCard).join("")}</div>`;
+        })
+        .join("")}
+      <div class="callout callout--pine" style="margin-top:40px"><strong>More parks next</strong>Great Smoky Mountains is the first park with full itineraries. Every other park page has a one-day plan and the best-day check.</div>
+    </div>
+  </section>`;
+  return layout({
+    title: "Itineraries",
+    description: "Ready-made national park itineraries with photos, stop maps, winter swaps and printable PDFs, built from National Park Service closures and road dates.",
+    body,
+    active: "Itineraries",
+    canonical: "/itineraries/",
+  });
 }
 
 function feeSummary(p) {
@@ -901,6 +1248,10 @@ function pagePark(p) {
     </div>
   </section>
 
+  ${flagshipSection(p)}
+
+  ${itinerarySection(p)}
+
   ${
     e.dayPlan
       ? `<section class="section section--paper">
@@ -1068,6 +1419,19 @@ function pagePark(p) {
     active: "Parks",
     canonical: `/parks/${p.id}/`,
     ogImage,
+    schema: {
+      "@context": "https://schema.org",
+      "@type": ["Park", "TouristAttraction"],
+      name: p.fullName,
+      description: e.summary,
+      url: `${SITE_URL}/parks/${p.id}/`,
+      sameAs: p.url,
+      ...(ogImage ? { image: ogImage } : {}),
+      ...(p.coordinates ? { geo: { "@type": "GeoCoordinates", latitude: p.coordinates.lat, longitude: p.coordinates.lng } } : {}),
+      address: { "@type": "PostalAddress", addressRegion: p.states.join(", "), addressCountry: "US" },
+      ...(p.phone ? { telephone: formatPhone(p.phone) } : {}),
+      isAccessibleForFree: !(p.fees?.entrance || []).some((f) => f.costUsd > 0),
+    },
   });
 }
 
@@ -1234,7 +1598,15 @@ function pageArticle(item, opts = {}) {
     description: item.description,
     body,
     active: opts.active || "",
-    canonical: `${opts.sectionHref}${item.slug}/`,
+    canonical: `/${opts.sectionHref}${item.slug}/`,
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: item.title,
+      description: item.description,
+      ...(item.updated || item.date ? { dateModified: item.updated || item.date } : {}),
+      publisher: { "@type": "Organization", name: "Parkday Guide" },
+    },
   });
 }
 
@@ -1376,6 +1748,28 @@ function page404() {
 function buildSearchIndex() {
   const docs = [];
 
+  for (const it of itineraries) {
+    const stops = it.plan.flatMap((d) => d.stops.map((s) => it.places[s.place]?.name || s.place));
+    docs.push({
+      id: `itinerary:${it.slug}`,
+      type: "itinerary",
+      title: it.title,
+      url: `itineraries/${it.slug}/`,
+      text: `${it.title}. ${it.days}-day itinerary based in ${it.base}. ${it.summary} Stops: ${stops.join(", ")}. ${it.season}`,
+    });
+  }
+  for (const [pid, f] of Object.entries(flagship)) {
+    const p = byId.get(pid);
+    if (!p) continue;
+    docs.push({
+      id: `closures:${pid}`,
+      type: "closures",
+      title: `${p.name} closures and seasonal roads`,
+      url: `parks/${pid}/#before-you-go`,
+      text: `${p.fullName} closures checked ${f.checked}: ${f.closures.map((c) => `${c.name}: ${c.text}`).join(" ")} Seasonal roads ${f.seasonalRoads.year}: ${f.seasonalRoads.rows.map((r) => `${r.road} ${r.open} to ${r.close}`).join("; ")}.`,
+    });
+  }
+
   for (const p of parks) {
     const e = editorialFor(p);
     const townsFor = (townsByPark.get(p.id) || []).map((t) => t.name).join(", ");
@@ -1511,6 +1905,10 @@ function build() {
     );
   }
 
+  // Itineraries
+  write("itineraries/index.html", pageItinerariesIndex());
+  for (const it of itineraries) write(`itineraries/${it.slug}/index.html`, pageItinerary(it));
+
   // Static pages
   for (const p of staticPages) write(`${p.slug}/index.html`, pageStatic(p));
   write("checklist/index.html", pageChecklist());
@@ -1555,6 +1953,8 @@ function build() {
     "",
     "parks/",
     "towns/",
+    "itineraries/",
+    ...itineraries.map((it) => `itineraries/${it.slug}/`),
     "guides/",
     "blog/",
     "checklist/",
@@ -1575,7 +1975,7 @@ function build() {
   );
 
   // Report
-  const pages = 1 + 1 + parks.length + 1 + towns.length + 1 + guides.length + 1 + posts.length + staticPages.length + 1 + 1;
+  const pages = 1 + itineraries.length + 1 + parks.length + 1 + towns.length + 1 + guides.length + 1 + posts.length + staticPages.length + 1 + 1;
   console.log(`Built ${pages} pages → dist/`);
   console.log(`  parks: ${parks.length} · towns: ${towns.length} · guides: ${guides.length} · posts: ${posts.length} · pages: ${staticPages.length}`);
   if (missingEditorial.length) {

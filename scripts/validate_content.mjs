@@ -183,6 +183,64 @@ for (const town of towns) {
 }
 
 /* -------------------------------------------------------------------------- */
+/* Itineraries and flagship facts                                             */
+/* -------------------------------------------------------------------------- */
+
+const itinDir = path.join(ROOT, "content", "itineraries");
+let itineraryCount = 0;
+if (fs.existsSync(itinDir)) {
+  for (const file of fs.readdirSync(itinDir).filter((f) => f.endsWith(".json"))) {
+    const f = readJson(path.join(itinDir, file), null);
+    if (!f) { fail(`itineraries/${file}: not valid JSON`); continue; }
+    if (!parkById.has(f.park)) fail(`itineraries/${file}: unknown park "${f.park}"`);
+    for (const [id, ph] of Object.entries(f.photos || {})) {
+      if (!/^https:\/\/(www\.)?nps\.gov\//.test(ph.url || "")) fail(`itineraries/${file}: photo ${id} is not an nps.gov image`);
+      if (!ph.credit || !/nps/i.test(ph.credit)) fail(`itineraries/${file}: photo ${id} has no NPS credit`);
+      if (!ph.alt) fail(`itineraries/${file}: photo ${id} has no alt text`);
+    }
+    for (const it of f.itineraries || []) {
+      itineraryCount++;
+      const where = `itinerary ${it.slug}`;
+      if (!it.slug || !it.title || !it.summary) fail(`${where}: missing slug, title or summary`);
+      if (it.photo && !f.photos?.[it.photo]) fail(`${where}: hero photo "${it.photo}" not defined`);
+      if (it.baseTown && !towns.some((t) => t.id === it.baseTown)) fail(`${where}: base town "${it.baseTown}" not in the registry`);
+      if ((it.plan || []).length !== it.days) fail(`${where}: says ${it.days} days but plans ${(it.plan || []).length}`);
+      checkProse(`${where} summary`, it.summary);
+      checkProse(`${where} season`, it.season);
+      for (const day of it.plan || []) {
+        for (const stop of day.stops || []) {
+          if (!f.places?.[stop.place]) fail(`${where}: stop "${stop.place}" has no place record`);
+          if (stop.photo && !f.photos?.[stop.photo]) fail(`${where}: stop photo "${stop.photo}" not defined`);
+          if (stop.seasonal && !stop.swap) fail(`${where}: seasonal stop "${stop.place}" has no winter swap`);
+          if (/laurel falls/i.test(stop.place) || (/laurel falls/i.test(stop.text) && !/closed/i.test(stop.text))) {
+            fail(`${where}: routes visitors to Laurel Falls, which is closed until 2027`);
+          }
+          checkProse(`${where} stop ${stop.place}`, stop.text);
+          checkProse(`${where} stop ${stop.place} swap`, stop.swap);
+        }
+      }
+    }
+  }
+}
+
+const flagDir = path.join(ROOT, "data", "flagship");
+if (fs.existsSync(flagDir)) {
+  for (const file of fs.readdirSync(flagDir).filter((f) => f.endsWith(".json"))) {
+    const f = readJson(path.join(flagDir, file), null);
+    const id = file.replace(/\.json$/, "");
+    if (!f) { fail(`flagship/${file}: not valid JSON`); continue; }
+    if (!parkById.has(id)) fail(`flagship/${file}: unknown park`);
+    if (!f.checked || !f.sources?.length) fail(`flagship/${file}: needs a checked date and sources`);
+    for (const key of ["preTrip", "reservations", "closures", "accessibility"]) {
+      for (const row of f[key] || []) {
+        if (row.label && !["official", "approximate"].includes(row.label)) fail(`flagship/${file}: ${key} label "${row.label}"`);
+        if (row.text?.includes("—")) fail(`flagship/${file}: em dash in ${key}`);
+      }
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
 /* Markdown                                                                   */
 /* -------------------------------------------------------------------------- */
 
@@ -301,6 +359,7 @@ if (CHECK_DIST) {
         fail(`dist/: missing town page for ${t.id}`);
       }
     }
+    if (itineraryCount && !fs.existsSync(path.join(dist, "itineraries", "index.html"))) fail("dist/: missing itineraries index");
     for (const g of guides.keys()) {
       if (!fs.existsSync(path.join(dist, "guides", g, "index.html"))) {
         fail(`dist/: missing guide page for ${g}`);

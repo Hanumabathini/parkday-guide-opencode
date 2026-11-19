@@ -957,5 +957,37 @@
     "parks": [
       "north-cascades"
     ]
+  },
+  {
+    "id": "townsend-tn",
+    "name": "Townsend",
+    "stateCode": "TN",
+    "parks": [
+      "great-smoky-mountains"
+    ]
+  },
+  {
+    "id": "bryson-city-nc",
+    "name": "Bryson City",
+    "stateCode": "NC",
+    "parks": [
+      "great-smoky-mountains"
+    ]
+  },
+  {
+    "id": "maggie-valley-nc",
+    "name": "Maggie Valley",
+    "stateCode": "NC",
+    "parks": [
+      "great-smoky-mountains"
+    ]
+  },
+  {
+    "id": "sevierville-tn",
+    "name": "Sevierville",
+    "stateCode": "TN",
+    "parks": [
+      "great-smoky-mountains"
+    ]
   }
 ]

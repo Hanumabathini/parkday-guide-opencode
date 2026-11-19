@@ -1,0 +1,73 @@
+{
+  "_about": "Flagship facts for Great Smoky Mountains, carried over from the Parkday Smokies research report (2026-11-14) and rechecked against NPS.gov on 2026-11-19. 'official' rows were checked against an NPS page or the Smokies Guide park newspaper. 'approximate' rows are estimates and must never be shown as fact. Closures change weekly: the page always links to the live NPS closures page.",
+  "checked": "2026-11-19",
+  "sources": [
+    { "title": "NPS: Fees and parking tags", "url": "https://www.nps.gov/grsm/planyourvisit/fees.htm" },
+    { "title": "NPS: Seasonal road schedule", "url": "https://www.nps.gov/grsm/planyourvisit/seasonalroads.htm" },
+    { "title": "NPS: Current road, trail and facility closures", "url": "https://www.nps.gov/grsm/planyourvisit/temproadclose.htm" },
+    { "title": "NPS: Current conditions", "url": "https://www.nps.gov/grsm/planyourvisit/conditions.htm" },
+    { "title": "NPS: Smokies Guide, Fall 2026 (park newspaper)", "url": "https://npshistory.com/publications/grsm/newspaper/fall-2026.pdf" },
+    { "title": "NPS: Accessibility", "url": "https://www.nps.gov/grsm/planyourvisit/accessibility.htm" }
+  ],
+  "liveClosuresUrl": "https://www.nps.gov/grsm/planyourvisit/temproadclose.htm",
+  "preTrip": [
+    { "label": "official", "text": "Buy a parking tag before you drive in. Any stop longer than 15 minutes needs one, and most trailheads have no tag machine." },
+    { "label": "official", "text": "There is no gas, EV charging, showers or restaurant inside the park. Visitor centers and camp stores sell limited food." },
+    { "label": "official", "text": "Cell service is not guaranteed across large parts of the park. Download maps and your itinerary before you leave town. In an emergency call 911." },
+    { "label": "official", "text": "Pets are allowed only on the Gatlinburg Trail and the Oconaluftee River Trail, plus campgrounds and roadsides, on a leash of six feet or less." },
+    { "label": "official", "text": "Stay at least 25 yards from elk and never feed wildlife. Feeding wildlife carries a fine." }
+  ],
+  "reservations": [
+    { "label": "official", "name": "Cades Cove vehicle-free Wednesdays", "text": "The loop road closes to cars on Wednesdays from May 6 to Sept. 30 (2026 dates). Bikes can be rented at the campground store." },
+    { "label": "official", "name": "Synchronous fireflies at Elkmont", "text": "Viewing runs in late May (May 20 to 27 in 2026) and needs a vehicle pass won through a Recreation.gov lottery held in April." },
+    { "label": "official", "name": "Frontcountry campgrounds", "text": "Reservations are required on Recreation.gov." },
+    { "label": "official", "name": "Backcountry camping", "text": "Every overnight in the backcountry needs a permit." },
+    { "label": "official", "name": "LeConte Lodge", "text": "The only lodging inside the park. It is reached only on foot and needs a reservation." }
+  ],
+  "seasonalRoads": {
+    "year": 2026,
+    "note": "Dates are the 2026 season from the NPS seasonal road schedule. 2027 dates are not published yet.",
+    "rows": [
+      { "road": "Kuwohi Road (formerly Clingmans Dome Road)", "open": "Apr 1", "close": "Nov 29" },
+      { "road": "Roaring Fork Motor Nature Trail", "open": "Apr 17", "close": "Nov 29" },
+      { "road": "Little Greenbrier Road", "open": "Apr 3", "close": "Nov 29" },
+      { "road": "Rich Mountain Road", "open": "Apr 10", "close": "Nov 9" },
+      { "road": "Parson Branch Road", "open": "May 1", "close": "Nov 9" },
+      { "road": "Heintooga Ridge Road", "open": "May 15", "close": "Oct 31" },
+      { "road": "Forge Creek Road", "open": "Mar 6", "close": "Dec 31" },
+      { "road": "Heintooga Round Bottom Road", "open": "To be announced", "close": "Hurricane Helene damage" },
+      { "road": "Straight Fork Road", "open": "To be announced", "close": "Hurricane Helene damage" },
+      { "road": "Cades Cove Loop, Cataloochee Road, Upper Tremont Road, Wear Cove Road", "open": "Year-round", "close": "Weather closures only" },
+      { "road": "Newfound Gap Road (US-441)", "open": "Year-round", "close": "Closes for snow and ice with little notice" }
+    ]
+  },
+  "closures": [
+    { "label": "official", "name": "Laurel Falls Trail", "text": "Closed for rehabilitation of the lower viewing area. Reopening is expected in 2027. The park suggests Little River Trail to Huskey Branch Falls, the Deep Creek waterfalls loop or Hen Wallow Falls instead." },
+    { "label": "official", "name": "Mingus Mill", "text": "Temporarily closed for preservation work, with no reopening date." },
+    { "label": "official", "name": "Carlos Campbell Overlook", "text": "Temporarily closed on Newfound Gap Road." },
+    { "label": "official", "name": "Big Creek and Cataloochee trails", "text": "Hurricane Helene damage: Big Creek Trail is open only to Mouse Creek Falls, Caldwell Fork is closed beyond the Boogerman junction, and several other trails are closed or not advised." },
+    { "label": "official", "name": "Abrams Falls Trail", "text": "Was closed through Sept. 30, 2026 for footlog replacement. Confirm it has reopened before you plan on it." },
+    { "label": "official", "name": "Caves and mine shafts", "text": "All entry is prohibited to protect bats from white-nose syndrome." }
+  ],
+  "visitorCenters": [
+    { "name": "Sugarlands Visitor Center", "where": "Tennessee, just south of Gatlinburg on Newfound Gap Road", "services": "Exhibits, film, park store, parking tags (staffed and a 24-hour machine), accessible restrooms, free all-terrain wheelchair checkout" },
+    { "name": "Oconaluftee Visitor Center", "where": "North Carolina, just north of Cherokee on US-441", "services": "Exhibits, park store, Mountain Farm Museum next door, elk often in the nearby fields, accessible restrooms, free all-terrain wheelchair checkout" },
+    { "name": "Cades Cove Visitor Center", "where": "Midway around the Cades Cove Loop at the Cable Mill", "services": "Historic mill area, park store, accessible restrooms" },
+    { "name": "Kuwohi Visitor Contact Station", "where": "End of Kuwohi Road, open only while the road is open", "services": "Information, small store" },
+    { "name": "Great Smoky Mountains Institute at Tremont", "where": "Tremont Road off Laurel Creek Road", "services": "Small visitor center and store" }
+  ],
+  "partnerCenters": "Gatlinburg Welcome Center, the Great Smokies Welcome Center in Townsend and the Swain County Visitor Center in Bryson City are outside the park and also sell parking tags.",
+  "seasons": [
+    { "season": "Spring", "good": "Wildflowers along Porters Creek and Kephart Prong, waterfalls at high flow, synchronous fireflies in late May.", "watch": "Seasonal roads open on different dates, and cold snaps hit the high ridges." },
+    { "season": "Summer", "good": "Every seasonal road is open, ranger programs run, and Cades Cove is car-free on Wednesdays.", "watch": "Peak crowds, haze, afternoon thunderstorms and trailhead lots full by mid-morning." },
+    { "season": "Fall", "good": "Leaf color starts on the high ridges and works down, and elk rut in Cataloochee and Oconaluftee.", "watch": "The heaviest traffic of the year on October weekends. Kuwohi Road and Roaring Fork close on Nov. 29." },
+    { "season": "Winter", "good": "Quiet trails, snow on the high ridges and lower lodging prices in the gateway towns.", "watch": "Newfound Gap Road can close for ice, and Kuwohi Road, Roaring Fork and several other roads are closed until spring." }
+  ],
+  "accessibility": [
+    { "label": "official", "text": "Free all-terrain wheelchairs can be checked out at Sugarlands and Oconaluftee visitor centers for approved trails. A companion is required and checkout is booked in advance through the park." },
+    { "label": "official", "text": "Sugarlands, Oconaluftee and Cades Cove visitor centers have accessible restrooms." },
+    { "label": "approximate", "text": "Drive-based scenery: Cades Cove Loop, Newfound Gap Road, the Foothills Parkway, and Roaring Fork in season." },
+    { "label": "approximate", "text": "Flatter paths: the Mountain Farm Museum, the Oconaluftee River Trail and the Sugarlands nature trail. Confirm surfaces with the park." },
+    { "label": "approximate", "text": "The paved path to the Kuwohi tower is short but very steep and is not suitable for most wheelchair users without help." }
+  ]
+}

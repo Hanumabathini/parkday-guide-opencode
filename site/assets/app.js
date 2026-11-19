@@ -691,9 +691,20 @@
 
   /* ---------------------------------------------------------------------- */
 
+  // "Save as PDF" uses the browser's own print-to-PDF; styles.css has the print layout.
+  function initPrint() {
+    document.querySelectorAll("[data-print]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        track("itinerary_pdf", { page: location.pathname });
+        window.print();
+      });
+    });
+  }
+
   ready(function () {
     initNav();
     initBestDay();
+    initPrint();
     initDirectory({
       search: "[data-park-search]",
       grid: "[data-park-grid]",

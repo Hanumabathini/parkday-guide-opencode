@@ -13,13 +13,22 @@ Production target: parkdayguide.com (domain not yet purchased)
   activities and the official park link, retrieved from the National Park
   Service API and stamped with a retrieval date. Editorial sits in its own
   layer and is labelled as editorial.
-- **119 gateway town pages.** Where to base yourself for each park, with honest
+- **123 gateway town pages.** Where to base yourself for each park, with honest
   notes on what to confirm before arriving. No invented drive times, prices or
   business recommendations.
 - **10 planning guides.** Season, first trip, budget, reservations, camping,
   access, quiet months, driving, packing, and after the park.
 - **About, methodology, accessibility, RV guide, privacy, blog and a free
   64 Parks Planning Checklist.**
+- **Best-day check.** Every park page opens with a button that ranks the next
+  seven days from the live National Weather Service forecast (rain, heat,
+  wind, storms, weekends). Nothing is requested until the visitor clicks.
+- **Flagship park: Great Smoky Mountains.** A sourced "Before you go" section
+  (parking tag, closures, 2026 seasonal roads, visitor centers, seasons,
+  accessibility) from `data/flagship/`, plus three itineraries in
+  `content/itineraries/` with NPS-credited photos, a numbered stop map, winter
+  swaps for roads that close, and Save-as-PDF. This is the template to copy to
+  other parks.
 - **Ask the guide.** A browser-side retrieval chatbot that answers only from the
   released park data, cites the park page, and refuses facts it does not have.
   No model call, no server, no question logging.
@@ -70,9 +79,12 @@ the project base path, runs the output gates and deploys `dist/`.
   date on each.
 - `data/nps-snapshot.json` — raw NPS API payload used for the last sync, so any
   fee or hour can be traced back.
-- `content/towns/registry.json` — 119 towns mapped to the parks they serve.
+- `content/towns/registry.json` — 123 towns mapped to the parks they serve.
 - `content/editorial/*.json` — park and town editorial.
 - `content/guides/`, `content/pages/` — markdown with frontmatter.
+- `data/official-notes.json` — official facts the NPS API omits (Smokies parking tag).
+- `data/flagship/<park>.json` — flagship research facts with official/approximate labels.
+- `content/itineraries/<park>.json` — itineraries, stop coordinates (approximate, map only) and photo credits.
 
 The sync refuses a scope that is not 64 parks. Sequoia and Kings Canyon are one
 NPS unit (SEKI) presented as two scoped park pages.

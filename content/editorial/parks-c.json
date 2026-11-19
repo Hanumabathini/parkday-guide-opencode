@@ -110,26 +110,26 @@
     "tip": "Bring water and take breaks often, since walking on sand can feel more tiring than it looks."
   },
   "great-smoky-mountains": {
-    "summary": "Great Smoky Mountains National Park spans North Carolina and Tennessee with forested ridges, mountain streams, and sheltered valleys. You can drive scenic routes, pause at overlooks, and look for wildlife in open areas like Cades Cove.",
-    "whyGo": "Come for forested mountain scenery, quiet streams, and chances to experience valleys, overlooks, and wildlife.",
+    "summary": "The Smokies straddle the Tennessee and North Carolina line, and the side you sleep on decides your trip. The Tennessee side has Cades Cove, Sugarlands and Roaring Fork. The North Carolina side has Oconaluftee, elk in open fields, Deep Creek waterfalls and Cataloochee. Newfound Gap Road crosses the ridge between them.",
+    "whyGo": "Come for historic valleys, elk at dusk, waterfall walks and the high ridge road between two states. There is no entrance fee, but you need a parking tag.",
     "highlights": [
-      "Forested ridges and valleys",
-      "Mountain streams and trails",
-      "Scenic overlooks",
-      "Open views in Cades Cove"
+      "Cades Cove Loop at first light",
+      "Newfound Gap and Kuwohi on the state line",
+      "Elk in the Oconaluftee and Cataloochee fields",
+      "Three waterfalls on the Deep Creek loop"
     ],
     "dayPlan": {
-      "morning": "Start with a scenic drive or a short walk near a stream to enjoy the calm forest setting. Take your time noticing the layers of trees and hills.",
-      "afternoon": "Visit Cades Cove or another valley area for open views and wildlife watching. Stop at pullouts to appreciate the surrounding ridges.",
-      "evening": "Choose a quiet overlook or riverside spot as the day cools. Enjoy the softer light and slower pace before heading out."
+      "morning": "Buy a parking tag before you drive in, then start at Sugarlands or Oconaluftee visitor center for current closures. Drive Newfound Gap Road up to the state line overlook while the air is clear.",
+      "afternoon": "In season, add Kuwohi or the Roaring Fork loop. Year-round, walk Little River Trail from Elkmont to Huskey Branch Falls, which the park suggests while Laurel Falls is closed.",
+      "evening": "On the North Carolina side, watch for elk in the fields by Oconaluftee as the light drops. On the Tennessee side, drive back through Little River Road and keep clear of bear jams."
     },
     "bestFor": [
       "Scenic drives",
-      "Forest walks",
-      "Wildlife watching"
+      "Waterfall walks",
+      "Wildlife at dusk"
     ],
-    "seasonNote": "Weather and visibility can vary across ridges and valleys throughout the year. Bring layers so you can adjust to changing conditions.",
-    "tip": "Allow extra time for slower roads and unplanned stops so you can enjoy the landscape without feeling rushed."
+    "seasonNote": "Open all year, but Kuwohi Road and Roaring Fork close on Nov. 29 and reopen in spring. Newfound Gap Road can close for ice in winter. Check the seasonal road table below before you set a day.",
+    "tip": "Laurel Falls Trail is closed until 2027. If an older guide sends you there, go to Huskey Branch Falls, Deep Creek or Hen Wallow Falls instead."
   },
   "guadalupe-mountains": {
     "summary": "Guadalupe Mountains National Park in Texas protects rugged desert mountains, canyon corridors, and high limestone ridges. You can hike into shaded canyons, look up at Guadalupe Peak, and explore trails that reveal the area’s geologic character.",

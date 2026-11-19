@@ -808,3 +808,85 @@ details.disclosure[open] summary { margin-bottom: 10px; }
 .official-note p { margin: 0 0 8px; }
 .official-note ul { margin: 6px 0 0; padding-left: 1.1em; }
 .official-note li { margin: 3px 0; }
+
+/* --------------------------------------------------------------------------
+   Trust labels and flagship facts
+   -------------------------------------------------------------------------- */
+.trust {
+  display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
+  padding: 2px 7px; border-radius: 999px; margin-right: 8px; vertical-align: 1px; border: 1px solid;
+}
+.trust--official { color: var(--pine); border-color: color-mix(in srgb, var(--pine) 45%, transparent); background: var(--pine-soft); }
+.trust--approx { color: var(--clay-deep); border-color: color-mix(in srgb, var(--clay) 45%, transparent); background: color-mix(in srgb, var(--clay) 8%, var(--white)); }
+.fact-list { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 10px; }
+.fact-list li { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px 14px; font-size: 15px; }
+.flagship h3 { margin-bottom: 4px; }
+
+/* --------------------------------------------------------------------------
+   Itineraries
+   -------------------------------------------------------------------------- */
+.itin-card { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+.itin-card-media img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.itin-card-body { padding: 18px 20px 20px; }
+.itin-card-body h3 { margin: 6px 0 8px; }
+.hero-credit { margin-top: 14px; font-size: 12px; color: rgba(247, 243, 234, .7); }
+
+.itin-map { margin: 14px 0 0; max-width: 820px; }
+.itin-map svg { width: 100%; height: auto; display: block; }
+.map-bg { fill: var(--white); stroke: var(--line-strong); }
+.map-line { fill: none; stroke-width: 2.5; stroke-dasharray: 6 5; opacity: .85; }
+.map-town rect { fill: var(--ink); }
+.map-town text { font: 600 12px var(--sans); fill: var(--ink-soft); }
+.map-other { fill: var(--sand); }
+.map-stop circle { stroke: var(--white); stroke-width: 2.5; }
+.map-stop text { font: 700 12px var(--sans); fill: #fff; }
+.itin-map figcaption { margin-top: 12px; font-size: 14px; color: var(--ink-soft); }
+.itin-map figcaption p { font-size: 13px; color: var(--ink-faint); margin: 8px 0 0; }
+.map-legend { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+.map-key { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; vertical-align: -1px; }
+
+.itin-days { display: grid; gap: 48px; }
+.itin-day-head { border-left: 4px solid; padding-left: 14px; margin-bottom: 20px; }
+.itin-day-head h2 { margin: 4px 0 0; }
+.itin-stops { list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; }
+.itin-stop {
+  display: grid; grid-template-columns: 36px 1fr; gap: 14px;
+  background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 18px;
+}
+.itin-stop.has-photo { grid-template-columns: 36px 1fr minmax(200px, 300px); }
+.itin-num { width: 32px; height: 32px; border-radius: 50%; color: #fff; display: grid; place-items: center; font-weight: 700; }
+.itin-part { margin: 0; font-size: 12.5px; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-faint); }
+.itin-stop-body h3 { margin: 4px 0 6px; }
+.itin-stop-body > p { margin: 0 0 8px; }
+.itin-status { font-size: 13.5px; font-weight: 600; }
+.itin-status--open { color: var(--pine); }
+.itin-status--seasonal { color: var(--clay-deep); }
+.itin-status--live { color: #3f6f86; }
+.itin-swap { margin-top: 10px; font-size: 14.5px; }
+.itin-photo { margin: 0; }
+.itin-photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); display: block; }
+.itin-photo figcaption { font-size: 11.5px; color: var(--ink-faint); margin-top: 4px; }
+@media (max-width: 760px) {
+  .itin-stop, .itin-stop.has-photo { grid-template-columns: 32px 1fr; }
+  .itin-photo { grid-column: 1 / -1; }
+}
+
+/* Save as PDF: the browser print dialog, laid out for paper */
+@media print {
+  .nav, .site-footer, footer, dialog, .skip-link, .hero-actions, [data-chat-open], .nav-tools { display: none !important; }
+  body { background: #fff; }
+  .park-hero, .itin-hero { min-height: 0 !important; padding: 0 !important; color: var(--ink) !important; }
+  .park-hero .hero-media, .itin-hero .hero-media { position: static !important; height: 180px; overflow: hidden; }
+  .park-hero .hero-media::after, .itin-hero .hero-media::after { display: none !important; }
+  .park-hero *, .itin-hero * { color: var(--ink) !important; }
+  .section { padding: 14px 0 !important; }
+  .itin-stop { break-inside: avoid; box-shadow: none; }
+  .itin-day { break-before: auto; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 10px; color: #555; word-break: break-all; }
+}
+@media (max-width: 600px) {
+  .map-stop circle { r: 21px; }
+  .map-stop text { font-size: 20px; }
+  .map-town text { font-size: 19px; }
+  .map-town rect { transform-box: fill-box; transform-origin: center; transform: scale(1.5); }
+}
