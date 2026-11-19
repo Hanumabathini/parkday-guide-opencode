@@ -1,0 +1,102 @@
+{
+  "park": "yosemite",
+  "checked": "2026-11-19",
+  "est": "1890",
+  "tagline": "Granite walls, waterfalls and giant sequoias",
+  "airports": "Fresno (FAT) is the closest major airport",
+  "bestTime": [
+    { "icon": "flower", "when": "Apr to Jun", "text": "Waterfalls run highest with snowmelt. Glacier Point Road usually opens in May." },
+    { "icon": "sun", "when": "Jul to Sep", "text": "Every road usually open, but the valley is at its busiest. Arrive early on weekends." },
+    { "icon": "leaf", "when": "Oct to Nov", "text": "Quieter trails. Glacier Point and Tioga roads close with the first heavy snow." },
+    { "icon": "snow", "when": "Dec to Mar", "text": "Snow on the granite and a quiet valley. Mariposa Grove is reached on foot." }
+  ],
+  "highlights": [
+    { "photo": "falls", "label": "Yosemite Falls" },
+    { "photo": "dome", "label": "Granite domes" },
+    { "photo": "reflection", "label": "Mirror Lake" },
+    { "photo": "rainbow", "label": "Valley light" }
+  ],
+  "tips": [
+    "No vehicle reservation is needed in 2026. Arrive early on weekends and holidays, when valley parking fills.",
+    "Check current conditions the day before. Roads and campgrounds close with snow.",
+    "Half Dome cables are down for the season and Four Mile Trail is closed.",
+    "Store all food properly. Black bears are active in the valley.",
+    "Carry layers. Glacier Point is much colder than the valley floor."
+  ],
+  "sources": [
+    { "title": "NPS: Yosemite will not require vehicle reservations in 2026", "url": "https://www.nps.gov/yose/learn/news/yosemite-national-park-will-not-require-vehicle-reservations-in-2026.htm" },
+    { "title": "NPS: Yosemite current conditions (updated Nov 18, 2026)", "url": "https://www.nps.gov/yose/planyourvisit/conditions.htm" },
+    { "title": "NPS: Glacier Point", "url": "https://www.nps.gov/yose/planyourvisit/glacierpoint.htm" },
+    { "title": "NPS: Mariposa Grove of Giant Sequoias", "url": "https://www.nps.gov/yose/planyourvisit/mg.htm" },
+    { "title": "NPS: Tioga and Glacier Point roads", "url": "https://www.nps.gov/yose/planyourvisit/tioga.htm" }
+  ],
+  "photos": {
+    "dome": { "url": "https://www.nps.gov/common/uploads/structured_data/3C84CF74-1DD8-B71B-0B9C7FF83F7C68EB.jpg", "alt": "A granite dome with traces of snow.", "credit": "NPS / Cindy Jacoby", "source": "https://www.nps.gov/yose/index.htm" },
+    "falls": { "url": "https://www.nps.gov/common/uploads/structured_data/05383E91-AA28-2DDC-AB517507594F9FA6.jpg", "alt": "Upper Yosemite Fall and the Merced River in spring.", "credit": "NPS Photo", "source": "https://www.nps.gov/yose/index.htm" },
+    "reflection": { "url": "https://www.nps.gov/common/uploads/structured_data/3C84C3C0-1DD8-B71B-0BFF90B64283C3D8.jpg", "alt": "A granite mountain reflected in still water.", "credit": "NPS / Cindy Jacoby", "source": "https://www.nps.gov/yose/index.htm" },
+    "rainbow": { "url": "https://www.nps.gov/common/uploads/structured_data/3C84C6CF-1DD8-B71B-0B1C7CB883AA8FB1.jpg", "alt": "A rainbow over a granite mountain in the distance.", "credit": "NPS / Bob Roney", "source": "https://www.nps.gov/yose/index.htm" }
+  },
+  "places": {
+    "valley-village": { "name": "Yosemite Valley", "kind": "town", "lat": 37.7456, "lng": -119.5936 },
+    "el-portal": { "name": "El Portal", "kind": "town", "lat": 37.6746, "lng": -119.7832 },
+    "fish-camp": { "name": "Fish Camp", "kind": "town", "lat": 37.4783, "lng": -119.6390 },
+    "tunnel-view": { "name": "Tunnel View", "lat": 37.7156, "lng": -119.6773 },
+    "bridalveil": { "name": "Bridalveil Fall", "lat": 37.7166, "lng": -119.6466 },
+    "el-cap-meadow": { "name": "El Capitan Meadow", "lat": 37.7232, "lng": -119.6216 },
+    "lower-falls": { "name": "Lower Yosemite Fall", "lat": 37.7485, "lng": -119.5965 },
+    "visitor-center": { "name": "Yosemite Valley Visitor Center", "lat": 37.7489, "lng": -119.5872 },
+    "glacier-point": { "name": "Glacier Point", "lat": 37.7307, "lng": -119.5735 },
+    "mirror-lake": { "name": "Mirror Lake", "lat": 37.7466, "lng": -119.5523 },
+    "mariposa-grove": { "name": "Mariposa Grove", "lat": 37.5136, "lng": -119.6018 },
+    "wawona": { "name": "Wawona", "lat": 37.5374, "lng": -119.6555 }
+  },
+  "itineraries": [
+    {
+      "slug": "yosemite-three-days",
+      "title": "Three days in Yosemite",
+      "days": 3,
+      "base": "Yosemite Valley, El Portal or Mariposa",
+      "baseTown": "mariposa-ca",
+      "photo": "falls",
+      "activity": "Moderate",
+      "tags": ["Granite cliffs", "Waterfalls", "Giant sequoias"],
+      "summary": "The valley floor on day one, the view down from Glacier Point on day two, and the giant sequoias of Mariposa Grove on the way out.",
+      "bestFor": ["Nature", "Photography", "Families"],
+      "season": "Glacier Point Road is usually open from May to November and is closed now for winter. Mariposa Grove's shuttle runs about late April through November. Winter swaps are given for both.",
+      "plan": [
+        {
+          "label": "Day 1",
+          "theme": "Yosemite Valley icons",
+          "subtitle": "The classic valley view, two waterfalls and El Capitan",
+          "photo": "falls",
+          "stops": [
+            { "place": "tunnel-view", "icon": "camera", "photo": "dome", "part": "Arrive", "text": "Stop at Tunnel View as you come in on Wawona Road for the first look down the valley to El Capitan and Half Dome.", "status": "Open year-round" },
+            { "place": "bridalveil", "icon": "waterfall", "part": "Late morning", "text": "Walk the short paved path to the base of Bridalveil Fall. Expect spray in spring.", "status": "Open year-round" },
+            { "place": "el-cap-meadow", "icon": "binoculars", "part": "Afternoon", "text": "Pull over at El Capitan Meadow and look for climbers on the wall.", "status": "Open year-round" },
+            { "place": "lower-falls", "icon": "waterfall", "photo": "falls", "part": "Late afternoon", "text": "Take the easy loop to the base of Lower Yosemite Fall, then stop at the Valley Visitor Center for maps and exhibits.", "status": "Open year-round. Flow is lowest in late summer and fall." }
+          ]
+        },
+        {
+          "label": "Day 2",
+          "theme": "The view from above",
+          "subtitle": "Glacier Point, then a still-water walk on the valley floor",
+          "photo": "rainbow",
+          "stops": [
+            { "place": "glacier-point", "icon": "binoculars", "photo": "rainbow", "part": "Morning", "text": "Drive up Glacier Point Road to the overlook above the valley, facing Half Dome and the falls on the Merced River.", "status": "Road usually open May to November. Closed now for the season.", "seasonal": true, "swap": "When the road is closed, take the free valley shuttle or drive the valley loop and stop at each meadow pullout instead." },
+            { "place": "mirror-lake", "icon": "hike", "photo": "reflection", "part": "Afternoon", "text": "Walk the flat path to Mirror Lake below Half Dome. The water is highest in spring and can be a dry meadow by late summer.", "status": "Open year-round" }
+          ]
+        },
+        {
+          "label": "Day 3",
+          "theme": "Giant sequoias and departure",
+          "subtitle": "Mariposa Grove and the south side of the park",
+          "photo": "dome",
+          "stops": [
+            { "place": "mariposa-grove", "icon": "tree", "part": "Morning", "text": "Ride the free shuttle from the welcome plaza near the South Entrance and walk among the giant sequoias.", "status": "Shuttle about late April through November", "seasonal": true, "swap": "With no shuttle (December to at least mid-April), the park says the grove is a walk of about two miles each way on the Washburn Trail or the grove road." },
+            { "place": "wawona", "icon": "flag", "part": "Departure", "text": "Leave by the South Entrance toward Fish Camp and Oakhurst.", "status": "Wawona Road open year-round, closes in heavy snow", "live": true }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "park": "zion",
+  "checked": "2026-11-19",
+  "est": "1919",
+  "tagline": "Red cliffs, the Virgin River and canyon trails",
+  "airports": "St. George (SGU) is closest; Las Vegas (LAS) has the most flights",
+  "bestTime": [
+    { "icon": "flower", "when": "Mar to May", "text": "Mild weather and the shuttle running daily. The Narrows can close when spring snowmelt runs high." },
+    { "icon": "sun", "when": "Jun to Aug", "text": "Very hot afternoons and flash-flood season. Hike early and carry water." },
+    { "icon": "leaf", "when": "Sep to Nov", "text": "Pleasant temperatures and fall color along the river. The shuttle runs through late November." },
+    { "icon": "snow", "when": "Dec to Feb", "text": "Quiet and cool. With no shuttle on many winter days you can drive the canyon road." }
+  ],
+  "highlights": [
+    { "photo": "narrows", "label": "The Narrows" },
+    { "photo": "watchman", "label": "Sandstone peaks" },
+    { "photo": "overlook", "label": "Canyon Overlook" },
+    { "photo": "sunset", "label": "Canyon sunset" }
+  ],
+  "tips": [
+    "In shuttle season you cannot drive Zion Canyon Scenic Drive. Ride the free shuttle; no ticket is needed.",
+    "Angels Landing needs a permit from the lottery. You can hike to Scout Lookout without one.",
+    "The Narrows closes when the river runs above 150 cubic feet per second or during a flash flood warning.",
+    "Large vehicles are barred from the Zion to Mount Carmel highway and tunnel since June 7, 2026.",
+    "Hidden Canyon is closed and the East Rim Trail is partly closed after a rockfall near Weeping Rock."
+  ],
+  "sources": [
+    { "title": "NPS: Zion Canyon shuttle system", "url": "https://www.nps.gov/zion/planyourvisit/zion-canyon-shuttle-system.htm" },
+    { "title": "NPS: Angels Landing permits", "url": "https://www.nps.gov/zion/planyourvisit/angels-landing-hiking-permits.htm" },
+    { "title": "NPS: Zion current conditions", "url": "https://www.nps.gov/zion/planyourvisit/conditions.htm" },
+    { "title": "NPS: Large vehicle restrictions on the Zion to Mount Carmel highway", "url": "https://www.nps.gov/zion/learn/news/2026-01-05-large-vehicles.htm" },
+    { "title": "NPS: Canyon Overlook Trail", "url": "https://www.nps.gov/thingstodo/hike-canyon-overlook.htm" }
+  ],
+  "photos": {
+    "watchman": { "url": "https://www.nps.gov/common/uploads/structured_data/68BFC1AC-BF96-629F-89D261D78F181C64.jpg", "alt": "A triangular sandstone peak above green and yellow foliage under a cloudy sky.", "credit": "NPS Photo / Shane Carte", "source": "https://www.nps.gov/zion/index.htm" },
+    "sunset": { "url": "https://www.nps.gov/common/uploads/structured_data/69162F54-D4AF-8695-A42F97A8F9774C19.jpg", "alt": "The sun setting behind tall red and white sandstone towers.", "credit": "NPS Photo / Jesse Nelson", "source": "https://www.nps.gov/zion/index.htm" },
+    "lodge": { "url": "https://www.nps.gov/common/uploads/structured_data/68D46E7D-A116-A443-ABA04AD1DD785208.jpg", "alt": "A sandstone and glass building among tall trees with a mountain behind it.", "credit": "NPS", "source": "https://www.nps.gov/zion/index.htm" },
+    "narrows": { "url": "https://www.nps.gov/common/uploads/structured_data/68ED8C2C-A9D3-90B2-BBC96E7A21BC3744.jpg", "alt": "Tall red sandstone walls closing in around a narrow river.", "credit": "NPS", "source": "https://www.nps.gov/zion/index.htm" },
+    "riverside": { "url": "https://www.nps.gov/common/uploads/cropped_image/primary/E187F7C6-9E0B-2F5A-129B7F885F29A4D7.jpg?width=1300&quality=90&mode=crop", "alt": "Two hikers on a sandy trail lined with a wooden rail and fall leaves on the Riverside Walk.", "credit": "NPS / Abi Farish", "source": "https://www.nps.gov/thingstodo/hike-riverside-walk.htm" },
+    "overlook": { "url": "https://www.nps.gov/common/uploads/cropped_image/primary/EB34DB47-9EBF-94FA-749C688629AD3876.jpg?width=1300&quality=90&mode=crop", "alt": "Red sandstone slickrock with green plants and mountains behind, at the end of the Canyon Overlook Trail.", "credit": "NPS / Daren Reehl", "source": "https://www.nps.gov/thingstodo/hike-canyon-overlook.htm" },
+    "parus": { "url": "https://www.nps.gov/common/uploads/cropped_image/primary/B9496B9A-01B7-0AB1-0D8BA0A554D4B4EA.jpg?width=1300&quality=90&mode=crop", "alt": "The paved Pa'rus Trail running through yellow grass toward a triangular sandstone peak.", "credit": "NPS", "source": "https://www.nps.gov/thingstodo/hike-pa-rus-trail.htm" }
+  },
+  "places": {
+    "springdale": { "name": "Springdale", "kind": "town", "lat": 37.1889, "lng": -112.9986 },
+    "visitor-center": { "name": "Zion Canyon Visitor Center", "lat": 37.2004, "lng": -112.9874 },
+    "parus": { "name": "Pa'rus Trail", "lat": 37.2065, "lng": -112.9815 },
+    "patriarchs": { "name": "Court of the Patriarchs", "lat": 37.2269, "lng": -112.9606 },
+    "canyon-junction": { "name": "Canyon Junction", "lat": 37.2135, "lng": -112.9757 },
+    "temple": { "name": "Temple of Sinawava and Riverside Walk", "lat": 37.2851, "lng": -112.9478 },
+    "narrows": { "name": "The Narrows", "lat": 37.298, "lng": -112.947 },
+    "grotto": { "name": "The Grotto to Scout Lookout", "lat": 37.2595, "lng": -112.951 },
+    "lodge": { "name": "Zion Lodge", "lat": 37.2509, "lng": -112.9573 },
+    "overlook": { "name": "Canyon Overlook Trail", "lat": 37.2133, "lng": -112.9408 },
+    "checkerboard": { "name": "Checkerboard Mesa", "lat": 37.2265, "lng": -112.8826 }
+  },
+  "itineraries": [
+    {
+      "slug": "zion-three-days",
+      "title": "Three days in Zion",
+      "days": 3,
+      "base": "Springdale",
+      "baseTown": "springdale-ut",
+      "photo": "watchman",
+      "activity": "Moderate to challenging",
+      "tags": ["Sandstone walls", "Virgin River", "Canyon trails"],
+      "summary": "Get oriented on the canyon floor on day one, walk into the Narrows and up to Scout Lookout on day two, and drive the east side through the tunnel on day three.",
+      "bestFor": ["Hikers", "Nature lovers", "Photographers"],
+      "season": "The canyon shuttle runs daily from about March through late November; in 2026 there is no service from Nov. 29 to Dec. 25, when you can drive the canyon road. Day two depends on river flow and, for the chains, a permit.",
+      "plan": [
+        {
+          "label": "Day 1",
+          "theme": "Into the canyon",
+          "subtitle": "Orientation, an easy river trail and the patriarchs",
+          "photo": "parus",
+          "stops": [
+            { "place": "springdale", "icon": "car", "part": "Arrive", "text": "Check in and park in Springdale or at the visitor center. Lots inside the park fill early.", "status": "Gateway town" },
+            { "place": "visitor-center", "icon": "info", "part": "Afternoon", "text": "Pick up a map and check river and trail conditions before you plan day two.", "status": "Open year-round" },
+            { "place": "parus", "icon": "hike", "photo": "parus", "part": "Late afternoon", "text": "Walk the paved Pa'rus Trail along the Virgin River. It is the one Zion trail open to leashed pets and bikes.", "status": "Open year-round" },
+            { "place": "patriarchs", "icon": "bus", "part": "Sunset", "text": "Ride the shuttle to the Court of the Patriarchs viewpoint, then stop at Canyon Junction for evening light on the cliffs.", "status": "Shuttle season: no private cars on the canyon road", "seasonal": true, "swap": "On days with no shuttle service, drive the canyon road and park at the viewpoint pullouts." }
+          ]
+        },
+        {
+          "label": "Day 2",
+          "theme": "River and rim trails",
+          "subtitle": "The Riverside Walk, the Narrows and Scout Lookout",
+          "photo": "narrows",
+          "stops": [
+            { "place": "temple", "icon": "hike", "photo": "riverside", "part": "Early morning", "text": "Take the first shuttle to the Temple of Sinawava and walk the easy Riverside Walk to where the trail meets the river.", "status": "Open year-round" },
+            { "place": "narrows", "icon": "river", "photo": "narrows", "part": "Morning", "text": "If conditions allow, wade upstream into the Narrows as far as you are comfortable and turn back well before you tire.", "status": "Closes above 150 cubic feet per second or during a flash flood warning", "live": true },
+            { "place": "grotto", "icon": "mountain", "part": "Afternoon", "text": "From the Grotto, climb the West Rim Trail to Scout Lookout. Continuing onto the Angels Landing chains needs a lottery permit.", "status": "Scout Lookout: no permit. Angels Landing: permit required." },
+            { "place": "lodge", "icon": "cabin", "photo": "lodge", "part": "Evening", "text": "Rest on the lawn at Zion Lodge before the shuttle back to Springdale.", "status": "Open year-round" }
+          ]
+        },
+        {
+          "label": "Day 3",
+          "theme": "The east side",
+          "subtitle": "The tunnel, Canyon Overlook and the slickrock country",
+          "photo": "overlook",
+          "stops": [
+            { "place": "canyon-junction", "icon": "car", "part": "Early morning", "text": "Drive the switchbacks of the Zion to Mount Carmel highway and through the tunnel. Large vehicles are not allowed on this road.", "status": "Open, closes for snow, ice or rockfall", "live": true },
+            { "place": "overlook", "icon": "camera", "photo": "overlook", "part": "Morning", "text": "Hike the short Canyon Overlook Trail just past the tunnel. Parking is very limited, so go early and be ready to circle back.", "status": "Open year-round" },
+            { "place": "checkerboard", "icon": "mountain", "photo": "sunset", "part": "Departure", "text": "Continue to the cross-hatched sandstone of Checkerboard Mesa near the East Entrance, then head home.", "status": "Open year-round" }
+          ]
+        }
+      ]
+    }
+  ]
+}

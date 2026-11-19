@@ -256,7 +256,14 @@ const officialNotes = readJson(path.join(ROOT, "data", "official-notes.json"), {
 const flagship = readDirJson(path.join(ROOT, "data", "flagship"), { byFile: true });
 const itineraryFiles = readDirJson(path.join(ROOT, "content", "itineraries"), { byFile: true });
 const itineraries = Object.values(itineraryFiles).flatMap((f) =>
-  (f.itineraries || []).map((it) => ({ ...it, parkId: f.park, photos: f.photos || {}, places: f.places || {}, checked: f.checked })),
+  (f.itineraries || []).map((it) => ({
+    ...it,
+    parkId: f.park,
+    photos: f.photos || {},
+    places: f.places || {},
+    checked: f.checked,
+    park: { est: f.est, tagline: f.tagline, airports: f.airports, bestTime: f.bestTime || [], highlights: f.highlights || [], tips: f.tips || [], sources: f.sources || [] },
+  })),
 );
 const itinerariesByPark = new Map();
 for (const it of itineraries) {
@@ -660,11 +667,19 @@ function itineraryMap(it, { compact = false } = {}) {
   const padLat = Math.max(0.035, (Math.max(...lats) - Math.min(...lats)) * 0.18);
   const padLng = Math.max(0.05, (Math.max(...lngs) - Math.min(...lngs)) * 0.12);
   const minLat = Math.min(...lats) - padLat, maxLat = Math.max(...lats) + padLat;
-  const minLng = Math.min(...lngs) - padLng, maxLng = Math.max(...lngs) + padLng;
+  let minLng = Math.min(...lngs) - padLng, maxLng = Math.max(...lngs) + padLng;
+  // Keep maps landscape: widen the longitude span when a park runs north to south.
+  const kk = Math.cos(((minLat + maxLat) / 2) * Math.PI / 180);
+  const needLng = (maxLat - minLat) / (0.72 * kk);
+  if (maxLng - minLng < needLng) {
+    const mid = (minLng + maxLng) / 2;
+    minLng = mid - needLng / 2;
+    maxLng = mid + needLng / 2;
+  }
   const inside = (p) => p.lat >= minLat && p.lat <= maxLat && p.lng >= minLng && p.lng <= maxLng;
   const k = Math.cos(((minLat + maxLat) / 2) * Math.PI / 180);
   const W = 480;
-  const H = Math.max(200, Math.round((W * (maxLat - minLat)) / ((maxLng - minLng) * k)));
+  const H = Math.max(240, Math.round((W * (maxLat - minLat)) / ((maxLng - minLng) * k)));
   const r1 = (v) => Math.round(v * 10) / 10;
   const x = (lng) => r1(((lng - minLng) / (maxLng - minLng)) * W);
   const y = (lat) => r1(((maxLat - lat) / (maxLat - minLat)) * H);
@@ -685,7 +700,7 @@ function itineraryMap(it, { compact = false } = {}) {
   const used = new Set(it.plan.flatMap((d) => d.stops.map((s) => s.place)));
 
   const towns = Object.entries(it.places)
-    .filter(([, p]) => p.kind === "town" && inside(p))
+    .filter(([id, p]) => p.kind === "town" && inside(p) && !used.has(id))
     .map(([, p]) => `<g class="map-town"><rect x="${r1(x(p.lng) - 5)}" y="${r1(y(p.lat) - 5)}" width="10" height="10" rx="2"/><text x="${r1(x(p.lng) + 9)}" y="${r1(y(p.lat) + 4.5)}" text-anchor="start">${esc(p.name)}</text></g>`)
     .join("");
   const others = Object.entries(it.places)
@@ -760,110 +775,221 @@ function itinerarySection(p) {
   </section>`;
 }
 
+/* ---------- Itinerary poster page ---------- */
+/* Layout follows the Parkday "National Parks series" poster: parchment panels,
+   torn photo edges, polaroid day photos and icon timelines. Every photo is a
+   real NPS photograph with its credit; no logos or generated scenes. */
+
+const ICON_PATHS = {
+  car: '<path d="M5 17h14M6 17l1.4-5.2A2 2 0 0 1 9.3 10h5.4a2 2 0 0 1 1.9 1.8L18 17"/><circle cx="8" cy="17.5" r="1.6"/><circle cx="16" cy="17.5" r="1.6"/><path d="M4 17v-2.5M20 17v-2.5"/>',
+  info: '<path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/><path d="M12 9.5v.01"/>',
+  mountain: '<path d="M3 19l6.5-11 4 6.5 2.5-3.5L21 19z"/><path d="M8 11.5l1.5 1 1.5-1"/>',
+  sunset: '<path d="M3 18h18M6.3 14a5.7 5.7 0 0 1 11.4 0"/><path d="M12 4v3M5 7.5l1.8 1.8M19 7.5l-1.8 1.8M8 21h8"/>',
+  hike: '<circle cx="13" cy="4.5" r="1.6"/><path d="M11 21l1.5-6 2.5 2.5V21M10 12l2-4 3 2 2 1M9 9l-1 4M17 11v10"/>',
+  waterfall: '<path d="M4 5h16M7 5v9M12 5v12M17 5v9"/><path d="M4 20c2-1.5 4-1.5 6 0s4 1.5 6 0 3-1 4-.5"/>',
+  cabin: '<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5M5 14h4M15 14h4"/>',
+  deer: '<path d="M8 3l1 3-2 1M16 3l-1 3 2 1M9 6.5h6l-1 4h-4z"/><path d="M10 10.5L8 21M14 10.5l2 10.5M10 14h4"/>',
+  camera: '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8.5 7l1.5-3h4l1.5 3"/><circle cx="12" cy="13.5" r="3.5"/>',
+  bus: '<rect x="5" y="3" width="14" height="15" rx="2"/><path d="M5 11h14M8 21v-3M16 21v-3"/><circle cx="8.5" cy="14.5" r=".8"/><circle cx="15.5" cy="14.5" r=".8"/>',
+  binoculars: '<circle cx="7" cy="15" r="4"/><circle cx="17" cy="15" r="4"/><path d="M9 11l1-6h4l1 6M11 15h2"/>',
+  tree: '<path d="M12 3l5 7h-3l4 6H6l4-6H7z"/><path d="M12 16v5"/>',
+  flag: '<path d="M5 21V4M5 4h11l-2 3.5 2 3.5H5"/>',
+  river: '<path d="M3 7c3-2 6 2 9 0s6 2 9 0M3 12c3-2 6 2 9 0s6 2 9 0M3 17c3-2 6 2 9 0s6 2 9 0"/>',
+  mill: '<circle cx="15" cy="13" r="6"/><path d="M15 7v12M9 13h12M10.8 8.8l8.4 8.4M19.2 8.8l-8.4 8.4"/><path d="M3 21V11h6"/>',
+  calendar: '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
+  level: '<path d="M5 20v-4M10 20v-8M15 20v-12M20 20V4"/>',
+  people: '<circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M15.5 14.4c2.9-.6 5.5 1.6 5.5 4.6"/>',
+  bed: '<path d="M3 18V7M3 13h18v5M21 18v-3a3 3 0 0 0-3-3h-7v1"/><circle cx="7" cy="10.5" r="1.8"/>',
+  plane: '<path d="M2 15l20-7-3 9-6-2-3 4-1-5z"/>',
+  flower: '<circle cx="12" cy="9" r="2.2"/><path d="M12 6.8c0-2.5 3-2.5 3 0s-1.5 2.2-3 2.2M12 6.8c0-2.5-3-2.5-3 0s1.5 2.2 3 2.2M9.8 9c-2.5 0-2.5 3 0 3M14.2 9c2.5 0 2.5 3 0 3M12 11.2V21M12 17c-2 0-3.5-1-4-3M12 17c2 0 3.5-1 4-3"/>',
+  sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
+  leaf: '<path d="M5 19C5 10 11 5 20 4c-1 9-6 15-15 15z"/><path d="M5 19l8-8"/>',
+  snow: '<path d="M12 2v20M3.3 7l17.4 10M3.3 17L20.7 7"/><path d="M9.5 4l2.5 2 2.5-2M9.5 20l2.5-2 2.5 2"/>',
+  check: '<path d="M4 12.5l5 5L20 6.5"/>',
+  pin: '<path d="M12 21s-7-6.5-7-11.5a7 7 0 0 1 14 0C19 14.5 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/>',
+  compass: '<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/>',
+};
+
+function icon(name, cls = "") {
+  const d = ICON_PATHS[name] || ICON_PATHS.pin;
+  return `<svg class="ico ${cls}" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
+}
+
+function polaroid(ph, { label = "", tilt = 0, eager = false, cls = "" } = {}) {
+  if (!ph) return "";
+  return `<figure class="polaroid ${cls}" style="--tilt:${tilt}deg">
+    <img src="${esc(ph.url)}" alt="${esc(ph.alt)}" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} />
+    ${label ? `<figcaption class="polaroid-label">${esc(label)}</figcaption>` : ""}
+    <span class="photo-credit">${esc(ph.credit)}</span>
+  </figure>`;
+}
+
 function pageItinerary(it) {
   const p = byId.get(it.parkId);
+  const meta = it.park;
   const hero = it.photos[it.photo];
   const note = officialNotes[it.parkId];
   const baseTown = towns.find((t) => t.id === it.baseTown);
+  const dayWord = `${it.days}-DAY`;
+  const sideA = it.plan[1]?.photo ? it.photos[it.plan[1].photo] : null;
+  const sideB = it.plan[2]?.photo ? it.photos[it.plan[2].photo] : it.plan[0]?.photo ? it.photos[it.plan[0].photo] : null;
+
   let n = 0;
-  const days = it.plan
-    .map(
-      (day, di) => `
-      <section class="itin-day" aria-labelledby="day-${di}">
-        <header class="itin-day-head" style="border-color:${DAY_COLORS[di % DAY_COLORS.length]}">
-          <p class="eyebrow" style="margin:0">${esc(day.label)}</p>
-          <h2 id="day-${di}">${esc(day.theme)}</h2>
+  const dayCards = it.plan
+    .map((day, di) => {
+      const dph = day.photo ? it.photos[day.photo] : null;
+      return `
+      <article class="day-card paper" aria-labelledby="day-${di}">
+        <header class="day-card-head">
+          <span class="day-tab"><small>Day</small>${String(di + 1).padStart(2, "0")}</span>
+          <div>
+            <h3 id="day-${di}">${esc(day.theme)}</h3>
+            ${day.subtitle ? `<p class="day-sub">${esc(day.subtitle)}</p>` : ""}
+          </div>
         </header>
-        <ol class="itin-stops">
-          ${day.stops
-            .map((s) => {
-              const place = it.places[s.place];
-              const ph = s.photo ? it.photos[s.photo] : null;
-              const tone = s.seasonal ? "seasonal" : s.live ? "live" : "open";
-              return `
-          <li class="itin-stop${ph ? " has-photo" : ""}">
-            <span class="itin-num" style="background:${DAY_COLORS[di % DAY_COLORS.length]}">${++n}</span>
-            <div class="itin-stop-body">
-              <p class="itin-part">${esc(s.part)}</p>
-              <h3>${esc(place?.name || s.place)}</h3>
-              <p>${esc(s.text)}</p>
-              <p class="itin-status itin-status--${tone}">${esc(s.status)}${s.live ? " · check conditions on the day" : ""}</p>
-              ${s.swap ? `<div class="callout itin-swap"><strong>Winter swap</strong>${esc(s.swap)}</div>` : ""}
-            </div>
-            ${photoFigure(ph)}
-          </li>`;
-            })
-            .join("")}
-        </ol>
-      </section>`,
-    )
+        <div class="day-card-body">
+          <ol class="timeline">
+            ${day.stops
+              .map((s) => {
+                n++;
+                const place = it.places[s.place];
+                const sph = s.photo && s.photo !== day.photo ? it.photos[s.photo] : null;
+                const tone = s.seasonal ? "seasonal" : s.live ? "live" : "open";
+                return `<li class="tl-stop">
+                  <span class="tl-icon">${icon(s.icon || "pin")}</span>
+                  <div class="tl-body">
+                    <p class="tl-part"><span class="tl-num">${n}</span>${esc(s.part)}</p>
+                    <h4>${esc(place?.name || s.place)}</h4>
+                    <p>${esc(s.text)}</p>
+                    <p class="tl-status tl-status--${tone}">${esc(s.status)}${s.live ? " · check conditions on the day" : ""}</p>
+                    ${s.swap ? `<p class="tl-swap">${icon("snow")}<span><strong>Winter swap.</strong> ${esc(s.swap)}</span></p>` : ""}
+                  </div>
+                  ${sph ? `<figure class="tl-thumb"><img src="${esc(sph.url)}" alt="${esc(sph.alt)}" loading="lazy" /><figcaption>${esc(sph.credit)}</figcaption></figure>` : ""}
+                </li>`;
+              })
+              .join("")}
+          </ol>
+          ${dph ? polaroid(dph, { tilt: di % 2 ? 2.5 : -2.5, cls: "day-photo" }) : ""}
+        </div>
+      </article>`;
+    })
     .join("");
 
+  const glance = [
+    ["calendar", "Duration", `${it.days} ${it.days === 1 ? "day" : `days / ${it.days - 1} ${it.days - 1 === 1 ? "night" : "nights"}`}`],
+    ["level", "Activity level", it.activity || "Varies"],
+    ["people", "Best for", it.bestFor.join(", ")],
+    ["bed", "Base", it.base],
+    ...(meta.airports ? [["plane", "Fly in", meta.airports]] : []),
+  ];
+
   const photoSources = [...new Set(Object.values(it.photos).map((ph) => ph.source))];
+  const sources = meta.sources.length ? meta.sources : flagship[it.parkId]?.sources || [];
+
   const body = `
-  <section class="park-hero itin-hero">
-    ${hero ? `<div class="hero-media"><img src="${esc(hero.url)}" alt="${esc(hero.alt)}" fetchpriority="high" /></div>` : ""}
-    <div class="wrap">
-      <div class="hero-inner">
-        <nav class="breadcrumbs" aria-label="Breadcrumb" style="color:rgba(247,243,234,.65)">
-          <a href="${url("itineraries/")}" style="color:rgba(247,243,234,.8)">Itineraries</a><span>/</span>
-          <a href="${url(`parks/${p.id}/`)}" style="color:rgba(247,243,234,.8)">${esc(p.name)}</a>
-        </nav>
-        <p class="eyebrow" style="color:rgba(247,243,234,.7)">${it.days} ${it.days === 1 ? "day" : "days"} · base: ${esc(it.base)}</p>
-        <h1>${esc(it.title)}</h1>
-        <p class="lede" style="max-width:62ch">${esc(it.summary)}</p>
-        <div class="hero-actions">
-          <button class="btn" type="button" data-print>Save as PDF</button>
-          <a class="btn btn--ghost" href="${url(`parks/${p.id}/#best-day`)}">Find the best day</a>
-        </div>
-        ${hero ? `<p class="hero-credit">Photo: ${esc(hero.credit)}</p>` : ""}
+  <div class="poster">
+    <section class="poster-head">
+      <div class="poster-hero">
+        ${hero ? `<img class="poster-hero-img" src="${esc(hero.url)}" alt="${esc(hero.alt)}" fetchpriority="high" />` : ""}
+        <span class="photo-credit photo-credit--hero">Photo: ${esc(hero?.credit || "")}</span>
       </div>
-    </div>
-  </section>
-
-  <section class="section section--tight">
-    <div class="wrap">
-      <div class="split">
-        <div>
-          <p class="eyebrow">Season</p>
-          <p class="lede" style="color:var(--ink)">${esc(it.season)}</p>
-          ${note ? `<div class="callout" style="margin-top:18px"><strong>${esc(note.title)}</strong>${esc(note.summary)}</div>` : ""}
-          ${baseTown ? `<p style="margin-top:18px">Where to stay: <a href="${url(`towns/${baseTown.id}/`)}">${esc(baseTown.name)}</a>. See all <a href="${url(`parks/${p.id}/#before-you-go`)}">${esc(p.name)} closures and seasonal roads</a>.</p>` : ""}
+      <div class="wrap poster-head-inner">
+        <div class="poster-title paper">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="${url("itineraries/")}">Itineraries</a><span>/</span><a href="${url(`parks/${p.id}/`)}">${esc(p.name)}</a>
+          </nav>
+          <p class="series">Parkday Guide · U.S. National Parks series</p>
+          <h1><span class="park-name">${esc(p.name)}</span><span class="np">National Park</span></h1>
+          <p class="poster-meta">${esc(p.stateNames.join(" · "))}${meta.est ? ` · Est. ${esc(meta.est)}` : ""}</p>
+          ${meta.tagline ? `<p class="script">${esc(meta.tagline)}</p>` : ""}
+          <p class="ribbon">${dayWord} travel itinerary</p>
+          <p class="itin-title-line">${esc(it.title)}</p>
+          <ul class="tag-strip">${(it.tags || []).map((t) => `<li>${esc(t)}</li>`).join("")}</ul>
+          <div class="poster-actions">
+            <button class="btn" type="button" data-print>Save as PDF</button>
+            <a class="btn btn--ghost" href="${url(`parks/${p.id}/#best-day`)}">Find the best day</a>
+          </div>
         </div>
-        <div>
-          <p class="eyebrow">Best for</p>
-          <ul class="chips">${it.bestFor.map((b) => `<li class="chip">${esc(b)}</li>`).join("")}</ul>
+        <div class="poster-collage" aria-hidden="true">
+          ${polaroid(sideA, { tilt: 4, cls: "collage-a" })}
+          ${polaroid(sideB, { tilt: -5, cls: "collage-b" })}
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section section--paper section--tight">
-    <div class="wrap">
-      <p class="eyebrow">The route</p>
-      ${itineraryMap(it)}
-    </div>
-  </section>
+    <section class="wrap poster-intro">
+      <p class="lede">${esc(it.summary)}</p>
+    </section>
 
-  <section class="section">
-    <div class="wrap itin-days">${days}</div>
-  </section>
+    <section class="wrap poster-grid">
+      <aside class="poster-side">
+        <div class="panel paper">
+          <h2 class="panel-tab panel-tab--green">Trip at a glance</h2>
+          <dl class="glance">${glance.map(([ic, k, v]) => `<div>${icon(ic)}<dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>
+          ${baseTown ? `<p class="panel-foot">Where to stay: <a href="${url(`towns/${baseTown.id}/`)}">${esc(baseTown.name)}</a></p>` : ""}
+        </div>
 
-  <section class="section section--paper">
-    <div class="wrap">
-      <p class="eyebrow">Sources</p>
-      <h2>What this plan is based on</h2>
-      <ul class="source-list">
-        ${(flagship[it.parkId]?.sources || []).map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)}</a></li>`).join("")}
-        ${photoSources.map((u) => `<li>Photos: <a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(u.replace(/^https:\/\//, ""))}</a></li>`).join("")}
-      </ul>
-      <p style="margin-top:18px;font-size:13.5px;color:var(--ink-faint)">Plan checked ${esc(it.checked)}. Closures and road dates come from the National Park Service and change often; times of day are suggestions, not schedules.</p>
-    </div>
-  </section>`;
+        ${
+          meta.bestTime.length
+            ? `<div class="panel paper">
+          <h2 class="panel-tab panel-tab--clay">Best time to visit</h2>
+          <ul class="best-time">${meta.bestTime.map((b) => `<li>${icon(b.icon, `ico--${b.icon}`)}<div><strong>${esc(b.when)}</strong><span>${esc(b.text)}</span></div></li>`).join("")}</ul>
+          <p class="panel-foot">${esc(it.season)}</p>
+        </div>`
+            : ""
+        }
+
+        <div class="panel paper">
+          <h2 class="panel-tab panel-tab--script">Travel tips</h2>
+          <ul class="tips">${meta.tips.map((t) => `<li>${icon("check")}<span>${esc(t)}</span></li>`).join("")}</ul>
+        </div>
+      </aside>
+
+      <div class="poster-days">
+        <div class="panel paper panel--map">
+          <h2 class="panel-tab panel-tab--script">${icon("compass")} Park explorer map</h2>
+          ${itineraryMap(it, { compact: true })}
+        </div>
+        <h2 class="days-banner">${dayWord} itinerary</h2>
+        ${dayCards}
+      </div>
+    </section>
+
+    ${
+      meta.highlights.length
+        ? `<section class="wrap highlights">
+      <h2 class="panel-tab panel-tab--green">${icon("binoculars")} Park highlights</h2>
+      <div class="highlight-strip">${meta.highlights.map((h, i) => polaroid(it.photos[h.photo], { label: h.label, tilt: [-3, 2, -1.5, 3][i % 4] })).join("")}</div>
+    </section>`
+        : ""
+    }
+
+    <section class="wrap tips-row">
+      <div class="panel paper">
+        <h2 class="panel-tab panel-tab--clay">Before you go</h2>
+        ${note ? `<p><strong>${esc(note.title)}.</strong> ${esc(note.summary)}</p>` : ""}
+        <p>Closures, road dates and permits change often. Check the <a href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">official ${esc(p.name)} page ↗</a> the day before you go.</p>
+        ${flagship[it.parkId] ? `<p><a href="${url(`parks/${p.id}/#before-you-go`)}">All ${esc(p.name)} closures and seasonal roads</a></p>` : ""}
+        <p class="panel-foot">Plan checked ${esc(it.checked)}. Times of day are suggestions, not schedules.</p>
+      </div>
+    </section>
+
+    <section class="wrap poster-sources">
+      <details class="disclosure"><summary>Sources and photo credits</summary>
+        <ul class="source-list">
+          ${sources.map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)}</a></li>`).join("")}
+          ${photoSources.map((u) => `<li>Photos: <a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(u.replace(/^https:\/\//, ""))}</a></li>`).join("")}
+        </ul>
+        <p style="font-size:13px;color:var(--ink-faint)">All photographs are National Park Service photographs, credited as published by the NPS. Map positions are approximate.</p>
+      </details>
+    </section>
+
+    <div class="poster-band"><span>Explore</span><span>Plan</span><span>Travel</span><span>Preserve</span></div>
+  </div>`;
 
   return layout({
     title: it.title,
-    description: clip(`${it.title}: a ${it.days}-day ${p.name} plan with photos, a stop map, winter swaps and a printable PDF. ${it.summary}`),
+    description: clip(`${it.title}: a ${it.days}-day ${p.name} itinerary with real NPS photos, a stop map, winter swaps and a printable PDF. ${it.summary}`),
     body,
     active: "Itineraries",
     canonical: `/itineraries/${it.slug}/`,
@@ -887,6 +1013,7 @@ function pageItinerary(it) {
   });
 }
 
+
 function pageItinerariesIndex() {
   const byPark = [...itinerariesByPark.entries()];
   const body = `
@@ -902,7 +1029,7 @@ function pageItinerariesIndex() {
           <div class="grid grid--3 mt-2">${list.map(itineraryCard).join("")}</div>`;
         })
         .join("")}
-      <div class="callout callout--pine" style="margin-top:40px"><strong>More parks next</strong>Great Smoky Mountains is the first park with full itineraries. Every other park page has a one-day plan and the best-day check.</div>
+      <div class="callout callout--pine" style="margin-top:40px"><strong>More parks next</strong>Great Smoky Mountains, Yosemite and Zion have full itineraries so far. Every other park page has a one-day plan and the best-day check.</div>
     </div>
   </section>`;
   return layout({
