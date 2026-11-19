@@ -1,8 +1,12 @@
 # Parkday Guide — OpenCode build
 
 Working repo for the Parkday Guide board, cloned from
-`Hanumabathini/parkday-guide-board` on 2026-11-19. Origin re-pointed to
-`Hanumabathini/parkday-guide-opencode` as the OpenCode build of the guide.
+`Hanumabathii/parkday-guide-board` on 2026-11-19. Origin re-pointed to
+`Hanumabathii/parkday-guide-opencode` as the OpenCode build of the guide.
+
+Published as a public repo on GitHub: `Hanumabathii/parkday-guide-opencode`
+([github.com/Hanumabathii/parkday-guide-opencode](https://github.com/Hanumabathini/parkday-guide-opencode)).
+Clone it from https://github.com/Hanumabathii/parkday-guide-opencode.
 
 ## What Parkday Guide is
 
