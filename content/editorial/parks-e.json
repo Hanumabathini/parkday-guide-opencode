@@ -1,0 +1,244 @@
+{
+  "national-park-of-american-samoa": {
+    "summary": "The National Park of American Samoa protects rainforest, coral reefs and shoreline on three islands in the South Pacific. Trails climb from the coast into forest, and reefs lie close to shore. Village life continues within and around the park, and the land is leased from Samoan landowners.",
+    "whyGo": "Come for a Pacific island park where reef, rainforest and village culture sit in the same small area, and where the crowds of the mainland parks are absent.",
+    "highlights": [
+      "Mount Alava trail",
+      "Ofu beach and reef",
+      "Tutuila rainforest",
+      "Polynesian village life"
+    ],
+    "dayPlan": {
+      "morning": "Walk the Mount Alava trail on Tutuila while the air is cool and the ridge is clear. The route climbs through forest and looks down on the harbor.",
+      "afternoon": "Spend time at a reef and shoreline area with a local guide, and keep to the places you are allowed to visit. Village land and reef areas have their own rules.",
+      "evening": "Return to your base and eat with the family or lodge you are staying with. The pace here is set by the island rather than by a park schedule."
+    },
+    "bestFor": [
+      "Reef snorkelers",
+      "Rainforest hikers",
+      "Culture-minded travelers"
+    ],
+    "seasonNote": "The islands are warm year round, with a wetter season from November to April. Flights and boat schedules are limited, so plan around them.",
+    "tip": "Ask before walking onto village land or into a reef area. A local guide will keep you within the places visitors are welcome and will explain the customs."
+  },
+  "new-river-gorge": {
+    "summary": "New River Gorge National Park and Preserve in southern West Virginia protects a deep river gorge and the forested plateau around it. The New River cuts north through the plateau, and rim roads and overlooks look down to the water. The park is known for whitewater, climbing and the bridge that spans the gorge.",
+    "whyGo": "Come for a river gorge you can see from the rim and then descend into, with rafting, climbing and quiet forest trails in one park.",
+    "highlights": [
+      "New River Gorge Bridge overlook",
+      "Grandview rim views",
+      "Sandstone Falls",
+      "River rafting section"
+    ],
+    "dayPlan": {
+      "morning": "Drive to the bridge overlook and take in the span from the rim. Continue to Grandview for a wider view of the river bend below.",
+      "afternoon": "Hike down to a river access or join a rafting trip if the water and season suit you. The climb back out is steep, so leave enough time and water.",
+      "evening": "Return to a rim overlook as the light drops into the gorge. The forested walls go dark early, and the river stays visible longer than you expect."
+    },
+    "bestFor": [
+      "Rafters",
+      "Rock climbers",
+      "Scenic drivers"
+    ],
+    "seasonNote": "Spring and fall bring comfortable weather and good water. Summer is warm and busy on the river, and winter is quiet with some closures.",
+    "tip": "The gorge is deep and the trails out are steep. Check the difficulty of any river access route before you start down."
+  },
+  "north-cascades": {
+    "summary": "North Cascades National Park in northern Washington protects a range of steep peaks, glaciers and deep valleys. A highway crosses the mountains past turquoise reservoirs, and trails lead into wilderness from the road. The park is close to Seattle yet feels remote once you leave the highway.",
+    "whyGo": "Come for glacier-fed lakes, sharp peaks and a wilderness that starts within a short walk of the road.",
+    "highlights": [
+      "Diablo Lake overlook",
+      "Cascade Pass trail",
+      "Washington Pass views",
+      "Ross Lake shoreline"
+    ],
+    "dayPlan": {
+      "morning": "Stop at the Diablo Lake overlook while the water holds its color. Drive on to Washington Pass for the view of the peaks and the road below.",
+      "afternoon": "Walk the Cascade Pass trail as far as your time and energy allow. The path climbs steadily and opens onto a wide view of the range.",
+      "evening": "Return to a lake shore or a quiet pullout for the last light. The road back is long, so start before the light goes."
+    },
+    "bestFor": [
+      "Alpine hikers",
+      "Wilderness seekers",
+      "Scenic drivers"
+    ],
+    "seasonNote": "Summer and early fall bring the clearest roads and open trails. Snow closes the high passes for much of the year, and services are limited.",
+    "tip": "Fuel and food are scarce along the highway. Fill up before you head into the mountains and carry what you need for the day."
+  },
+  "olympic": {
+    "summary": "Olympic National Park on Washington's Olympic Peninsula holds three distinct landscapes: temperate rainforest, alpine ridges and a wild coastline. Roads reach each of them, and the distances between are long. The Hoh and Quinault valleys are green and wet, while Hurricane Ridge looks out over glacier-covered peaks.",
+    "whyGo": "Come for a park where you can walk in rainforest in the morning and stand on a surf beach by evening, with alpine views in between if the weather allows.",
+    "highlights": [
+      "Hoh Rain Forest",
+      "Hurricane Ridge",
+      "Rialto Beach sea stacks",
+      "Lake Crescent"
+    ],
+    "dayPlan": {
+      "morning": "Go up to Hurricane Ridge first if the sky is clear, since the view is the reason to make the drive. Return to the valley before the afternoon clouds build.",
+      "afternoon": "Walk in the Hoh Rain Forest among moss-covered trees and along the river. The trail is level and the shade makes it comfortable in the rain or the sun.",
+      "evening": "Drive to Rialto Beach and walk toward the sea stacks as the light drops. Check the tide before you go, since the beach changes shape with the water."
+    },
+    "bestFor": [
+      "Rainforest walkers",
+      "Coastal hikers",
+      "Families"
+    ],
+    "seasonNote": "Summer is the driest season, though rain falls year round on the coast and in the rainforest. Hurricane Ridge road closes in winter and can be fogged in.",
+    "tip": "The park is large and the roads are slow. Pick one side of the peninsula for the day instead of trying to cross it twice."
+  },
+  "petrified-forest": {
+    "summary": "Petrified Forest National Park in eastern Arizona protects a high desert of badlands, petrified wood and ancient rock. The Painted Desert rim looks over banded hills, and trails cross mesa country where fallen trees have turned to stone. A road runs through the park from one entrance to the other.",
+    "whyGo": "Come for a road trip through banded desert and for the strange sight of tree trunks that are now stone, with short trails that suit a half day.",
+    "highlights": [
+      "Painted Desert rim",
+      "Blue Mesa badlands",
+      "Crystal Forest trail",
+      "Giant Logs"
+    ],
+    "dayPlan": {
+      "morning": "Enter from the north and stop at the Painted Desert rim while the light is low. The banded hills show their color best before the sun is high.",
+      "afternoon": "Walk the Blue Mesa loop and the Crystal Forest trail, where petrified logs lie across the ground. Stay on the trail, since the wood is protected.",
+      "evening": "Drive out through the south entrance as the light warms the badlands. The road is a through route, so you do not have to double back."
+    },
+    "bestFor": [
+      "Road-trip stops",
+      "Fossil and geology fans",
+      "Short walks"
+    ],
+    "seasonNote": "Spring and fall are the mildest seasons. Summer afternoons are hot and exposed, and winter brings cold wind but clear light.",
+    "tip": "Do not take petrified wood, even a small piece. It is protected, and the park checks vehicles at the exits."
+  },
+  "pinnacles": {
+    "summary": "Pinnacles National Park in central California protects a field of volcanic rock spires and talus caves. Trails climb through the formations, and the park is a release site for California condors. The landscape is dry in summer and green after winter rain.",
+    "whyGo": "Come for rock spires you can walk among, caves formed by fallen boulders, and a chance to see condors riding the thermals above the ridges.",
+    "highlights": [
+      "High Peaks Trail",
+      "Bear Gulch Cave",
+      "Condor watching",
+      "Balconies Cave"
+    ],
+    "dayPlan": {
+      "morning": "Start at Bear Gulch and walk through the cave if it is open, then climb toward the High Peaks. The rock steps are steep and the route can be narrow.",
+      "afternoon": "Continue along the High Peaks Trail and watch the sky for condors. The birds are large and hold their wings flat, which makes them easier to pick out.",
+      "evening": "Descend to the valley and drive out before dark. The roads are winding, and the nearest towns are some distance away."
+    },
+    "bestFor": [
+      "Rock scramblers",
+      "Condor watchers",
+      "Cave explorers"
+    ],
+    "seasonNote": "Winter and spring bring green hills and mild temperatures. Summer heat is severe, and cave access depends on closures for bats.",
+    "tip": "The caves flood in wet weather and close for bat protection at times. Check the status before you plan a route through them, and bring a flashlight."
+  },
+  "redwood": {
+    "summary": "Redwood National and State Parks in northern California protect old-growth coast redwood forest and a strip of coastline. Trees rise from fern-covered ground, and some groves stand near the ocean. The park is a partnership between the National Park Service and California State Parks.",
+    "whyGo": "Come to stand among very large trees in quiet groves, then to see where the forest meets the Pacific along the same stretch of coast.",
+    "highlights": [
+      "Stout Grove",
+      "Fern Canyon",
+      "Prairie Creek elk",
+      "Coastal Drive"
+    ],
+    "dayPlan": {
+      "morning": "Walk Stout Grove while the light is soft and the forest is quiet. The loop is short and the trees are the point, so take your time.",
+      "afternoon": "Drive to Fern Canyon and walk the streambed between fern-covered walls. The road in is gravel and may require a permit in season.",
+      "evening": "Follow the coast road to a beach or overlook as the light drops. Watch for elk in the prairie areas and keep a wide distance."
+    },
+    "bestFor": [
+      "Forest walkers",
+      "Photographers",
+      "Coastal hikers"
+    ],
+    "seasonNote": "Summer and early fall bring the driest weather. Rain is heavy in winter, and some gravel roads close.",
+    "tip": "Fern Canyon access often needs a permit and the road crosses a stream. Check the current conditions before you drive in."
+  },
+  "rocky-mountain": {
+    "summary": "Rocky Mountain National Park in north-central Colorado protects high mountain country along the Continental Divide. Trail Ridge Road climbs above treeline and crosses the park, while lower valleys hold lakes, meadows and forest. Elk, bighorn sheep and other wildlife live across the range.",
+    "whyGo": "Come for a road that climbs above treeline, for lake trails in the valleys, and for the chance to see elk in the meadows at dusk.",
+    "highlights": [
+      "Trail Ridge Road",
+      "Bear Lake and Dream Lake",
+      "Moraine Park meadow",
+      "Alpine overlooks"
+    ],
+    "dayPlan": {
+      "morning": "Take the Bear Lake shuttle or arrive early, then walk to Dream Lake through the forest. The trail is short and gains enough height for a wide view.",
+      "afternoon": "Drive Trail Ridge Road if it is open and stop at the alpine overlooks. The air is thin, so walk short distances and turn back if you feel lightheaded.",
+      "evening": "Return to Moraine Park and watch the meadow for elk as the light drops. Keep well back and use a long lens rather than approaching."
+    },
+    "bestFor": [
+      "Alpine hikers",
+      "Scenic drivers",
+      "Wildlife watchers"
+    ],
+    "seasonNote": "Summer and early fall bring open high roads. Trail Ridge Road closes in winter, and afternoon storms are common above treeline.",
+    "tip": "Bear Lake parking fills early. Use the shuttle from the park and ride, and carry rain gear even on a clear morning."
+  },
+  "saguaro": {
+    "summary": "Saguaro National Park in southern Arizona protects desert land on both sides of Tucson, where saguaro cacti stand among palo verde and rock. The two districts have separate roads and trails, one to the west and one to the east. Spring brings cactus flowers and desert birds.",
+    "whyGo": "Come for a desert forest of tall cacti, short trails that suit a half day, and sunsets that turn the whole slope gold.",
+    "highlights": [
+      "Saguaro forest at dawn",
+      "Cactus Forest Drive",
+      "Signal Hill petroglyphs",
+      "Desert sunset"
+    ],
+    "dayPlan": {
+      "morning": "Drive the Cactus Forest loop in the east district while the light is low and the desert is still cool. Stop for a short trail among the cacti.",
+      "afternoon": "Visit a petroglyph site or the west district for a different view of the same desert. Keep to the trails and give the cacti room.",
+      "evening": "Stay for sunset on a slope where the saguaros stand against the sky. The temperature drops quickly once the sun is gone, so bring a layer."
+    },
+    "bestFor": [
+      "Desert walks",
+      "Photographers",
+      "Winter visitors"
+    ],
+    "seasonNote": "Cooler months from late fall to early spring are easier for walking. Summer heat is extreme, and shade is scarce.",
+    "tip": "The two districts are on opposite sides of Tucson and are not connected inside the park. Choose one for the day."
+  },
+  "sequoia": {
+    "summary": "Sequoia National Park in California's southern Sierra Nevada protects giant sequoia groves and the high country above them. The General Sherman Tree stands in the Giant Forest, and trails pass through groves and meadows. A road climbs from the foothills into the forest and on toward the peaks.",
+    "whyGo": "Come to stand beside trees that are wider than a road, then to climb above the forest for views of the Sierra crest.",
+    "highlights": [
+      "General Sherman Tree",
+      "Moro Rock steps",
+      "Giant Forest trails",
+      "Crescent Meadow"
+    ],
+    "dayPlan": {
+      "morning": "Walk to the General Sherman Tree from the main parking area while the forest is cool. Continue on a grove trail to see how the trees grow among other conifers.",
+      "afternoon": "Climb the steps on Moro Rock for a wide view of the canyon and the high country. The staircase is steep and narrow in places, so take it at your own pace.",
+      "evening": "Walk into Crescent Meadow as the light softens and the forest goes quiet. Return before dark, since the roads are winding and wildlife crosses at dusk."
+    },
+    "bestFor": [
+      "Giant tree visitors",
+      "Families",
+      "Sierra hikers"
+    ],
+    "seasonNote": "Summer and early fall bring the clearest access to the forest and high trails. Winter snow closes some roads, and chains may be required.",
+    "tip": "The Generals Highway is steep and winding. Allow more driving time than the distance suggests, and check chain requirements in winter."
+  },
+  "shenandoah": {
+    "summary": "Shenandoah National Park in Virginia follows the Blue Ridge for more than a hundred miles, with Skyline Drive running along the crest. Overlooks look west into the Shenandoah Valley and east across the piedmont. Trails leave the drive for waterfalls, ridges and quiet forest.",
+    "whyGo": "Come for a ridge road with frequent overlooks, waterfall walks in the forest, and a park that works well for a day or a long weekend.",
+    "highlights": [
+      "Skyline Drive overlooks",
+      "Dark Hollow Falls",
+      "Old Rag summit",
+      "Shenandoah Valley views"
+    ],
+    "dayPlan": {
+      "morning": "Drive a section of Skyline Drive and stop at the overlooks while the valley is still in haze. Choose a waterfall trail for a short walk into the forest.",
+      "afternoon": "Take a longer ridge trail or the Old Rag route if you have the time and energy. Old Rag is a demanding scramble and needs a plan for the return.",
+      "evening": "Return to an overlook for sunset over the valley. The drive out is slow at dusk, so allow time for the distance."
+    },
+    "bestFor": [
+      "Ridge hikers",
+      "Fall foliage trips",
+      "Scenic drivers"
+    ],
+    "seasonNote": "Spring and fall are the busiest and most colorful seasons. Summer is green and humid, and winter can close parts of the drive.",
+    "tip": "Skyline Drive has a low speed limit and frequent curves. Plan for the drive to take longer than the mileage suggests, and watch for deer."
+  }
+}

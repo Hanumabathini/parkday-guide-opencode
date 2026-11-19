@@ -1,0 +1,244 @@
+{
+  "isle-royale": {
+    "summary": "Isle Royale National Park is a remote island in Lake Superior, off Michigan's Upper Peninsula. Thick forest, inland lakes, and rocky shoreline replace roads and crowds, while moose move through the trees and lighthouses mark the water. Dark, clear skies make nighttime feel like part of the trip.",
+    "whyGo": "You come for a quiet, self-reliant island trip: forest trails, still inland lakes, and shoreline that feels far from the mainland.",
+    "highlights": [
+      "Moose in northern forest",
+      "Rock of Ages Lighthouse",
+      "Quiet inland lakes",
+      "Dark skies and aurora"
+    ],
+    "dayPlan": {
+      "morning": "Start at Rock Harbor and walk the shoreline paths, watching for moose along the way. Pick a direction early; the island rewards a simple plan more than a packed one.",
+      "afternoon": "Cross the island by foot or paddle, following ridgelines and inland lakes. Keep food stored carefully and give wildlife plenty of room.",
+      "evening": "Return to camp as the light softens, then look up. With little light pollution, stars and sometimes the aurora fill the sky."
+    },
+    "bestFor": [
+      "Remote-trail hikers",
+      "Lake paddlers",
+      "Moose watchers"
+    ],
+    "seasonNote": "Isle Royale is a summer destination. Winter brings heavy snow and rough water, and the island sits quiet and largely inaccessible outside the warmer months.",
+    "tip": "Book your crossing early and pack for cold, wet weather; Lake Superior can change quickly."
+  },
+  "joshua-tree": {
+    "summary": "Joshua Tree National Park sits where the Mojave and Colorado deserts meet in southern California. Boulders pile into hidden valleys, Joshua trees stand in open stands, and rock climbers and hikers share the same weathered granite. Nights stay cool and the stars come out sharply.",
+    "whyGo": "You come for sculpted granite, twisted Joshua trees, and a desert sky that turns pink and purple after sunset.",
+    "highlights": [
+      "Hidden Valley boulders",
+      "Joshua tree stands",
+      "Jumbo Rocks at sunset",
+      "Wide desert night skies"
+    ],
+    "dayPlan": {
+      "morning": "Enter early and walk Hidden Valley while the rock is still cool. The boulder piles and short trails give you a feel for the park's desert texture.",
+      "afternoon": "Drive the park road to Jumbo Rocks and scramble among the granite. Pause at a pullout as the sun drops and the rock warms with color.",
+      "evening": "Stay after dark away from any lights. The desert night is clear, and the Milky Way often stretches over the boulders."
+    },
+    "bestFor": [
+      "Rock climbers",
+      "Desert hikers",
+      "Stargazers"
+    ],
+    "seasonNote": "Fall through spring brings mild days and steady light; summer heat can be intense, so plan hikes for early morning.",
+    "tip": "Carry more water than you expect and wear sun protection; the desert sun is strong."
+  },
+  "katmai": {
+    "summary": "Katmai National Park & Preserve covers volcanoes, lakes, and salmon streams on the Alaska Peninsula. Brown bears gather where salmon leap, especially at Brooks Falls, and the water draws them close to established viewing areas. The landscape still carries the marks of the 1912 Novarupta-Katmai eruption.",
+    "whyGo": "You come to watch brown bears fish for salmon, then to stand in a landscape shaped by volcanic eruption.",
+    "highlights": [
+      "Brown bears at Brooks Falls",
+      "Leaping sockeye salmon",
+      "Mount Katmai's caldera lake",
+      "Novarupta eruption landscape"
+    ],
+    "dayPlan": {
+      "morning": "Arrive at Brooks River as the light rises and watch bears work the falls. Keep a calm distance and follow ranger guidance while the salmon run.",
+      "afternoon": "Walk the valley or lakeside paths and read the volcanic terrain. Ash beds, craters, and quiet water show how recently the land was remade.",
+      "evening": "Return to the water as the day cools. Bears often keep fishing late, and the low light makes the scene feel even quieter."
+    },
+    "bestFor": [
+      "Bear watchers",
+      "Wildlife photographers",
+      "Volcanic-landscape hikers"
+    ],
+    "seasonNote": "July brings peak salmon runs, and bears gather along the rivers through midsummer. Weather shifts fast, so bring rain gear and warm layers.",
+    "tip": "Give bears plenty of space and follow ranger instructions; they set the distance for a reason."
+  },
+  "kenai-fjords": {
+    "summary": "Kenai Fjords National Park protects the coast where glaciers meet the Gulf of Alaska. Boat routes pass sheer rock walls and tidewater ice, while orcas and other marine life move through the water. Inland, the Harding Icefield spreads above the trees and feeds the valleys below.",
+    "whyGo": "You come for ice and ocean together: calving glaciers, deep fjords, and whales and seabirds along the coast.",
+    "highlights": [
+      "Harding Icefield views",
+      "Exit Glacier ranger walks",
+      "Orcas along the coast",
+      "Fjords carved by ice"
+    ],
+    "dayPlan": {
+      "morning": "Start at Exit Glacier for a ranger walk or a longer trail across the outwash. The ice and the marked retreat tell the story of the park in one stop.",
+      "afternoon": "Head to the water and join a boat route into the fjords. Watch for calving ice, puffins or other seabirds, and whales surfacing near the boat.",
+      "evening": "Return to the harbor and walk the shore as the light lingers. If the sky clears, the surrounding peaks hold snow long after sunset."
+    },
+    "bestFor": [
+      "Boat-based wildlife watchers",
+      "Glacier hikers",
+      "Photographers"
+    ],
+    "seasonNote": "June through August tends to bring milder weather and fuller services. Winter brings snow, and rough seas keep the coast quiet in the cold months.",
+    "tip": "Dress in warm layers and bring rain gear; the coast can feel much colder than the forecast suggests."
+  },
+  "kings-canyon": {
+    "summary": "Kings Canyon National Park is managed alongside Sequoia in California's southern Sierra Nevada. Glaciers cut a broad, steep-walled valley, and giant sequoias grow in shaded groves. Above the forest, granite slopes rise toward bare alpine ridges with long, wide views.",
+    "whyGo": "You come for a deep glacier-carved canyon, quiet sequoia groves, and high granite views in the southern Sierra.",
+    "highlights": [
+      "Kings Canyon's steep granite walls",
+      "General Grant Tree in Grant Grove",
+      "Zumwalt Meadow boardwalk",
+      "Roaring River Falls"
+    ],
+    "dayPlan": {
+      "morning": "Drive into the canyon and stop at the overlooks as the cliffs catch first light. Walk a sequoia grove path in Grant Grove and look up at the trunks.",
+      "afternoon": "Follow the Zumwalt Meadow loop beneath the canyon walls, then stop at Roaring River Falls where the water cuts through granite.",
+      "evening": "Return along the canyon road as shadows fill the valley. Stay near the river or a quiet pullout and listen to the water."
+    },
+    "bestFor": [
+      "Canyon and forest hikers",
+      "Giant sequoia viewers",
+      "Alpine day hikers"
+    ],
+    "seasonNote": "Summer and early fall usually open the high country and its trails. Winter brings snow to the upper roads, while the lower canyon stays quieter.",
+    "tip": "Check current road conditions before you go, since snow and rockfall can change access quickly."
+  },
+  "kobuk-valley": {
+    "summary": "Kobuk Valley National Park lies north of the Arctic Circle in Alaska, with no roads leading in. Great sand dunes rise beside the Kobuk River, and the Baird and Jade Mountains frame the horizon. The park holds one of the quieter wildernesses in the national park system.",
+    "whyGo": "You come for the Kobuk sand dunes and a river valley that feels far from roads, with mountains on both sides.",
+    "highlights": [
+      "Kobuk sand dunes",
+      "Canoeing the Kobuk River",
+      "Baird Mountains peaks",
+      "Jade Mountains views"
+    ],
+    "dayPlan": {
+      "morning": "Fly in and settle at the dunes. Walk the sandy ridges and watch how the light changes the color of the spruce and sand.",
+      "afternoon": "Paddle or ride the Kobuk River, stopping at gravel bars and quiet banks. Onion Portage is a good place to read the landscape's long human history.",
+      "evening": "Camp near the river and listen to the wind over the dunes. The low sun and open sky give the evening a wide, slow feel."
+    },
+    "bestFor": [
+      "Remote wilderness travelers",
+      "River paddlers",
+      "Sand-dune hikers"
+    ],
+    "seasonNote": "Summer brings long daylight and the easiest access by air taxi. The rest of the year is severe and largely left to those with Arctic experience.",
+    "tip": "Arrange your air taxi early and pack for cold rain and mosquitoes, even in high summer."
+  },
+  "lake-clark": {
+    "summary": "Lake Clark National Park & Preserve spans volcanoes, glaciers, and the long lake it is named for in south-central Alaska. The Chigmit and Neacola Mountains hold snow and ice, while waterfalls drop through forest to the water. Brown bears, salmon, and backcountry routes draw people into a landscape with few facilities.",
+    "whyGo": "You come for glaciers and volcanoes side by side, quiet rivers, and bear country that feels far from any crowd.",
+    "highlights": [
+      "Lake Clark's long shoreline",
+      "Chigmit and Neacola peaks",
+      "Tanalian Falls day hike",
+      "Glaciers and volcanoes"
+    ],
+    "dayPlan": {
+      "morning": "Start near Port Alsworth and hike toward Tanalian Falls. The forest path is a good warm-up, and the waterfall gives you a clear destination.",
+      "afternoon": "Take a flightseeing or boat trip toward the Chigmit or Neacola Mountains. From above, glaciers and volcanic peaks line up across the horizon.",
+      "evening": "Return to the lake shore as the light flattens. Watch the water and the tree line for bears moving between the salmon streams."
+    },
+    "bestFor": [
+      "Backcountry travelers",
+      "Bear and salmon watchers",
+      "Flightseeing visitors"
+    ],
+    "seasonNote": "Summer usually brings warmer days, open access and fuller services, which shrink after the main season. Storms and cold rain can arrive quickly in the mountains.",
+    "tip": "Pack rain gear and bear-aware habits; the weather and wildlife both demand your attention on every trip."
+  },
+  "lassen-volcanic": {
+    "summary": "Lassen Volcanic National Park in northern California holds all four types of volcano in one compact area. Steaming hydrothermal basins, cinder cones, and sharp peaks sit beside meadows, lakes, and creeks. Trails cross both the high volcanic country and the softer ground below.",
+    "whyGo": "You come for steaming vents and boiling pools, volcanic peaks, and trails that pack a lot of geology into a short distance.",
+    "highlights": [
+      "Bumpass Hell hydrothermal area",
+      "Steaming vents and pools",
+      "Meadows, lakes, and creeks",
+      "Volcanic peak trails"
+    ],
+    "dayPlan": {
+      "morning": "Walk the boardwalk at Bumpass Hell for a close look at the hydrothermal basin. The mud pots, steam, and bright mineral colors explain the park's volcanic name.",
+      "afternoon": "Drive the park road and stop at a lake or meadow for a picnic. A short climb to a cinder cone or a high viewpoint adds a different angle.",
+      "evening": "Watch the peaks turn color as the sun drops. If snow lingers, the high trails still hold it late into the season."
+    },
+    "bestFor": [
+      "Geology and hot-spring fans",
+      "Day hikers",
+      "Winter recreation visitors"
+    ],
+    "seasonNote": "Summer and early fall usually open the road and the high trails. Winter brings deep snow and a quieter, colder park, though it remains a cold-weather destination.",
+    "tip": "Stay on the boardwalk at hydrothermal areas; the ground can be thin and the water scalding."
+  },
+  "mammoth-cave": {
+    "summary": "Mammoth Cave National Park in Kentucky protects a vast limestone cave system, along with green hills and river valleys above ground. Guided tours lead into passages shaped by water over millennia, while trails and boardwalks explore the surface. The two landscapes feel like separate parks.",
+    "whyGo": "You come to walk underground passages with a guide, then to see the green surface world above the cave.",
+    "highlights": [
+      "Guided cave tours",
+      "Historic Entrance staircase",
+      "Sloans Crossing Pond Trail",
+      "Green river valleys"
+    ],
+    "dayPlan": {
+      "morning": "Join a guided cave tour and descend through the Historic Entrance. The passages, formations, and cool air set the tone for the day.",
+      "afternoon": "Walk Sloans Crossing Pond Trail or another surface path. The boardwalk and river views show the park's aboveground side in the sunlight.",
+      "evening": "Return to the visitor area and think about the difference between the two worlds. A quiet evening walk along the river closes the day."
+    },
+    "bestFor": [
+      "Cave tour visitors",
+      "Families and first-time cavers",
+      "River and forest walkers"
+    ],
+    "seasonNote": "The cave holds a steady cool temperature year-round, so it is a reliable stop in any season. Surface trails are most comfortable in spring and fall.",
+    "tip": "Wear layers for the cave's cool air and shoes with good grip for the stairs and wet rock."
+  },
+  "mesa-verde": {
+    "summary": "Mesa Verde National Park in southwestern Colorado protects cliff dwellings built by Ancestral Pueblo people. Alcoves in the canyon walls hold stone rooms and towers, including Cliff Palace and Balcony House. Overlooks and loops along the mesa tops add wider views of the same country.",
+    "whyGo": "You come to stand beside rooms and towers built into canyon alcoves, and to look across the mesa country that surrounded them.",
+    "highlights": [
+      "Cliff Palace alcove",
+      "Balcony House from Soda Canyon",
+      "Square Tower House overlook",
+      "Mesa Top Loop drives"
+    ],
+    "dayPlan": {
+      "morning": "Start at Cliff Palace and look into the deep alcove before the day warms. A ranger or self-guided stop sets the context for the dwellings.",
+      "afternoon": "Drive the Mesa Top Loop and stop at Square Tower House. The overlooks give you a sense of how the sites sit within the canyon system.",
+      "evening": "Take in Balcony House from the Soda Canyon Overlook as the light softens. The quiet view across the canyon is a calm way to end the day."
+    },
+    "bestFor": [
+      "History and archaeology visitors",
+      "Cliff-dwelling tourgoers",
+      "Canyon overlook fans"
+    ],
+    "seasonNote": "Spring through fall usually brings open trails and access to the cliff dwellings. Summer afternoons can be hot, and winter brings snow and thinner services.",
+    "tip": "Bring water and sun protection, and give yourself time for the steep overlook trails on the mesa."
+  },
+  "mount-rainier": {
+    "summary": "Mount Rainier National Park in Washington centers on a single glacier-covered volcanic peak. Forest, wildflower meadows, and waterfalls spread below it, and trails lead to views of the summit and the White River valley. Each season changes how much of the mountain you can reach.",
+    "whyGo": "You come to walk flower-filled meadows with a glacier-clad summit overhead and waterfalls along the way in summer.",
+    "highlights": [
+      "Mount Rainier's glacier-covered summit",
+      "Silver Forest Trail at Sunrise",
+      "Narada Falls cascade",
+      "Wildflower meadows and wildlife"
+    ],
+    "dayPlan": {
+      "morning": "Start at Sunrise for high views over the White River valley and the mountain. The Silver Forest Trail adds a quieter meadow-and-forest walk.",
+      "afternoon": "Drive the lower road and stop at Narada Falls. Continue through forest and meadow, watching for marmots, elk, or bears.",
+      "evening": "Find a pullout or meadow as the light turns warm. The peak often glows last, and the evening air cools quickly."
+    },
+    "bestFor": [
+      "Wildflower hikers",
+      "Waterfall watchers",
+      "Mountain photographers"
+    ],
+    "seasonNote": "July and August bring the warmest weather and the fullest wildflower display. In spring and autumn, snow and cloud decide which roads and facilities are open.",
+    "tip": "Check the park's current conditions before you drive up; weather changes fast at higher elevations."
+  }
+}

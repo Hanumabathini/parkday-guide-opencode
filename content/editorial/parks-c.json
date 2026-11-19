@@ -1,0 +1,244 @@
+{
+  "glacier-bay": {
+    "summary": "Glacier Bay National Park & Preserve in Alaska surrounds you with tidewater glaciers, deep fjords, and forested shores. You can watch for wildlife, take in coastal scenery, and move through quiet inlets by water or on land near Bartlett Cove.",
+    "whyGo": "Come for tidewater ice, sheltered fjords, and a close look at Alaska’s coastal landscapes and marine habitats.",
+    "highlights": [
+      "Tidewater glaciers and icy fjords",
+      "Forested shores around Bartlett Cove",
+      "Wildlife viewing on water",
+      "Quiet coves and coastal inlets"
+    ],
+    "dayPlan": {
+      "morning": "Begin near Bartlett Cove to orient yourself and enjoy views across the bay. Spend time on nearby paths or along the shoreline for a calm start.",
+      "afternoon": "Explore the waterfront by boat or from shoreline viewpoints to see glaciers and steep fjord walls. Keep your plans flexible as weather and visibility change.",
+      "evening": "Return to a sheltered area and take in the softer light over the water. Reflect on the day while listening to the sounds of the coast."
+    },
+    "bestFor": [
+      "Coastal scenery",
+      "Wildlife watching",
+      "Quiet water views"
+    ],
+    "seasonNote": "Weather in coastal Alaska can shift quickly, with cool air and changing visibility. Bring layers so you can stay comfortable during time outdoors.",
+    "tip": "Plan extra time for changing conditions and choose activities that let you enjoy the scenery at an unhurried pace."
+  },
+  "grand-canyon": {
+    "summary": "Grand Canyon National Park in Arizona centers on a vast canyon carved by the Colorado River. You can look out from the South Rim or North Rim, follow paths along overlooks, and watch light shift across layered rock walls throughout the day.",
+    "whyGo": "Visit for wide canyon views, changing light on rock layers, and time along the South Rim or North Rim.",
+    "highlights": [
+      "Colorado River far below",
+      "Layered canyon walls",
+      "Overlooks on both rims",
+      "Changing light across the canyon"
+    ],
+    "dayPlan": {
+      "morning": "Start at a rim viewpoint to take in the depth of the canyon. Walk a short section of paved path for different angles in the early light.",
+      "afternoon": "Visit another overlook area and spend time resting in the shade. Pause often to appreciate the canyon’s scale from several vantage points.",
+      "evening": "Return to the rim for softer light across the rock layers. Find a comfortable spot to watch colors deepen as the day cools."
+    },
+    "bestFor": [
+      "Scenic overlooks",
+      "Short rim walks",
+      "Sunrise and sunset viewing"
+    ],
+    "seasonNote": "Conditions vary by season and elevation between the rims. Plan layers and water so you can stay comfortable during time outdoors.",
+    "tip": "Give yourself extra time to move between viewpoints so you can enjoy the changing canyon views without rushing."
+  },
+  "grand-teton": {
+    "summary": "Grand Teton National Park in Wyoming places you near the sharp peaks of the Teton Range, clear mountain lakes, and broad valley floors. You can explore scenic roads, short trails, and waterside areas while watching for wildlife in open spaces.",
+    "whyGo": "Go for close views of the Teton Range, reflective lakes, and time in Wyoming’s valley and mountain scenery.",
+    "highlights": [
+      "Views of the Teton Range",
+      "Mountain lakes and shores",
+      "Wildlife in valley areas",
+      "Scenic roads and pullouts"
+    ],
+    "dayPlan": {
+      "morning": "Begin with a lakeside stop to see mountain reflections in calm light. Take a short walk along the shore to enjoy the quiet setting.",
+      "afternoon": "Follow a scenic drive through the valley and pause at overlooks for broad views. Look for wildlife from a safe distance in open areas.",
+      "evening": "Settle near a viewpoint as the light softens on the peaks. Enjoy the cooler air and the changing colors across the landscape."
+    },
+    "bestFor": [
+      "Mountain scenery",
+      "Lakeside walks",
+      "Wildlife watching"
+    ],
+    "seasonNote": "Mountain weather can change during the day, with cool mornings and evenings. Bring layers so you can adjust as conditions shift.",
+    "tip": "Carry water and plan unhurried stops so you can take in both mountain and valley views."
+  },
+  "great-basin": {
+    "summary": "Great Basin National Park in Nevada combines high mountain terrain, desert basins, and limestone caves. You can hike among ancient bristlecone pines, learn about Lehman Caves, and take in wide views in the Wheeler Peak area.",
+    "whyGo": "Choose Great Basin for mountain scenery, ancient bristlecone pines, Lehman Caves, and time under clear night skies.",
+    "highlights": [
+      "Wheeler Peak mountain scenery",
+      "Ancient bristlecone pine groves",
+      "Limestone formations in Lehman Caves",
+      "Broad desert basin views"
+    ],
+    "dayPlan": {
+      "morning": "Start with a mountain viewpoint or a short trail to enjoy cooler air and open views. Take time to notice the contrast between peaks and basins.",
+      "afternoon": "Explore an area near Lehman Caves or walk among bristlecone pines where trails are available. Move at a steady pace and rest in shaded spots.",
+      "evening": "Find an open area to watch the landscape settle into dusk. If skies are clear, stay a while to enjoy the stars."
+    },
+    "bestFor": [
+      "Mountain walks",
+      "Cave geology interest",
+      "Stargazing"
+    ],
+    "seasonNote": "Higher elevations can feel cool even when lower areas are warm. Pack layers so you can stay comfortable from day into evening.",
+    "tip": "Plan your day around changing temperatures and keep some time free for quiet evening sky watching."
+  },
+  "great-sand-dunes": {
+    "summary": "Great Sand Dunes National Park & Preserve in Colorado pairs tall dunes with the backdrop of the Sangre de Cristo Mountains. You can walk on sandy slopes, explore creekside areas when water is present, and take in wide open views.",
+    "whyGo": "Visit for sweeping dunes, mountain backdrops, and a landscape that blends sand, grasslands, and flowing water.",
+    "highlights": [
+      "Tall dunes against mountain peaks",
+      "Seasonal creekside areas",
+      "Open grassland views",
+      "Shifting patterns in the sand"
+    ],
+    "dayPlan": {
+      "morning": "Head onto the dunes early for cooler sand and softer light. Choose a comfortable pace as you climb and explore the rolling slopes.",
+      "afternoon": "Spend time near the base of the dunes or along creek areas when water is present. Rest often and enjoy the contrast of sand and mountains.",
+      "evening": "Return to a lower overlook as shadows stretch across the dunes. Take in the quieter mood and changing colors before you leave."
+    },
+    "bestFor": [
+      "Dune exploring",
+      "Scenic photography",
+      "Family outings"
+    ],
+    "seasonNote": "Surface conditions on the dunes can change with sun, wind, and seasonal water. Prepare for both warm sand and cooler evening air.",
+    "tip": "Bring water and take breaks often, since walking on sand can feel more tiring than it looks."
+  },
+  "great-smoky-mountains": {
+    "summary": "Great Smoky Mountains National Park spans North Carolina and Tennessee with forested ridges, mountain streams, and sheltered valleys. You can drive scenic routes, pause at overlooks, and look for wildlife in open areas like Cades Cove.",
+    "whyGo": "Come for forested mountain scenery, quiet streams, and chances to experience valleys, overlooks, and wildlife.",
+    "highlights": [
+      "Forested ridges and valleys",
+      "Mountain streams and trails",
+      "Scenic overlooks",
+      "Open views in Cades Cove"
+    ],
+    "dayPlan": {
+      "morning": "Start with a scenic drive or a short walk near a stream to enjoy the calm forest setting. Take your time noticing the layers of trees and hills.",
+      "afternoon": "Visit Cades Cove or another valley area for open views and wildlife watching. Stop at pullouts to appreciate the surrounding ridges.",
+      "evening": "Choose a quiet overlook or riverside spot as the day cools. Enjoy the softer light and slower pace before heading out."
+    },
+    "bestFor": [
+      "Scenic drives",
+      "Forest walks",
+      "Wildlife watching"
+    ],
+    "seasonNote": "Weather and visibility can vary across ridges and valleys throughout the year. Bring layers so you can adjust to changing conditions.",
+    "tip": "Allow extra time for slower roads and unplanned stops so you can enjoy the landscape without feeling rushed."
+  },
+  "guadalupe-mountains": {
+    "summary": "Guadalupe Mountains National Park in Texas protects rugged desert mountains, canyon corridors, and high limestone ridges. You can hike into shaded canyons, look up at Guadalupe Peak, and explore trails that reveal the area’s geologic character.",
+    "whyGo": "Visit for desert mountain scenery, quiet canyon walks, and views shaped by the park’s rugged limestone terrain.",
+    "highlights": [
+      "Views of Guadalupe Peak",
+      "Canyon corridors and trails",
+      "Desert mountain landscapes",
+      "Limestone cliffs and ridges"
+    ],
+    "dayPlan": {
+      "morning": "Begin with a trail into a canyon area for cooler air and close-up views of rock walls. Move at a steady pace and enjoy the quiet surroundings.",
+      "afternoon": "Choose a viewpoint or shorter path that offers broad desert scenery. Take breaks in available shade and notice the textures of the landscape.",
+      "evening": "Spend time near an open area as the light softens on the mountains. Enjoy the calm atmosphere as temperatures begin to drop."
+    },
+    "bestFor": [
+      "Canyon hikes",
+      "Desert scenery",
+      "Quiet retreats"
+    ],
+    "seasonNote": "Desert conditions can bring warm days and cooler evenings, with weather that shifts by elevation. Carry layers and water for comfort outdoors.",
+    "tip": "Start earlier in the day when you can, and keep your plans flexible to match the conditions."
+  },
+  "haleakala": {
+    "summary": "Haleakalā in Hawaii offers volcanic landscapes, summit views, and high-elevation terrain that feels far removed from the coast. You can explore overlooks, walk short trails, and notice how plants and weather change with elevation in a striking setting.",
+    "whyGo": "Choose Haleakalā for volcanic terrain, broad summit views, and a clear sense of Hawaii’s changing elevations.",
+    "highlights": [
+      "Volcanic summit landscapes",
+      "Broad overlooks and viewpoints",
+      "High-elevation scenery",
+      "Changing clouds and light"
+    ],
+    "dayPlan": {
+      "morning": "Begin at a summit overlook to take in the wide volcanic landscape. Walk a short path to experience the terrain and cooler mountain air.",
+      "afternoon": "Visit additional viewpoints to see how colors and textures shift across the slopes. Spend time reading interpretive signs and resting between walks.",
+      "evening": "Stay for the softer light as clouds move across the summit area. Enjoy the quieter atmosphere before making your way down."
+    },
+    "bestFor": [
+      "Summit views",
+      "Volcanic landscapes",
+      "Short scenic walks"
+    ],
+    "seasonNote": "Conditions at higher elevations can be cool, windy, and changeable compared with the coast. Bring layers so you can stay comfortable.",
+    "tip": "Move at an easy pace at higher elevations and allow time to pause at several overlooks."
+  },
+  "hawaii-volcanoes": {
+    "summary": "Hawaiʻi Volcanoes in Hawaii showcases volcanic terrain shaped by Kīlauea and Mauna Loa, along with lava fields and native forests. You can visit overlooks, walk established paths, and learn how eruptions continue to shape the land.",
+    "whyGo": "Visit for active volcanic landscapes, lava-sculpted ground, and the contrast between forest and recent volcanic terrain.",
+    "highlights": [
+      "Views of Kīlauea landscapes",
+      "Terrain shaped by Mauna Loa",
+      "Lava fields and craters",
+      "Native forest environments"
+    ],
+    "dayPlan": {
+      "morning": "Start at an overlook to understand the scale of the volcanic landscape. Follow an established path for a closer look at lava features and vegetation.",
+      "afternoon": "Explore another area where forest meets older lava flows. Take time to notice textures, colors, and signs of ongoing geologic change.",
+      "evening": "Choose a safe viewing area for late-day light across the terrain. Enjoy the calm and reflect on the contrast between rock and forest."
+    },
+    "bestFor": [
+      "Volcanic scenery",
+      "Geology interest",
+      "Short interpretive walks"
+    ],
+    "seasonNote": "Weather can vary from wet forest areas to cooler volcanic uplands. Bring layers and rain protection so you can stay comfortable.",
+    "tip": "Stay on established paths and give yourself time to explore more than one landscape type."
+  },
+  "hot-springs": {
+    "summary": "Hot Springs National Park in Arkansas blends forested hills with historic bathhouse buildings along Bathhouse Row. You can stroll the promenade, explore preserved architecture, and enjoy shaded paths in the surrounding landscape at an easy pace.",
+    "whyGo": "Come for a mix of thermal spring history, Bathhouse Row architecture, and relaxed walks in forested hills.",
+    "highlights": [
+      "Historic buildings on Bathhouse Row",
+      "Shaded hillside paths",
+      "Promenade along the spring area",
+      "Blend of town and nature"
+    ],
+    "dayPlan": {
+      "morning": "Begin with a walk along Bathhouse Row to take in the historic buildings. Continue onto the promenade for a calm start to your day.",
+      "afternoon": "Explore nearby hillside paths for shade and quieter surroundings. Pause often to enjoy views and the contrast between architecture and forest.",
+      "evening": "Return to the central area for an unhurried stroll as the day cools. Take in the atmosphere of the historic district at a relaxed pace."
+    },
+    "bestFor": [
+      "Historic architecture",
+      "Easy walks",
+      "Relaxed day trips"
+    ],
+    "seasonNote": "Temperatures and humidity can vary through the year in Arkansas. Dress for comfort so you can enjoy both shaded paths and open areas.",
+    "tip": "Set aside time for both the historic district and a quiet walk on nearby hillside paths."
+  },
+  "indiana-dunes": {
+    "summary": "Indiana Dunes National Park in Indiana stretches along Lake Michigan with sandy beaches, dunes, wetlands, and wooded trails. You can walk the shoreline, explore varied habitats, and take in open water views from higher ground.",
+    "whyGo": "Visit for Lake Michigan shoreline, sandy dunes, and an easy mix of beach, wetland, and forest settings.",
+    "highlights": [
+      "Lake Michigan shoreline views",
+      "Sandy dunes and beaches",
+      "Wetland and forest habitats",
+      "Trails with varied scenery"
+    ],
+    "dayPlan": {
+      "morning": "Start along the Lake Michigan shoreline for open views and fresh air. Take a relaxed walk on the beach or a nearby trail.",
+      "afternoon": "Explore a dune or wooded area to see how the landscape changes away from the water. Pause at overlooks for a different perspective on the lake.",
+      "evening": "Return to the shore for softer light and a quieter atmosphere. Enjoy a calm end to the day near the water."
+    },
+    "bestFor": [
+      "Beach walks",
+      "Dune scenery",
+      "Short nature outings"
+    ],
+    "seasonNote": "Conditions along Lake Michigan can change with wind and temperature throughout the year. Bring layers so you can stay comfortable near the water.",
+    "tip": "Plan a mix of shoreline and inland paths to experience the park’s different landscapes in one visit."
+  }
+}

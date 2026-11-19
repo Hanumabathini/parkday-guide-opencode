@@ -1,0 +1,18 @@
+{
+  "name": "parkday-guide",
+  "version": "0.1.0",
+  "private": true,
+  "description": "From-scratch guide to all 64 scoped US national parks and their gateway towns.",
+  "type": "module",
+  "scripts": {
+    "sync": "node scripts/sync_nps_data.mjs",
+    "validate": "node scripts/validate_content.mjs",
+    "build": "node site/build.mjs",
+    "build:pages": "node site/build.mjs --base=/parkday-guide-opencode/ --url=https://hanumabathini.github.io/parkday-guide-opencode",
+    "check": "node scripts/validate_content.mjs --dist",
+    "board": "node scripts/validate_command_board.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

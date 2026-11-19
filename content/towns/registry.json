@@ -1,0 +1,961 @@
+[
+  {
+    "id": "akron-oh",
+    "name": "Akron",
+    "stateCode": "OH",
+    "parks": [
+      "cuyahoga-valley"
+    ]
+  },
+  {
+    "id": "alamogordo-nm",
+    "name": "Alamogordo",
+    "stateCode": "NM",
+    "parks": [
+      "white-sands"
+    ]
+  },
+  {
+    "id": "alamosa-co",
+    "name": "Alamosa",
+    "stateCode": "CO",
+    "parks": [
+      "great-sand-dunes"
+    ]
+  },
+  {
+    "id": "ashford-wa",
+    "name": "Ashford",
+    "stateCode": "WA",
+    "parks": [
+      "mount-rainier"
+    ]
+  },
+  {
+    "id": "baker-nv",
+    "name": "Baker",
+    "stateCode": "NV",
+    "parks": [
+      "great-basin"
+    ]
+  },
+  {
+    "id": "bar-harbor-me",
+    "name": "Bar Harbor",
+    "stateCode": "ME",
+    "parks": [
+      "acadia"
+    ]
+  },
+  {
+    "id": "beatty-nv",
+    "name": "Beatty",
+    "stateCode": "NV",
+    "parks": [
+      "death-valley"
+    ]
+  },
+  {
+    "id": "beckley-wv",
+    "name": "Beckley",
+    "stateCode": "WV",
+    "parks": [
+      "new-river-gorge"
+    ]
+  },
+  {
+    "id": "benson-az",
+    "name": "Benson",
+    "stateCode": "AZ",
+    "parks": [
+      "chiricahua"
+    ]
+  },
+  {
+    "id": "bettles-ak",
+    "name": "Bettles",
+    "stateCode": "AK",
+    "parks": [
+      "gates-of-the-arctic"
+    ]
+  },
+  {
+    "id": "bryce-canyon-city-ut",
+    "name": "Bryce Canyon City",
+    "stateCode": "UT",
+    "parks": [
+      "bryce-canyon"
+    ]
+  },
+  {
+    "id": "cantwell-ak",
+    "name": "Cantwell",
+    "stateCode": "AK",
+    "parks": [
+      "denali"
+    ]
+  },
+  {
+    "id": "carlsbad-nm",
+    "name": "Carlsbad",
+    "stateCode": "NM",
+    "parks": [
+      "carlsbad-caverns",
+      "guadalupe-mountains"
+    ]
+  },
+  {
+    "id": "cave-city-ky",
+    "name": "Cave City",
+    "stateCode": "KY",
+    "parks": [
+      "mammoth-cave"
+    ]
+  },
+  {
+    "id": "charlotte-amalie-vi",
+    "name": "Charlotte Amalie",
+    "stateCode": "VI",
+    "parks": [
+      "virgin-islands"
+    ]
+  },
+  {
+    "id": "cherokee-nc",
+    "name": "Cherokee",
+    "stateCode": "NC",
+    "parks": [
+      "great-smoky-mountains"
+    ]
+  },
+  {
+    "id": "chester-ca",
+    "name": "Chester",
+    "stateCode": "CA",
+    "parks": [
+      "lassen-volcanic"
+    ]
+  },
+  {
+    "id": "chesterton-in",
+    "name": "Chesterton",
+    "stateCode": "IN",
+    "parks": [
+      "indiana-dunes"
+    ]
+  },
+  {
+    "id": "chitina-ak",
+    "name": "Chitina",
+    "stateCode": "AK",
+    "parks": [
+      "wrangell-st-elias"
+    ]
+  },
+  {
+    "id": "cloudcroft-nm",
+    "name": "Cloudcroft",
+    "stateCode": "NM",
+    "parks": [
+      "white-sands"
+    ]
+  },
+  {
+    "id": "cody-wy",
+    "name": "Cody",
+    "stateCode": "WY",
+    "parks": [
+      "yellowstone"
+    ]
+  },
+  {
+    "id": "coldfoot-ak",
+    "name": "Coldfoot",
+    "stateCode": "AK",
+    "parks": [
+      "gates-of-the-arctic"
+    ]
+  },
+  {
+    "id": "columbia-sc",
+    "name": "Columbia",
+    "stateCode": "SC",
+    "parks": [
+      "congaree"
+    ]
+  },
+  {
+    "id": "cortez-co",
+    "name": "Cortez",
+    "stateCode": "CO",
+    "parks": [
+      "mesa-verde"
+    ]
+  },
+  {
+    "id": "crescent-city-ca",
+    "name": "Crescent City",
+    "stateCode": "CA",
+    "parks": [
+      "redwood"
+    ]
+  },
+  {
+    "id": "cruz-bay-vi",
+    "name": "Cruz Bay",
+    "stateCode": "VI",
+    "parks": [
+      "virgin-islands"
+    ]
+  },
+  {
+    "id": "custer-sd",
+    "name": "Custer",
+    "stateCode": "SD",
+    "parks": [
+      "wind-cave"
+    ]
+  },
+  {
+    "id": "dickinson-nd",
+    "name": "Dickinson",
+    "stateCode": "ND",
+    "parks": [
+      "theodore-roosevelt"
+    ]
+  },
+  {
+    "id": "ellsworth-me",
+    "name": "Ellsworth",
+    "stateCode": "ME",
+    "parks": [
+      "acadia"
+    ]
+  },
+  {
+    "id": "ely-mn",
+    "name": "Ely",
+    "stateCode": "MN",
+    "parks": [
+      "voyageurs"
+    ]
+  },
+  {
+    "id": "ely-nv",
+    "name": "Ely",
+    "stateCode": "NV",
+    "parks": [
+      "great-basin"
+    ]
+  },
+  {
+    "id": "enumclaw-wa",
+    "name": "Enumclaw",
+    "stateCode": "WA",
+    "parks": [
+      "mount-rainier"
+    ]
+  },
+  {
+    "id": "estes-park-co",
+    "name": "Estes Park",
+    "stateCode": "CO",
+    "parks": [
+      "rocky-mountain"
+    ]
+  },
+  {
+    "id": "fayetteville-wv",
+    "name": "Fayetteville",
+    "stateCode": "WV",
+    "parks": [
+      "new-river-gorge"
+    ]
+  },
+  {
+    "id": "florida-city-fl",
+    "name": "Florida City",
+    "stateCode": "FL",
+    "parks": [
+      "biscayne",
+      "everglades"
+    ]
+  },
+  {
+    "id": "forks-wa",
+    "name": "Forks",
+    "stateCode": "WA",
+    "parks": [
+      "olympic"
+    ]
+  },
+  {
+    "id": "fort-klamath-or",
+    "name": "Fort Klamath",
+    "stateCode": "OR",
+    "parks": [
+      "crater-lake"
+    ]
+  },
+  {
+    "id": "fresno-ca",
+    "name": "Fresno",
+    "stateCode": "CA",
+    "parks": [
+      "kings-canyon"
+    ]
+  },
+  {
+    "id": "front-royal-va",
+    "name": "Front Royal",
+    "stateCode": "VA",
+    "parks": [
+      "shenandoah"
+    ]
+  },
+  {
+    "id": "furnace-creek-ca",
+    "name": "Furnace Creek",
+    "stateCode": "CA",
+    "parks": [
+      "death-valley"
+    ]
+  },
+  {
+    "id": "gardiner-mt",
+    "name": "Gardiner",
+    "stateCode": "MT",
+    "parks": [
+      "yellowstone"
+    ]
+  },
+  {
+    "id": "gatlinburg-tn",
+    "name": "Gatlinburg",
+    "stateCode": "TN",
+    "parks": [
+      "great-smoky-mountains"
+    ]
+  },
+  {
+    "id": "grand-lake-co",
+    "name": "Grand Lake",
+    "stateCode": "CO",
+    "parks": [
+      "rocky-mountain"
+    ]
+  },
+  {
+    "id": "grand-portage-mn",
+    "name": "Grand Portage",
+    "stateCode": "MN",
+    "parks": [
+      "isle-royale"
+    ]
+  },
+  {
+    "id": "groveland-ca",
+    "name": "Groveland",
+    "stateCode": "CA",
+    "parks": [
+      "yosemite"
+    ]
+  },
+  {
+    "id": "gunnison-co",
+    "name": "Gunnison",
+    "stateCode": "CO",
+    "parks": [
+      "black-canyon-of-the-gunnison"
+    ]
+  },
+  {
+    "id": "gustavus-ak",
+    "name": "Gustavus",
+    "stateCode": "AK",
+    "parks": [
+      "glacier-bay"
+    ]
+  },
+  {
+    "id": "hanksville-ut",
+    "name": "Hanksville",
+    "stateCode": "UT",
+    "parks": [
+      "capitol-reef"
+    ]
+  },
+  {
+    "id": "healy-ak",
+    "name": "Healy",
+    "stateCode": "AK",
+    "parks": [
+      "denali"
+    ]
+  },
+  {
+    "id": "hilo-hi",
+    "name": "Hilo",
+    "stateCode": "HI",
+    "parks": [
+      "hawaii-volcanoes"
+    ]
+  },
+  {
+    "id": "holbrook-az",
+    "name": "Holbrook",
+    "stateCode": "AZ",
+    "parks": [
+      "petrified-forest"
+    ]
+  },
+  {
+    "id": "hollister-ca",
+    "name": "Hollister",
+    "stateCode": "CA",
+    "parks": [
+      "pinnacles"
+    ]
+  },
+  {
+    "id": "homestead-fl",
+    "name": "Homestead",
+    "stateCode": "FL",
+    "parks": [
+      "biscayne",
+      "everglades"
+    ]
+  },
+  {
+    "id": "hopkins-sc",
+    "name": "Hopkins",
+    "stateCode": "SC",
+    "parks": [
+      "congaree"
+    ]
+  },
+  {
+    "id": "hot-springs-ar",
+    "name": "Hot Springs",
+    "stateCode": "AR",
+    "parks": [
+      "hot-springs"
+    ]
+  },
+  {
+    "id": "hot-springs-sd",
+    "name": "Hot Springs",
+    "stateCode": "SD",
+    "parks": [
+      "wind-cave"
+    ]
+  },
+  {
+    "id": "houghton-mi",
+    "name": "Houghton",
+    "stateCode": "MI",
+    "parks": [
+      "isle-royale"
+    ]
+  },
+  {
+    "id": "interior-sd",
+    "name": "Interior",
+    "stateCode": "SD",
+    "parks": [
+      "badlands"
+    ]
+  },
+  {
+    "id": "international-falls-mn",
+    "name": "International Falls",
+    "stateCode": "MN",
+    "parks": [
+      "voyageurs"
+    ]
+  },
+  {
+    "id": "jackson-wy",
+    "name": "Jackson",
+    "stateCode": "WY",
+    "parks": [
+      "grand-teton",
+      "yellowstone"
+    ]
+  },
+  {
+    "id": "joshua-tree-ca",
+    "name": "Joshua Tree",
+    "stateCode": "CA",
+    "parks": [
+      "joshua-tree"
+    ]
+  },
+  {
+    "id": "juneau-ak",
+    "name": "Juneau",
+    "stateCode": "AK",
+    "parks": [
+      "glacier-bay"
+    ]
+  },
+  {
+    "id": "kahului-hi",
+    "name": "Kahului",
+    "stateCode": "HI",
+    "parks": [
+      "haleakala"
+    ]
+  },
+  {
+    "id": "kanab-ut",
+    "name": "Kanab",
+    "stateCode": "UT",
+    "parks": [
+      "zion"
+    ]
+  },
+  {
+    "id": "key-west-fl",
+    "name": "Key West",
+    "stateCode": "FL",
+    "parks": [
+      "dry-tortugas"
+    ]
+  },
+  {
+    "id": "king-salmon-ak",
+    "name": "King Salmon",
+    "stateCode": "AK",
+    "parks": [
+      "katmai"
+    ]
+  },
+  {
+    "id": "klamath-ca",
+    "name": "Klamath",
+    "stateCode": "CA",
+    "parks": [
+      "redwood"
+    ]
+  },
+  {
+    "id": "kotzebue-ak",
+    "name": "Kotzebue",
+    "stateCode": "AK",
+    "parks": [
+      "kobuk-valley"
+    ]
+  },
+  {
+    "id": "kula-hi",
+    "name": "Kula",
+    "stateCode": "HI",
+    "parks": [
+      "haleakala"
+    ]
+  },
+  {
+    "id": "lee-vining-ca",
+    "name": "Lee Vining",
+    "stateCode": "CA",
+    "parks": [
+      "yosemite"
+    ]
+  },
+  {
+    "id": "lone-pine-ca",
+    "name": "Lone Pine",
+    "stateCode": "CA",
+    "parks": [
+      "death-valley"
+    ]
+  },
+  {
+    "id": "luray-va",
+    "name": "Luray",
+    "stateCode": "VA",
+    "parks": [
+      "shenandoah"
+    ]
+  },
+  {
+    "id": "mancos-co",
+    "name": "Mancos",
+    "stateCode": "CO",
+    "parks": [
+      "mesa-verde"
+    ]
+  },
+  {
+    "id": "marathon-tx",
+    "name": "Marathon",
+    "stateCode": "TX",
+    "parks": [
+      "big-bend"
+    ]
+  },
+  {
+    "id": "marblemount-wa",
+    "name": "Marblemount",
+    "stateCode": "WA",
+    "parks": [
+      "north-cascades"
+    ]
+  },
+  {
+    "id": "mariposa-ca",
+    "name": "Mariposa",
+    "stateCode": "CA",
+    "parks": [
+      "yosemite"
+    ]
+  },
+  {
+    "id": "mccarthy-ak",
+    "name": "McCarthy",
+    "stateCode": "AK",
+    "parks": [
+      "wrangell-st-elias"
+    ]
+  },
+  {
+    "id": "medora-nd",
+    "name": "Medora",
+    "stateCode": "ND",
+    "parks": [
+      "theodore-roosevelt"
+    ]
+  },
+  {
+    "id": "mineral-ca",
+    "name": "Mineral",
+    "stateCode": "CA",
+    "parks": [
+      "lassen-volcanic"
+    ]
+  },
+  {
+    "id": "moab-ut",
+    "name": "Moab",
+    "stateCode": "UT",
+    "parks": [
+      "arches",
+      "canyonlands"
+    ]
+  },
+  {
+    "id": "monticello-ut",
+    "name": "Monticello",
+    "stateCode": "UT",
+    "parks": [
+      "canyonlands"
+    ]
+  },
+  {
+    "id": "montrose-co",
+    "name": "Montrose",
+    "stateCode": "CO",
+    "parks": [
+      "black-canyon-of-the-gunnison"
+    ]
+  },
+  {
+    "id": "mosca-co",
+    "name": "Mosca",
+    "stateCode": "CO",
+    "parks": [
+      "great-sand-dunes"
+    ]
+  },
+  {
+    "id": "oxnard-ca",
+    "name": "Oxnard",
+    "stateCode": "CA",
+    "parks": [
+      "channel-islands"
+    ]
+  },
+  {
+    "id": "pago-pago-as",
+    "name": "Pago Pago",
+    "stateCode": "AS",
+    "parks": [
+      "national-park-of-american-samoa"
+    ]
+  },
+  {
+    "id": "park-city-ky",
+    "name": "Park City",
+    "stateCode": "KY",
+    "parks": [
+      "mammoth-cave"
+    ]
+  },
+  {
+    "id": "peninsula-oh",
+    "name": "Peninsula",
+    "stateCode": "OH",
+    "parks": [
+      "cuyahoga-valley"
+    ]
+  },
+  {
+    "id": "pigeon-forge-tn",
+    "name": "Pigeon Forge",
+    "stateCode": "TN",
+    "parks": [
+      "great-smoky-mountains"
+    ]
+  },
+  {
+    "id": "port-alsworth-ak",
+    "name": "Port Alsworth",
+    "stateCode": "AK",
+    "parks": [
+      "lake-clark"
+    ]
+  },
+  {
+    "id": "port-angeles-wa",
+    "name": "Port Angeles",
+    "stateCode": "WA",
+    "parks": [
+      "olympic"
+    ]
+  },
+  {
+    "id": "porter-in",
+    "name": "Porter",
+    "stateCode": "IN",
+    "parks": [
+      "indiana-dunes"
+    ]
+  },
+  {
+    "id": "prospect-or",
+    "name": "Prospect",
+    "stateCode": "OR",
+    "parks": [
+      "crater-lake"
+    ]
+  },
+  {
+    "id": "seward-ak",
+    "name": "Seward",
+    "stateCode": "AK",
+    "parks": [
+      "kenai-fjords"
+    ]
+  },
+  {
+    "id": "soledad-ca",
+    "name": "Soledad",
+    "stateCode": "CA",
+    "parks": [
+      "pinnacles"
+    ]
+  },
+  {
+    "id": "southwest-harbor-me",
+    "name": "Southwest Harbor",
+    "stateCode": "ME",
+    "parks": [
+      "acadia"
+    ]
+  },
+  {
+    "id": "springdale-ut",
+    "name": "Springdale",
+    "stateCode": "UT",
+    "parks": [
+      "zion"
+    ]
+  },
+  {
+    "id": "st-louis-mo",
+    "name": "St. Louis",
+    "stateCode": "MO",
+    "parks": [
+      "gateway-arch"
+    ]
+  },
+  {
+    "id": "st-mary-mt",
+    "name": "St. Mary",
+    "stateCode": "MT",
+    "parks": [
+      "glacier"
+    ]
+  },
+  {
+    "id": "terlingua-tx",
+    "name": "Terlingua",
+    "stateCode": "TX",
+    "parks": [
+      "big-bend"
+    ]
+  },
+  {
+    "id": "three-rivers-ca",
+    "name": "Three Rivers",
+    "stateCode": "CA",
+    "parks": [
+      "sequoia",
+      "kings-canyon"
+    ]
+  },
+  {
+    "id": "torrey-ut",
+    "name": "Torrey",
+    "stateCode": "UT",
+    "parks": [
+      "capitol-reef"
+    ]
+  },
+  {
+    "id": "tropic-ut",
+    "name": "Tropic",
+    "stateCode": "UT",
+    "parks": [
+      "bryce-canyon"
+    ]
+  },
+  {
+    "id": "tucson-az",
+    "name": "Tucson",
+    "stateCode": "AZ",
+    "parks": [
+      "saguaro"
+    ]
+  },
+  {
+    "id": "tusayan-az",
+    "name": "Tusayan",
+    "stateCode": "AZ",
+    "parks": [
+      "grand-canyon"
+    ]
+  },
+  {
+    "id": "twentynine-palms-ca",
+    "name": "Twentynine Palms",
+    "stateCode": "CA",
+    "parks": [
+      "joshua-tree"
+    ]
+  },
+  {
+    "id": "vail-az",
+    "name": "Vail",
+    "stateCode": "AZ",
+    "parks": [
+      "saguaro"
+    ]
+  },
+  {
+    "id": "ventura-ca",
+    "name": "Ventura",
+    "stateCode": "CA",
+    "parks": [
+      "channel-islands"
+    ]
+  },
+  {
+    "id": "visalia-ca",
+    "name": "Visalia",
+    "stateCode": "CA",
+    "parks": [
+      "sequoia"
+    ]
+  },
+  {
+    "id": "volcano-hi",
+    "name": "Volcano",
+    "stateCode": "HI",
+    "parks": [
+      "hawaii-volcanoes"
+    ]
+  },
+  {
+    "id": "wall-sd",
+    "name": "Wall",
+    "stateCode": "SD",
+    "parks": [
+      "badlands"
+    ]
+  },
+  {
+    "id": "waynesboro-va",
+    "name": "Waynesboro",
+    "stateCode": "VA",
+    "parks": [
+      "shenandoah"
+    ]
+  },
+  {
+    "id": "west-glacier-mt",
+    "name": "West Glacier",
+    "stateCode": "MT",
+    "parks": [
+      "glacier"
+    ]
+  },
+  {
+    "id": "west-yellowstone-mt",
+    "name": "West Yellowstone",
+    "stateCode": "MT",
+    "parks": [
+      "yellowstone"
+    ]
+  },
+  {
+    "id": "whitefish-mt",
+    "name": "Whitefish",
+    "stateCode": "MT",
+    "parks": [
+      "glacier"
+    ]
+  },
+  {
+    "id": "whites-city-nm",
+    "name": "Whites City",
+    "stateCode": "NM",
+    "parks": [
+      "carlsbad-caverns",
+      "guadalupe-mountains"
+    ]
+  },
+  {
+    "id": "willcox-az",
+    "name": "Willcox",
+    "stateCode": "AZ",
+    "parks": [
+      "chiricahua"
+    ]
+  },
+  {
+    "id": "williams-az",
+    "name": "Williams",
+    "stateCode": "AZ",
+    "parks": [
+      "grand-canyon"
+    ]
+  },
+  {
+    "id": "winslow-az",
+    "name": "Winslow",
+    "stateCode": "AZ",
+    "parks": [
+      "petrified-forest"
+    ]
+  },
+  {
+    "id": "winthrop-wa",
+    "name": "Winthrop",
+    "stateCode": "WA",
+    "parks": [
+      "north-cascades"
+    ]
+  }
+]

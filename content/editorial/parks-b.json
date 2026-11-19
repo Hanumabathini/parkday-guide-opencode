@@ -1,0 +1,200 @@
+{
+  "chiricahua": {
+    "summary": "Chiricahua National Park sits in the mountains of southeastern Arizona, where erosion has carved tall stone pinnacles and balanced rocks among oak woodland. A scenic road and a network of trails lead through the formations and into quiet canyons. The shapes reward slow looking, shifting as the light moves across them through the day.",
+    "whyGo": "Come to walk among strange, sculpted rock formations that feel far removed from the desert around them. The trails are varied, and the views open out in every direction.",
+    "highlights": [
+      "Massai Point views",
+      "Echo Canyon Trail",
+      "The Grotto passage",
+      "Scenic drive through pinnacles"
+    ],
+    "dayPlan": {
+      "morning": "Start with the scenic drive, stopping at overlooks to read the rock formations in the soft morning light. Get out at Massai Point and look across the standing rocks before the day warms up.",
+      "afternoon": "Take a trail into Echo Canyon, where the path threads between pinnacles and reaches The Grotto. Move slowly through the narrow passages and give yourself time to climb back out.",
+      "evening": "Return to an overlook as the sun drops and the rocks change color, then stay a while for the stars. The formations take on a different character once the light is gone."
+    },
+    "bestFor": ["Rock hikers", "Photographers", "Stargazers"],
+    "seasonNote": "Spring offers mild temperatures and wildflowers, while summer brings monsoon storms that make the rocks glow. Winter is quiet, with cooler air that suits walking and clear skies after fronts pass through.",
+    "tip": "Carry more water than you think you need, because the trails climb through exposed rock with little shade along the way."
+  },
+  "congaree": {
+    "summary": "Congaree National Park protects a broad floodplain forest in South Carolina, with tall cypress and tupelo trees rising over cypress knees and shaded water. Canoes slip along Cedar Creek, while boardwalks and trails cross the forest floor. It is a green, humid place shaped by the river and by seasonal flooding.",
+    "whyGo": "Walk or paddle through a riverside forest of tall trees and standing water. The scale of the canopy and the quiet creeks make the park feel slow and unhurried.",
+    "highlights": [
+      "Canoeing Cedar Creek",
+      "Cypress knees by Weston Lake",
+      "Congaree River views",
+      "Boardwalk through the forest"
+    ],
+    "dayPlan": {
+      "morning": "Begin at the visitor center, then follow the boardwalk into the forest while the air is still cool. Watch for cypress knees standing out of the water and for birds moving through the branches.",
+      "afternoon": "Paddle Cedar Creek in a canoe, keeping to the slower water and watching for turtles and wading birds. If you prefer to stay on foot, take a longer trail into the floodplain.",
+      "evening": "As the light drops, find a spot near Weston Lake and listen for owls and frogs. The forest quiets down slowly, and the water holds the last of the color longer than the trails do."
+    },
+    "bestFor": ["Canoeists", "Birders", "Forest walkers"],
+    "seasonNote": "Warm months bring insects, so plan around them and watch the weather for rising water. Cooler seasons make walking more comfortable, and the wetland takes on a different look as water levels change.",
+    "tip": "Bring insect repellent, wear shoes you can get wet, and keep your camera ready for birds along the creek."
+  },
+  "crater-lake": {
+    "summary": "Crater Lake National Park in Oregon centers on a deep caldera filled with clear blue water, with Wizard Island rising from the lake and cliffs running around the rim. Trails climb to high viewpoints, and a road follows much of the shoreline above the water. Snow shapes the landscape for a long part of the year.",
+    "whyGo": "Stand on the rim and look down into a volcano filled with water so clear it seems to hold the sky. The scale is hard to take in from any single viewpoint.",
+    "highlights": [
+      "Wizard Island views",
+      "Garfield Peak trail",
+      "Phantom Ship sightline",
+      "Mount Scott summit"
+    ],
+    "dayPlan": {
+      "morning": "Drive the rim road early, stopping at Discovery Point for a first look at Wizard Island. Walk a short stretch of trail above the caldera, then take in the water's color before the day brightens.",
+      "afternoon": "Hike Garfield Peak for a higher angle on the lake and the little island of rock within it. On the way back, follow the rim past viewpoints toward Phantom Ship and the far cliffs.",
+      "evening": "Settle at a rim overlook as the sun lowers and the cliffs darken around the water. The lake holds the last light, and the air is still, so the quiet becomes part of the view."
+    },
+    "bestFor": ["Rim walkers", "Photographers", "Scenic drivers"],
+    "seasonNote": "Summer opens the wider network of rim roads and trails, while winter brings deep snow and a quieter park. Plan around the season you visit, since snow changes access and the character of the landscape.",
+    "tip": "Bring layers and sunglasses, since the rim sits at high elevation and the light off the water is strong even on cool days."
+  },
+  "cuyahoga-valley": {
+    "summary": "Cuyahoga Valley National Park follows the Cuyahoga River through northeastern Ohio, mixing wooded hills, waterfalls, and open fields. A scenic railway runs through the valley, while trails and a towpath route connect river, falls, and overlooks. It is a green corridor close to cities, with a strong mix of natural and historic landscape.",
+    "whyGo": "Paddle a bend of the Cuyahoga River, walk to Brandywine Falls, then watch the valley slide past from a train window. The park packs river, cliffs, and rail history into an easy day.",
+    "highlights": [
+      "Brandywine Falls boardwalk",
+      "Ledges Overlook view",
+      "Scenic railroad ride",
+      "Kayaking the Cuyahoga"
+    ],
+    "dayPlan": {
+      "morning": "Walk the upper boardwalk to Brandywine Falls and watch the water drop over the ledge. From there, take a trail through the woods and watch for the river bending through the valley.",
+      "afternoon": "Climb to the Ledges Overlook for a wide view across the valley, then get back to the river for a paddle if the weather is calm. Otherwise, take the scenic railway through the valley.",
+      "evening": "Wind down with a slow walk along the river as the light softens, or stay near the falls and listen to the water over the rocks. The valley feels quieter once the afternoon traffic thins."
+    },
+    "bestFor": ["Families", "Cyclists", "Train riders"],
+    "seasonNote": "Autumn turns the hardwoods around the Ledges bright and is a busy time in the valley. Spring brings fresh green to the riverbanks, while summer suits paddling and long walks in the shade.",
+    "tip": "Wear shoes with grip for the boardwalk steps near the falls, and keep a light layer handy for the shaded sections of trail."
+  },
+  "death-valley": {
+    "summary": "Death Valley National Park stretches across the Mojave Desert in California and Nevada, a landscape of badlands, sand dunes, salt flats, and narrow canyons. Roads link widely separated viewpoints, and short walks lead out into the formations. The low, dry basin changes dramatically with the angle of the sun.",
+    "whyGo": "Come for open desert scenery that shifts from pale dunes to dark badlands within a short drive. The light at the edges of the day brings out shapes and colors that vanish by noon.",
+    "highlights": [
+      "Zabriskie Point badlands",
+      "Mesquite Dunes at sunrise",
+      "Natural rock bridge walk",
+      "Desert pupfish pools"
+    ],
+    "dayPlan": {
+      "morning": "Get out early to the Mesquite Dunes, where low light draws long shadows across the ripples. Walk out across the sand and pick your own line, watching the dune edges sharpen as the sun climbs.",
+      "afternoon": "Retreat from the heat and drive between the scattered stops, pausing at a short canyon walk to find the natural rock bridge overhead. Look for the small streams where the desert pupfish live.",
+      "evening": "Head to Zabriskie Point as the sun drops and the badlands turn pink and gold. Stay until the color fades, then look up, because the dark desert sky opens quickly once the light is gone."
+    },
+    "bestFor": ["Desert photographers", "Short walkers", "Stargazers"],
+    "seasonNote": "Cooler months make walking and driving the long distances more comfortable. In the heat of summer, plan outdoor time for early and late in the day and keep water within reach at all times.",
+    "tip": "Carry more water than you expect to use and tell someone your route, since stops are far apart and cell service is unreliable in the basin."
+  },
+  "denali": {
+    "summary": "Denali National Park and Preserve covers a vast stretch of interior Alaska centered on a snow-covered mountain and the wildlife that roams the valleys below. Buses carry visitors deep into the park, where the road gives way to tundra, rivers, and long views. Dall sheep, grizzlies, and caribou live here, though sightings are never guaranteed.",
+    "whyGo": "Ride the park road into wide open country where the mountain fills the horizon on clear days. The real draw is the sense of scale, with wildlife small against the tundra and peaks.",
+    "highlights": [
+      "Stony Hill Overlook mountain view",
+      "Dall sheep on slopes",
+      "Tundra wildlife watching",
+      "Backcountry day hikes"
+    ],
+    "dayPlan": {
+      "morning": "Board an early bus into the park and watch the slopes for Dall sheep along the way. Keep your camera out, since wildlife can appear at any bend and the light changes fast.",
+      "afternoon": "Ask the driver to let you off at Stony Hill Overlook if the sky is clear, and spend time scanning the mountain and the valleys. Walk the tundra on your own, staying alert for wildlife.",
+      "evening": "Back near your base, take a short walk as the light lengthens across the valleys and listen for the sounds of the bush. The mountain often clears in the evening, so keep looking up."
+    },
+    "bestFor": ["Wildlife watchers", "Bus riders", "Backpackers"],
+    "seasonNote": "Summer brings long days and a wider range of park services, with the tundra awake and active. Winter turns the park quiet and snowy, and the same landscape becomes a very different place to explore.",
+    "tip": "Bring binoculars and patience, since wildlife views come from staying still and scanning slowly rather than hurrying between stops."
+  },
+  "dry-tortugas": {
+    "summary": "Dry Tortugas National Park lies in the Gulf of Mexico far off the Florida coast, a cluster of small islands built around Fort Jefferson. The surrounding water holds coral reefs and sunken ships, and the islands support seabirds, sea turtles, and a lighthouse on Loggerhead Key. It feels genuinely removed from the mainland.",
+    "whyGo": "Snorkel over a wreck, circle a massive brick fort, and look up at a sky almost free of artificial light. The trip out is part of the experience, with open water all around.",
+    "highlights": [
+      "Fort Jefferson courtyard",
+      "Windjammer Wreck snorkeling",
+      "Loggerhead Key lighthouse",
+      "Open-water stargazing"
+    ],
+    "dayPlan": {
+      "morning": "Arrive by boat and orient yourself around Fort Jefferson, walking the walls and the open courtyard while the morning is still cool. Look for the scorpions and other small creatures that live among the stones.",
+      "afternoon": "Spend the warm hours in the water, snorkeling the shallows or finding the Windjammer Wreck if conditions allow. If you stay dry, walk the island and watch for seabirds over the fort.",
+      "evening": "Stay after the boats leave if you can, because the islands are far from city light. Sit away from the walls and watch the stars come out above the fort."
+    },
+    "bestFor": ["Snorkelers", "History readers", "Night-sky watchers"],
+    "seasonNote": "Summer tends to bring calm water and full days here, while cooler months bring thinner crowds and sharper air. Wind can make the crossing rough at any time of year.",
+    "tip": "Bring everything you need for the day, including water, shade, and sun protection, because there is little shelter on the islands."
+  },
+  "everglades": {
+    "summary": "Everglades National Park covers the southern tip of Florida, where slow water moves through sawgrass marsh and mangrove forest. Canoes cross Nine Mile Pond, bicycles follow the road at Shark Valley, and the Anhinga Trail brings visitors close to alligators and wading birds. The park reveals itself to people who move slowly through it.",
+    "whyGo": "Paddle through a marsh where alligators slide off the banks and birds feed in the shallows. On land, a short trail or a bike ride puts you in the middle of the same landscape.",
+    "highlights": [
+      "Anhinga Trail alligators",
+      "Nine Mile Pond paddling",
+      "Shark Valley biking",
+      "Cypress tree silhouettes"
+    ],
+    "dayPlan": {
+      "morning": "Walk the Anhinga Trail early, when alligators and wading birds are active along the water. Take your time at each bend, because the small details, from turtles to fish, hold your attention just as well.",
+      "afternoon": "Drive to Shark Valley and ride a bike out through the marsh, stopping at the observation tower for a wide view. Alternatively, put a canoe in at Nine Mile Pond instead.",
+      "evening": "Find a spot where cypress trees cut across the sky and watch the light go. As the sun sets, the marsh changes color and bird calls take over. That makes the last hour feel quiet."
+    },
+    "bestFor": ["Birders", "Canoeists", "Wildlife photographers"],
+    "seasonNote": "The dry season concentrates wildlife along the remaining water and makes walking and paddling easier. Wet months fill the marsh and bring heavier insects, so plan around standing water and give yourself flexibility.",
+    "tip": "Wear long sleeves and bring insect repellent, and keep your binoculars close because much of the wildlife stays at a distance."
+  },
+  "gates-of-the-arctic": {
+    "summary": "Gates of the Arctic National Park and Preserve lies in Alaska's Brooks Range, a vast wilderness of river valleys, granite peaks, and open tundra. There are no roads into the interior, so visitors travel on foot or by river, carrying what they need. The Alatna River and Arrigetch Peaks are part of this wide, quiet landscape.",
+    "whyGo": "Go for a landscape with almost nothing built in it, where your day is shaped by weather, water, and your own pace. The scale is the point, not any single stop.",
+    "highlights": [
+      "Alatna River valley",
+      "Arrigetch Peaks granite",
+      "Oolah Valley crossing",
+      "Tundra berry picking"
+    ],
+    "dayPlan": {
+      "morning": "Start by checking your route and weather, then set out early in the cool air. On the river, read the water carefully; on foot, cross streams slowly and choose solid footing.",
+      "afternoon": "Give the middle of the day to the landscape, whether floating a stretch of the Alatna or walking toward the Arrigetch granite. Stop often to look back and read the terrain.",
+      "evening": "Make camp with time to spare and cook before the light goes. In late summer, blueberries are worth a short detour. Once the sun lowers, the tundra and peaks go quiet quickly."
+    },
+    "bestFor": ["Backpackers", "River travelers", "Solitude seekers"],
+    "seasonNote": "Summer is the practical window for most trips, with long days and walkable tundra. Shoulder seasons bring colder air and more variable weather, and you should be ready for a wide range of conditions.",
+    "tip": "Plan your own route and carry everything in, because this is a place where self-reliance matters more than any single piece of gear."
+  },
+  "gateway-arch": {
+    "summary": "Gateway Arch National Park sits on the Mississippi River in St. Louis, Missouri, centered on the tall steel arch and the grounds around it. The park includes the Old Courthouse and the Dred and Harriet Scott statue, tying the site to the city's riverfront history. A tram takes visitors up inside the arch for a view across the city and the river.",
+    "whyGo": "Ride to the top for an angle on the river and city, then walk to the Old Courthouse and the Scott statue. The park pairs the view with a piece of local history.",
+    "highlights": [
+      "Tram ride to the top",
+      "Old Courthouse visit",
+      "Dred and Harriet Scott statue",
+      "Luther Ely Smith Square"
+    ],
+    "dayPlan": {
+      "morning": "Cross Luther Ely Smith Square to the Arch and take in its curve from below before going inside. If you plan to ride the tram, go early and allow time to board.",
+      "afternoon": "After the tram, walk to the Old Courthouse and spend time with its exhibits. Step outside to the Dred and Harriet Scott statue and take in the riverfront setting.",
+      "evening": "Stay as the light changes on the arch, when the steel picks up the color of the sky. The riverfront is good for a slow walk as the city lights come up behind the arch."
+    },
+    "bestFor": ["City visitors", "History readers", "Families"],
+    "seasonNote": "Summer brings long days and the busiest periods on the grounds, so an early start helps. Spring and fall are pleasant for walking between the arch, the Old Courthouse, and the riverfront.",
+    "tip": "Wear comfortable shoes for the walk between the arch and the Old Courthouse, and check the sky before you go because the view depends on clear weather."
+  },
+  "glacier": {
+    "summary": "Glacier National Park occupies the mountains of northern Montana, where ridges, valleys, and cold alpine basins run close together. The Going-to-the-Sun Road crosses the park and opens views of streams and peaks, while trails lead into country where mountain goats and other wildlife live. Ranger programs help put the landscape in context.",
+    "whyGo": "Drive the high road and stop often, then step onto a trail to get the mountains at walking pace. Short walks and full-day routes both deliver the same mix of rock, water, and open sky.",
+    "highlights": [
+      "Drive the Going-to-the-Sun Road",
+      "Join a ranger-led program",
+      "Mountain goat sightings",
+      "Alpine valley trails"
+    ],
+    "dayPlan": {
+      "morning": "Start on the Going-to-the-Sun Road and stop at safe pullouts for views of streams below the peaks. Pick a short trail near the road and walk slowly, watching for mountain goats on the slopes.",
+      "afternoon": "Go deeper on a longer trail or join a ranger program, both of which explain how the cold alpine environment shapes the park. Keep an eye on the weather, since mountain conditions shift quickly.",
+      "evening": "Find a spot along the road or a trail's edge as the sun drops and the ridges catch the last light. The valleys darken before the sky, and the streams hold the light."
+    },
+    "bestFor": ["Hikers", "Scenic drivers", "Wildlife viewers"],
+    "seasonNote": "Summer generally means more open trails and ranger programs, with the high country free of snow for a time. Other seasons bring deeper snow and fewer services, so match your plans to the available roads.",
+    "tip": "Bring layers and rain gear even on a clear morning, because the mountain weather can turn quickly and the road climbs into cooler air."
+  }
+}

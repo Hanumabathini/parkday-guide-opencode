@@ -1,0 +1,78 @@
+# Launch gates
+
+Status: pre-launch · Owner: chief editor · Last reviewed 2026-11-19
+
+Six gates. A gate is either **PASS**, **CONCERNS** or **FAIL**. Nothing is
+published to the production domain while any gate is FAIL. A gate may pass with
+concerns only if the concern is written down here with an owner and a date.
+
+| # | Gate | Owner | State |
+|---|---|---|---|
+| 1 | Fact-check | fact-check lead | PASS with concerns |
+| 2 | FTC and commercial disclosure | commercial lead | PASS |
+| 3 | Privacy and data | product lead | PASS with concerns |
+| 4 | Links and redirects | technical lead | PASS |
+| 5 | Photo licensing | photo lead | PASS with concerns |
+| 6 | CEO approval | chief editor | PENDING |
+
+## 1. Fact-check
+
+- 64/64 park records synced from the NPS API with a retrieval date.
+- Fee fields classified into entrance, reservation and other.
+- The sync refuses a scope that is not 64.
+- Editorial is reviewed against the park's official page before release.
+
+Concerns: the NPS API is the source of record, and a fee can change between the
+retrieval date and the reader's visit. The page states the retrieval date and
+asks the reader to confirm. Monthly re-sync is scheduled, not yet automated.
+
+## 2. FTC and commercial disclosure
+
+- No affiliate program is approved; `affiliatePrograms` is empty.
+- Official NPS and Recreation.gov links are never monetised.
+- Approved disclosure wording is written and ready to render above the first
+  monetised link.
+- The chatbot contains no commercial layer.
+
+## 3. Privacy and data
+
+- No account, no login, no server-side storage of reader input.
+- Chat questions are processed in the browser and not transmitted.
+- Analytics is not configured at launch. If GA4 is enabled, the privacy page is
+  updated in the same commit.
+- The checklist email endpoint is not connected; the form says so and does not
+  fake a success state.
+
+Concerns: the contact address and any future email delivery need a processor
+agreement before the checklist form is enabled.
+
+## 4. Links and redirects
+
+- Every internal link resolves in the built site; the validator fails on a
+  broken one.
+- External links are limited to NPS.gov, Recreation.gov, and the official park
+  URL from the fact layer.
+- No redirect wrapper, no link shortener, no tracking parameter on an official
+  link.
+
+## 5. Photo licensing
+
+- 226 of 254 images carry an NPS credit and render.
+- 28 `needs-review` images are excluded by the generator, not by a manual step.
+- Credits render with the image; alt text describes the frame.
+
+Concerns: the 28 images need a licence decision before they can be used. They
+are not blocking launch because they are not rendered.
+
+## 6. CEO approval
+
+- Requires a full read of the home page, one park page per region, the
+  methodology page and the privacy page.
+- Requires a signed statement that the guide does not copy competitor text.
+- PENDING until the build is complete and the domain is pointed.
+
+## Domain
+
+`parkdayguide.com` is not purchased. Until it is, the site can be reviewed on a
+GitHub Pages URL with `SITE_URL` set to that origin. Canonical URLs must not
+claim a domain the guide does not control in production.

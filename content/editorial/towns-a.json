@@ -1,0 +1,542 @@
+{
+  "akron-oh": {
+    "intro": "Use Akron as your base for visiting Cuyahoga Valley National Park. The city sits beside the Cuyahoga River amid Ohio's rolling valley landscape, with wooded hills and quiet farmland around it.",
+    "whyStop": [
+      "River trail walks",
+      "Valley overlook views",
+      "Town center shops"
+    ],
+    "note": "Check seasonal services and lodging availability before you arrive."
+  },
+  "alamogordo-nm": {
+    "intro": "Use Alamogordo as your base for visiting White Sands National Park. The city sits at the edge of the Tularosa Basin amid New Mexico's desert basin landscape and surrounding mountain views.",
+    "whyStop": [
+      "White dune fields",
+      "Desert basin views",
+      "Mountain trail walks"
+    ],
+    "note": "Check seasonal services and desert road access before you arrive."
+  },
+  "alamosa-co": {
+    "intro": "Use Alamosa as your base for visiting Great Sand Dunes National Park. The city sits in Colorado's high San Luis Valley beside wide farmland with the Sangre de Cristo range rising nearby.",
+    "whyStop": [
+      "Sand dune walks",
+      "Valley mountain views",
+      "Night sky views"
+    ],
+    "note": "Check seasonal services and road conditions before you arrive."
+  },
+  "ashford-wa": {
+    "intro": "Use Ashford as your base for visiting Mount Rainier National Park. The village sits in Washington's Cascade foothills beside forested slopes and river valleys leading toward the high snowy mountain.",
+    "whyStop": [
+      "Mountain forest walks",
+      "River valley views",
+      "Cascade peak views"
+    ],
+    "note": "Check seasonal road access and services before you arrive."
+  },
+  "baker-nv": {
+    "intro": "Use Baker as your base for visiting Great Basin National Park. The village sits in Nevada's high desert amid sagebrush plains and mountain ranges rising above the wide valley floor.",
+    "whyStop": [
+      "Desert mountain hikes",
+      "Cave chamber walks",
+      "Night sky views"
+    ],
+    "note": "Check seasonal services and high-country road access before you arrive."
+  },
+  "bar-harbor-me": {
+    "intro": "Use Bar Harbor as your base for visiting Acadia National Park. The town sits on Mount Desert Island beside the Atlantic coast, with rocky shoreline and forest trails close by.",
+    "whyStop": [
+      "Coastal shoreline walks",
+      "Island forest trails",
+      "Harbor town views"
+    ],
+    "note": "Check seasonal services and park road access before you arrive."
+  },
+  "beatty-nv": {
+    "intro": "Use Beatty as your base for visiting Death Valley National Park. The town sits in Nevada's Mojave Desert beside the Amargosa Valley amid desert mountain ranges rising above the wild valley floor.",
+    "whyStop": [
+      "Desert valley walks",
+      "Mountain basin views",
+      "Night sky views"
+    ],
+    "note": "Check seasonal services and desert road conditions before you arrive."
+  },
+  "beckley-wv": {
+    "intro": "Use Beckley as your base for visiting New River Gorge National Park. The city sits in West Virginia's Appalachian Mountains beside the New River gorge amid forested cliffs and river bluffs.",
+    "whyStop": [
+      "River gorge walks",
+      "Forested cliff trails",
+      "Appalachian mountain views"
+    ],
+    "note": "Check seasonal services and gorge road access before you arrive."
+  },
+  "benson-az": {
+    "intro": "Use Benson as your base for visiting Chiricahua National Monument. The town sits in southeastern Arizona's Sky Islands beside grassland valleys and rocky mountain ranges rising above the wide desert.",
+    "whyStop": [
+      "Rocky mountain hikes",
+      "Grassland valley views",
+      "Sky island scenery"
+    ],
+    "note": "Check seasonal services and mountain road access before you arrive."
+  },
+  "bettles-ak": {
+    "intro": "Use Bettles as your base for visiting Gates of the Arctic National Park. The village sits in Alaska's Brooks Range beside remote wilderness and the Koyukuk River in the far north.",
+    "whyStop": [
+      "Remote wilderness treks",
+      "Arctic river views",
+      "Brooks Range scenery"
+    ],
+    "note": "Check seasonal services and remote wilderness access before you arrive."
+  },
+  "bryce-canyon-city-ut": {
+    "intro": "Use Bryce Canyon City as your base for visiting Bryce Canyon National Park. The town sits on Utah's high plateau beside red-rock hoodoos and pine forest on the canyon rim.",
+    "whyStop": [
+      "Hoodoo trail walks",
+      "Canyon rim views",
+      "High plateau views"
+    ],
+    "note": "Check seasonal services and high-country road access before you arrive."
+  },
+  "cantwell-ak": {
+    "intro": "Use Cantwell as your base for visiting Denali National Park. The community sits in Alaska's interior beside the Alaska Range amid wild rivers and open tundra beneath the northern big open skies.",
+    "whyStop": [
+      "Alaska Range views",
+      "Wilderness river trails",
+      "Interior Alaska scenery"
+    ],
+    "note": "Check seasonal services and remote road access before you arrive."
+  },
+  "carlsbad-nm": {
+    "intro": "Use Carlsbad as your base for visiting Carlsbad Caverns and Guadalupe Mountains National Parks. The city sits in southeastern New Mexico's Chihuahuan Desert beside desert mountains and limestone cave country.",
+    "whyStop": [
+      "Cave chamber walks",
+      "Desert mountain hikes",
+      "Limestone landscape views"
+    ],
+    "note": "Check seasonal services and cave access before you arrive."
+  },
+  "cave-city-ky": {
+    "intro": "Use Cave City as your base for visiting Mammoth Cave National Park. The town sits in Kentucky's cave country beside rolling hills and wooded ridges above the limestone cave chambers.",
+    "whyStop": [
+      "Cave country walks",
+      "Rolling hill trails",
+      "Wooded ridge views"
+    ],
+    "note": "Check seasonal services and cave tour access before you arrive."
+  },
+  "charlotte-amalie-vi": {
+    "intro": "Use Charlotte Amalie as your base for visiting Virgin Islands National Park. The town sits on St. Thomas beside a Caribbean harbor and steep green hills overlooking the clear blue sea.",
+    "whyStop": [
+      "Harbor town walks",
+      "Caribbean sea views",
+      "Green hill trails"
+    ],
+    "note": "Check seasonal services and island ferry access before you arrive."
+  },
+  "cherokee-nc": {
+    "intro": "Use Cherokee as your base for visiting Great Smoky Mountains National Park. The town sits in western North Carolina beside forested mountains and the Qualla Boundary homeland in the Smokies.",
+    "whyStop": [
+      "Mountain forest trails",
+      "Smoky mountain views",
+      "Qualla Boundary heritage"
+    ],
+    "note": "Check seasonal services and mountain road access before you arrive."
+  },
+  "chester-ca": {
+    "intro": "Use Chester as your base for visiting Lassen Volcanic National Park. The town sits in Northern California's Cascade Range beside mountain forests and volcanic peaks above the wide lake waters.",
+    "whyStop": [
+      "Volcanic peak hikes",
+      "Mountain forest walks",
+      "Lake shore views"
+    ],
+    "note": "Check seasonal services and mountain road access before you arrive."
+  },
+  "chesterton-in": {
+    "intro": "Use Chesterton as your base for visiting Indiana Dunes National Park. The town sits on Lake Michigan's southern shore beside sandy dunes and wooded trails along the wide lake shore.",
+    "whyStop": [
+      "Dune beach walks",
+      "Lakeshore trail hikes",
+      "Lake Michigan views"
+    ],
+    "note": "Check seasonal services and beach access before you arrive."
+  },
+  "chitina-ak": {
+    "intro": "Use Chitina as your base for visiting Wrangell-St. Elias National Park. The village sits in eastern Alaska beside the Copper River and glacier-fed mountains rising above the wild valley floor.",
+    "whyStop": [
+      "Copper River walks",
+      "Glacier mountain views",
+      "Alaska wilderness trails"
+    ],
+    "note": "Check seasonal services and remote road access before you arrive."
+  },
+  "cloudcroft-nm": {
+    "intro": "Use Cloudcroft as your base for visiting White Sands National Park. The village sits in New Mexico's Sacramento Mountains beside pine forest and mountain views above the wide desert floor.",
+    "whyStop": [
+      "Mountain forest walks",
+      "Desert valley views",
+      "High ridge trails"
+    ],
+    "note": "Check seasonal services and mountain road access before you arrive."
+  },
+  "cody-wy": {
+    "intro": "Use Cody as your base for visiting Yellowstone National Park. The city sits in northwestern Wyoming beside the Shoshone River and the Absaroka Range rising above the wide valley floor.",
+    "whyStop": [
+      "River valley walks",
+      "Mountain range views",
+      "Plains town trails"
+    ],
+    "note": "Check seasonal services and park road access before you arrive."
+  },
+  "coldfoot-ak": {
+    "intro": "Use Coldfoot as your base for visiting Gates of the Arctic National Park. The community sits in Alaska's Brooks Range beside remote wilderness and the Yukon River in the far north.",
+    "whyStop": [
+      "Remote wilderness treks",
+      "Arctic river views",
+      "Brooks Range scenery"
+    ],
+    "note": "Check seasonal services and remote wilderness access before you arrive."
+  },
+  "columbia-sc": {
+    "intro": "Use Columbia as your base for visiting Congaree National Park. The city sits in central South Carolina beside the Congaree River floodplain and bottomland forest under tall hardwood tree canopies overhead.",
+    "whyStop": [
+      "Floodplain forest walks",
+      "River bottom trails",
+      "Bottomland tree views"
+    ],
+    "note": "Check seasonal services and river floodplain access before you arrive."
+  },
+  "cortez-co": {
+    "intro": "Use Cortez as your base for visiting Mesa Verde National Park. The town sits in Colorado's Four Corners region beside mesa country and high desert views above the high plateau.",
+    "whyStop": [
+      "Mesa country walks",
+      "High desert views",
+      "Plateau trail hikes"
+    ],
+    "note": "Check seasonal services and mesa road access before you arrive."
+  },
+  "crescent-city-ca": {
+    "intro": "Use Crescent City as your base for visiting Redwood National Park. The town sits on California's northern coast beside towering redwoods and the Pacific Ocean, with forest trails close by.",
+    "whyStop": [
+      "Redwood forest walks",
+      "Coastal ocean views",
+      "Pacific shoreline trails"
+    ],
+    "note": "Check seasonal services and coastal road access before you arrive."
+  },
+  "cruz-bay-vi": {
+    "intro": "Use Cruz Bay as your base for visiting Virgin Islands National Park. The town sits on St. John beside a Caribbean bay and forested hills above the clear blue water.",
+    "whyStop": [
+      "Caribbean bay walks",
+      "Forested hill trails",
+      "Island sea views"
+    ],
+    "note": "Check seasonal services and island ferry access before you arrive."
+  },
+  "custer-sd": {
+    "intro": "Use Custer as your base for visiting Wind Cave National Park. The town sits in South Dakota's Black Hills beside prairie grasslands and limestone caves rising above the wooded hills.",
+    "whyStop": [
+      "Prairie grassland walks",
+      "Cave chamber walks",
+      "Hills forest trails"
+    ],
+    "note": "Check seasonal services and cave access before you arrive."
+  },
+  "dickinson-nd": {
+    "intro": "Use Dickinson as your base for visiting Theodore Roosevelt National Park. The city sits in western North Dakota beside the badlands and the Little Missouri River amid the wide prairie.",
+    "whyStop": [
+      "Badlands trail walks",
+      "Prairie river views",
+      "North Dakota scenery"
+    ],
+    "note": "Check seasonal services and badlands road access before you arrive."
+  },
+  "ellsworth-me": {
+    "intro": "Use Ellsworth as your base for visiting Acadia National Park. The city sits in coastal Maine beside Union River Bay and forested hills, with forest trails close by.",
+    "whyStop": [
+      "Bay shoreline walks",
+      "Coastal forest trails",
+      "Maine harbor views"
+    ],
+    "note": "Check seasonal services and coastal road access before you arrive."
+  },
+  "ely-mn": {
+    "intro": "Use Ely as your base for visiting Voyageurs National Park. The town sits in northern Minnesota beside boreal forest and a network of lakes near Canada beneath the northern skies.",
+    "whyStop": [
+      "Lake canoe routes",
+      "Boreal forest trails",
+      "Border lake views"
+    ],
+    "note": "Check seasonal services and border lake access before you arrive."
+  },
+  "ely-nv": {
+    "intro": "Use Ely as your base for visiting Great Basin National Park. The city sits in eastern Nevada beside high desert and mountain ranges rising above the wide open valley floor.",
+    "whyStop": [
+      "Desert mountain hikes",
+      "Cave chamber walks",
+      "Night sky views"
+    ],
+    "note": "Check seasonal services and high-country road access before you arrive."
+  },
+  "enumclaw-wa": {
+    "intro": "Use Enumclaw as your base for visiting Mount Rainier National Park. The city sits in Washington's Cascade foothills beside forested slopes and river valleys leading toward the high snowy mountain.",
+    "whyStop": [
+      "Mountain forest walks",
+      "River valley views",
+      "Cascade peak views"
+    ],
+    "note": "Check seasonal road access and services before you arrive."
+  },
+  "estes-park-co": {
+    "intro": "Use Estes Park as your base for visiting Rocky Mountain National Park. The town sits in Colorado's Front Range beside mountain meadows and pine forest along the high mountain slopes.",
+    "whyStop": [
+      "Mountain meadow walks",
+      "Pine forest trails",
+      "Rocky peak views"
+    ],
+    "note": "Check seasonal services and mountain road access before you arrive."
+  },
+  "fayetteville-wv": {
+    "intro": "Use Fayetteville as your base for visiting New River Gorge National Park. The town sits in West Virginia's Appalachian Mountains beside the New River gorge amid forested cliffs and river bluffs.",
+    "whyStop": [
+      "River gorge walks",
+      "Forested cliff trails",
+      "Appalachian mountain views"
+    ],
+    "note": "Check seasonal services and gorge road access before you arrive."
+  },
+  "florida-city-fl": {
+    "intro": "Use Florida City as your base for visiting Biscayne and Everglades National Parks. The city sits at Florida's southern tip beside coastal wetlands and Biscayne Bay near the wide Everglades.",
+    "whyStop": [
+      "Wetland trail walks",
+      "Bay shoreline views",
+      "Coastal island views"
+    ],
+    "note": "Check seasonal services and coastal wetland access before you arrive."
+  },
+  "forks-wa": {
+    "intro": "Use Forks as your base for visiting Olympic National Park. The town sits on Washington's Olympic Peninsula beside rainforest valleys and the Pacific coast along the wide open ocean shore.",
+    "whyStop": [
+      "Rainforest valley walks",
+      "Coastal shoreline trails",
+      "Pacific ocean views"
+    ],
+    "note": "Check seasonal services and coastal road access before you arrive."
+  },
+  "fort-klamath-or": {
+    "intro": "Use Fort Klamath as your base for visiting Crater Lake National Park. The community sits in southern Oregon beside the Cascade Range and high-desert forests near the lake's clear waters.",
+    "whyStop": [
+      "Cascade forest walks",
+      "Lake caldera views",
+      "High-desert trail hikes"
+    ],
+    "note": "Check seasonal services and mountain road access before you arrive."
+  },
+  "fresno-ca": {
+    "intro": "Use Fresno as your base for visiting Kings Canyon National Park. The city sits in California's San Joaquin Valley beside the Sierra Nevada foothills leading into the high mountain peaks.",
+    "whyStop": [
+      "Foothill trail walks",
+      "Mountain valley views",
+      "Sierra Nevada scenery"
+    ],
+    "note": "Check seasonal services and mountain road access before you arrive."
+  },
+  "front-royal-va": {
+    "intro": "Use Front Royal as your base for visiting Shenandoah National Park. The town sits in Virginia's Shenandoah Valley beside the Blue Ridge Mountains along Skyline Drive above the wide open valley.",
+    "whyStop": [
+      "Valley ridge walks",
+      "Skyline Drive views",
+      "Blue Ridge trails"
+    ],
+    "note": "Check seasonal services and Skyline Drive access before you arrive."
+  },
+  "furnace-creek-ca": {
+    "intro": "Use Furnace Creek as your base for visiting Death Valley National Park. The community sits in California's Mojave Desert below sea level amid desert mountains rising above the wide desert basin.",
+    "whyStop": [
+      "Desert basin walks",
+      "Salt flat views",
+      "Mountain canyon trails"
+    ],
+    "note": "Check seasonal services and desert road conditions before you arrive."
+  },
+  "gardiner-mt": {
+    "intro": "Use Gardiner as your base for visiting Yellowstone National Park. The town sits in Montana beside the Yellowstone River at the park's northern entrance beneath tall mountain peaks under open skies.",
+    "whyStop": [
+      "River valley walks",
+      "Park entrance trails",
+      "Montana mountain views"
+    ],
+    "note": "Check seasonal services and park entrance access before you arrive."
+  },
+  "gatlinburg-tn": {
+    "intro": "Use Gatlinburg as your base for visiting Great Smoky Mountains National Park. The town sits in eastern Tennessee beside forested Smoky Mountain ridges rising above the wide green valley floor below.",
+    "whyStop": [
+      "Smoky ridge walks",
+      "Forest mountain trails",
+      "Appalachian valley views"
+    ],
+    "note": "Check seasonal services and mountain road access before you arrive."
+  },
+  "grand-lake-co": {
+    "intro": "Use Grand Lake as your base for visiting Rocky Mountain National Park. The town sits beside a large natural lake, with the Front Range mountains and high meadow country close by.",
+    "whyStop": [
+      "Lake shore walks",
+      "Mountain meadow trails",
+      "Front Range views"
+    ],
+    "note": "Check seasonal services and high-country lake access before you arrive."
+  },
+  "grand-portage-mn": {
+    "intro": "Use Grand Portage as your base for visiting Isle Royale National Park. The community sits on Lake Superior beside the historic portage route and Anishinaabe homeland beside the open water.",
+    "whyStop": [
+      "Lake Superior views",
+      "Portage trail walks",
+      "Northwoods forest hikes"
+    ],
+    "note": "Check seasonal services and island ferry access before you arrive."
+  },
+  "groveland-ca": {
+    "intro": "Use Groveland as your base for visiting Yosemite National Park. The town sits in California's Sierra Nevada foothills beside Gold Country history and mountain forest along the historic mountain trail.",
+    "whyStop": [
+      "Gold Country walks",
+      "Sierra foothill trails",
+      "Mountain forest views"
+    ],
+    "note": "Check seasonal services and mountain road access before you arrive."
+  },
+  "gunnison-co": {
+    "intro": "Use Gunnison as your base for visiting Black Canyon of the Gunnison National Park. The city sits in western Colorado beside the Gunnison River and high mesa country above the valley.",
+    "whyStop": [
+      "Canyon rim walks",
+      "River valley views",
+      "Mesa country trails"
+    ],
+    "note": "Check seasonal services and canyon road access before you arrive."
+  },
+  "gustavus-ak": {
+    "intro": "Use Gustavus as your base for visiting Glacier Bay National Park. The community sits in southeast Alaska beside the Inside Passage amid remote coastal wilderness near the wide open water.",
+    "whyStop": [
+      "Coastal water walks",
+      "Glacier bay views",
+      "Alaska wilderness trails"
+    ],
+    "note": "Check seasonal services and Inside Passage access before you arrive."
+  },
+  "hanksville-ut": {
+    "intro": "Use Hanksville as your base for visiting Capitol Reef National Park. The town sits in southern Utah beside red-rock canyons and the Henry Mountains rising above the wide open desert lands.",
+    "whyStop": [
+      "Red-rock canyon walks",
+      "Desert mountain views",
+      "Henry range trails"
+    ],
+    "note": "Check seasonal services and canyon road access before you arrive."
+  },
+  "healy-ak": {
+    "intro": "Use Healy as your base for visiting Denali National Park. The community sits in Alaska's interior beside the Alaska Range and the Nenana River beneath the northern big open skies.",
+    "whyStop": [
+      "Alaska Range views",
+      "Wilderness river trails",
+      "Interior Alaska scenery"
+    ],
+    "note": "Check seasonal services and remote road access before you arrive."
+  },
+  "hilo-hi": {
+    "intro": "Use Hilo as your base for visiting Hawaii Volcanoes National Park. The city sits on Hawaii's Big Island beside tropical rainforest and volcanic slopes along Hilo Bay's wide open waters.",
+    "whyStop": [
+      "Rainforest trail walks",
+      "Volcanic slope views",
+      "Tropical bay views"
+    ],
+    "note": "Check seasonal services and volcanic road access before you arrive."
+  },
+  "holbrook-az": {
+    "intro": "Use Holbrook as your base for visiting Petrified Forest National Park. The town sits in Arizona's Painted Desert beside petrified wood and historic Route 66 amid wide open desert mesas under open skies.",
+    "whyStop": [
+      "Desert mesa walks",
+      "Petrified wood views",
+      "Route 66 trails"
+    ],
+    "note": "Check seasonal services and desert road access before you arrive."
+  },
+  "hollister-ca": {
+    "intro": "Use Hollister as your base for visiting Pinnacles National Park. The city sits in California's Central Coast beside chaparral hills and talus caves along the high coastal ridge above the valley.",
+    "whyStop": [
+      "Talus cave walks",
+      "Chaparral hill trails",
+      "Ridge line views"
+    ],
+    "note": "Check seasonal services and cave access before you arrive."
+  },
+  "homestead-fl": {
+    "intro": "Use Homestead as your base for visiting Biscayne and Everglades National Parks. The city sits in southern Florida beside coastal wetlands and Biscayne Bay under sunny open skies near the park lands.",
+    "whyStop": [
+      "Wetland trail walks",
+      "Bay shoreline views",
+      "Coastal island views"
+    ],
+    "note": "Check seasonal services and coastal wetland access before you arrive."
+  },
+  "hopkins-sc": {
+    "intro": "Use Hopkins as your base for visiting Congaree National Park. The community sits in South Carolina beside the Congaree River floodplain and bottomland forest beneath tall hardwood tree canopies overhead.",
+    "whyStop": [
+      "Floodplain forest walks",
+      "River bottom trails",
+      "Bottomland tree views"
+    ],
+    "note": "Check seasonal services and river floodplain access before you arrive."
+  },
+  "hot-springs-ar": {
+    "intro": "Use Hot Springs as your base for visiting Hot Springs National Park. The city sits in Arkansas's Ouachita Mountains beside thermal springs and forested ridges along the historic Bathhouse Row nearby.",
+    "whyStop": [
+      "Thermal spring walks",
+      "Forested ridge trails",
+      "Historic bathhouse views"
+    ],
+    "note": "Check seasonal services and mountain road access before you arrive."
+  },
+  "hot-springs-sd": {
+    "intro": "Use Hot Springs as your base for visiting Wind Cave National Park. The town sits in South Dakota's southern Black Hills beside prairie and limestone caves falling into the valley.",
+    "whyStop": [
+      "Prairie grassland walks",
+      "Cave chamber walks",
+      "Hills forest trails"
+    ],
+    "note": "Check seasonal services and cave access before you arrive."
+  },
+  "houghton-mi": {
+    "intro": "Use Houghton as your base for visiting Isle Royale National Park. The city sits on Michigan's Keweenaw Peninsula beside Lake Superior and copper-mining history along the open coastal water nearby.",
+    "whyStop": [
+      "Lake Superior views",
+      "Copper peninsula walks",
+      "Northwoods forest trails"
+    ],
+    "note": "Check seasonal services and island ferry access before you arrive."
+  },
+  "interior-sd": {
+    "intro": "Use Interior as your base for visiting Badlands National Park. The community sits in South Dakota beside eroded badlands and mixed-grass prairie under open skies beside the wide open valley.",
+    "whyStop": [
+      "Badlands ridge walks",
+      "Prairie grassland views",
+      "Eroded cliff trails"
+    ],
+    "note": "Check seasonal services and badlands road access before you arrive."
+  },
+  "international-falls-mn": {
+    "intro": "Use International Falls as your base for visiting Voyageurs National Park. The city sits on Minnesota's northern border beside the Rainy River and border lakes along the wide open water nearby.",
+    "whyStop": [
+      "River border walks",
+      "Lake canoe routes",
+      "Northwoods forest trails"
+    ],
+    "note": "Check seasonal services and border lake access before you arrive."
+  },
+  "jackson-wy": {
+    "intro": "Use Jackson as your base for visiting Grand Teton and Yellowstone National Parks. The town sits in Wyoming's Jackson Hole valley beside the Teton Range and Snake River amid mountain meadows.",
+    "whyStop": [
+      "Teton mountain walks",
+      "Snake River views",
+      "Valley meadow trails"
+    ],
+    "note": "Check seasonal services and mountain road access before you arrive."
+  }
+}

@@ -1,0 +1,391 @@
+{
+  "source": "National Park Service API v1 /parks",
+  "retrieved": "2026-11-19",
+  "note": "Official source snapshot for the 64 scoped park pages. Facts only; no editorial copy.",
+  "parks": [
+    {
+      "parkCode": "ACAD",
+      "id": "acadia",
+      "sourceUrl": "https://www.nps.gov/acad/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "ARCH",
+      "id": "arches",
+      "sourceUrl": "https://www.nps.gov/arch/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "BADL",
+      "id": "badlands",
+      "sourceUrl": "https://www.nps.gov/badl/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "BIBE",
+      "id": "big-bend",
+      "sourceUrl": "https://www.nps.gov/bibe/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "BISC",
+      "id": "biscayne",
+      "sourceUrl": "https://www.nps.gov/bisc/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "BLCA",
+      "id": "black-canyon-of-the-gunnison",
+      "sourceUrl": "https://www.nps.gov/blca/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "BRCA",
+      "id": "bryce-canyon",
+      "sourceUrl": "https://www.nps.gov/brca/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "CANY",
+      "id": "canyonlands",
+      "sourceUrl": "https://www.nps.gov/cany/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "CARE",
+      "id": "capitol-reef",
+      "sourceUrl": "https://www.nps.gov/care/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "CAVE",
+      "id": "carlsbad-caverns",
+      "sourceUrl": "https://www.nps.gov/cave/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "CHIR",
+      "id": "chiricahua",
+      "sourceUrl": "https://www.nps.gov/chir/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "CHIS",
+      "id": "channel-islands",
+      "sourceUrl": "https://www.nps.gov/chis/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "CONG",
+      "id": "congaree",
+      "sourceUrl": "https://www.nps.gov/cong/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "CRLA",
+      "id": "crater-lake",
+      "sourceUrl": "https://www.nps.gov/crla/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "CUVA",
+      "id": "cuyahoga-valley",
+      "sourceUrl": "https://www.nps.gov/cuva/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "DEVA",
+      "id": "death-valley",
+      "sourceUrl": "https://www.nps.gov/deva/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "DENA",
+      "id": "denali",
+      "sourceUrl": "https://www.nps.gov/dena/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "DRTO",
+      "id": "dry-tortugas",
+      "sourceUrl": "https://www.nps.gov/drto/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "EVER",
+      "id": "everglades",
+      "sourceUrl": "https://www.nps.gov/ever/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "GAAR",
+      "id": "gates-of-the-arctic",
+      "sourceUrl": "https://www.nps.gov/gaar/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "GLAC",
+      "id": "glacier",
+      "sourceUrl": "https://www.nps.gov/glac/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "GLBA",
+      "id": "glacier-bay",
+      "sourceUrl": "https://www.nps.gov/glba/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "GRCA",
+      "id": "grand-canyon",
+      "sourceUrl": "https://www.nps.gov/grca/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "GRTE",
+      "id": "grand-teton",
+      "sourceUrl": "https://www.nps.gov/grte/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "GRBA",
+      "id": "great-basin",
+      "sourceUrl": "https://www.nps.gov/grba/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "GRSA",
+      "id": "great-sand-dunes",
+      "sourceUrl": "https://www.nps.gov/grsa/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "GRSM",
+      "id": "great-smoky-mountains",
+      "sourceUrl": "https://www.nps.gov/grsm/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "GUMO",
+      "id": "guadalupe-mountains",
+      "sourceUrl": "https://www.nps.gov/gumo/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "HALE",
+      "id": "haleakala",
+      "sourceUrl": "https://www.nps.gov/hale/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "HAVO",
+      "id": "hawaii-volcanoes",
+      "sourceUrl": "https://www.nps.gov/havo/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "HOSP",
+      "id": "hot-springs",
+      "sourceUrl": "https://www.nps.gov/hosp/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "INDU",
+      "id": "indiana-dunes",
+      "sourceUrl": "https://www.nps.gov/indu/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "ISRO",
+      "id": "isle-royale",
+      "sourceUrl": "https://www.nps.gov/isro/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "JEFF",
+      "id": "gateway-arch",
+      "sourceUrl": "https://www.nps.gov/jeff/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "JOTR",
+      "id": "joshua-tree",
+      "sourceUrl": "https://www.nps.gov/jotr/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "KATM",
+      "id": "katmai",
+      "sourceUrl": "https://www.nps.gov/katm/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "KEFJ",
+      "id": "kenai-fjords",
+      "sourceUrl": "https://www.nps.gov/kefj/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "KOVA",
+      "id": "kobuk-valley",
+      "sourceUrl": "https://www.nps.gov/kova/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "LACL",
+      "id": "lake-clark",
+      "sourceUrl": "https://www.nps.gov/lacl/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "LAVO",
+      "id": "lassen-volcanic",
+      "sourceUrl": "https://www.nps.gov/lavo/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "MACA",
+      "id": "mammoth-cave",
+      "sourceUrl": "https://www.nps.gov/maca/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "MEVE",
+      "id": "mesa-verde",
+      "sourceUrl": "https://www.nps.gov/meve/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "MORA",
+      "id": "mount-rainier",
+      "sourceUrl": "https://www.nps.gov/mora/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "NERI",
+      "id": "new-river-gorge",
+      "sourceUrl": "https://www.nps.gov/neri/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "NOCA",
+      "id": "north-cascades",
+      "sourceUrl": "https://www.nps.gov/noca/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "NPSA",
+      "id": "national-park-of-american-samoa",
+      "sourceUrl": "https://www.nps.gov/npsa/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "OLYM",
+      "id": "olympic",
+      "sourceUrl": "https://www.nps.gov/olym/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "PEFO",
+      "id": "petrified-forest",
+      "sourceUrl": "https://www.nps.gov/pefo/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "PINN",
+      "id": "pinnacles",
+      "sourceUrl": "https://www.nps.gov/pinn/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "REDW",
+      "id": "redwood",
+      "sourceUrl": "https://www.nps.gov/redw/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "ROMO",
+      "id": "rocky-mountain",
+      "sourceUrl": "https://www.nps.gov/romo/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "SAGU",
+      "id": "saguaro",
+      "sourceUrl": "https://www.nps.gov/sagu/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "SEKI",
+      "id": "sequoia",
+      "sourceUrl": "https://www.nps.gov/seki/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "SEKI",
+      "id": "kings-canyon",
+      "sourceUrl": "https://www.nps.gov/seki/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "SHEN",
+      "id": "shenandoah",
+      "sourceUrl": "https://www.nps.gov/shen/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "THRO",
+      "id": "theodore-roosevelt",
+      "sourceUrl": "https://www.nps.gov/thro/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "VIIS",
+      "id": "virgin-islands",
+      "sourceUrl": "https://www.nps.gov/viis/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "VOYA",
+      "id": "voyageurs",
+      "sourceUrl": "https://www.nps.gov/voya/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "WHSA",
+      "id": "white-sands",
+      "sourceUrl": "https://www.nps.gov/whsa/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "WICA",
+      "id": "wind-cave",
+      "sourceUrl": "https://www.nps.gov/wica/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "WRST",
+      "id": "wrangell-st-elias",
+      "sourceUrl": "https://www.nps.gov/wrst/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "YELL",
+      "id": "yellowstone",
+      "sourceUrl": "https://www.nps.gov/yell/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "YOSE",
+      "id": "yosemite",
+      "sourceUrl": "https://www.nps.gov/yose/index.htm",
+      "retrieved": "2026-11-19"
+    },
+    {
+      "parkCode": "ZION",
+      "id": "zion",
+      "sourceUrl": "https://www.nps.gov/zion/index.htm",
+      "retrieved": "2026-11-19"
+    }
+  ]
+}

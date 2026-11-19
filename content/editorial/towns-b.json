@@ -1,0 +1,297 @@
+{
+  "joshua-tree-ca": {
+    "intro": "Joshua Tree town sits at the northern edge of the Mojave Desert, a convenient base for visiting Joshua Tree National Park. You can drive into the park for hikes and rock formations, then return to town for lodging and supplies.",
+    "whyStop": ["Desert gateway town", "Park access by car", "Lodging and supplies"],
+    "note": "Confirm seasonal road conditions and lodging availability before you arrive."
+  },
+  "juneau-ak": {
+    "intro": "Juneau, Alaska's capital, sits along the Inside Passage and serves as a base for visiting Glacier Bay National Park. You can arrange boat or flight access from town, then explore glaciers and coastal scenery on day trips.",
+    "whyStop": ["Inside Passage port city", "Access to Glacier Bay", "Lodging and services"],
+    "note": "Confirm seasonal transport options and lodging availability before you arrive."
+  },
+  "kahului-hi": {
+    "intro": "Kahului is the main commercial town on Maui, a practical base for visiting Haleakala National Park. You can drive up to the summit area and crater trails, then return to town for food and lodging.",
+    "whyStop": ["Maui's main commercial hub", "Road access to summit", "Food and lodging available"],
+    "note": "Confirm summit road conditions and reservation requirements before you arrive."
+  },
+  "kanab-ut": {
+    "intro": "Kanab sits in southern Utah's red rock country, a useful base for visiting Zion National Park. You can reach canyon trails and scenic drives from town, then settle into lodging and supplies each evening.",
+    "whyStop": ["Red rock gateway town", "Access to Zion canyon", "Lodging and supplies"],
+    "note": "Confirm seasonal shuttle schedules and lodging availability before you arrive."
+  },
+  "key-west-fl": {
+    "intro": "Key West sits at the end of the Florida Keys, a base for visiting Dry Tortugas National Park. You can join boat or seaplane trips from the harbor, then return to town for food and lodging.",
+    "whyStop": ["Southernmost island city", "Harbor for park trips", "Food and lodging"],
+    "note": "Confirm boat schedules, weather plans and lodging availability before you arrive."
+  },
+  "king-salmon-ak": {
+    "intro": "King Salmon is a small Alaska Peninsula town, a base for visiting Katmai National Park. You can arrange flights to park areas and bear viewing sites, then return to town for lodging and supplies.",
+    "whyStop": ["Alaska Peninsula gateway", "Flight access to Katmai", "Lodging and supplies"],
+    "note": "Confirm flight schedules, weather plans and lodging availability before you arrive."
+  },
+  "klamath-ca": {
+    "intro": "Klamath sits along the northern California coast, a base for visiting Redwood National and State Parks. You can drive among tall trees and coastal trails, then return to town for lodging and supplies.",
+    "whyStop": ["Coastal redwood gateway", "Scenic drives and trails", "Lodging and supplies"],
+    "note": "Confirm seasonal road conditions and lodging availability before you arrive."
+  },
+  "kotzebue-ak": {
+    "intro": "Kotzebue is a coastal Arctic town in northwest Alaska, a base for visiting Kobuk Valley National Park. You can arrange flights to park areas and dunes, then return to town for lodging and supplies.",
+    "whyStop": ["Arctic coastal town", "Flight access to Kobuk Valley", "Lodging and supplies"],
+    "note": "Confirm flight schedules, weather plans and lodging availability before you arrive."
+  },
+  "kula-hi": {
+    "intro": "Kula sits on the slopes of Haleakala on Maui, a quieter base for visiting Haleakala National Park. You can reach summit roads and crater trails from town, then return to lodging and supplies.",
+    "whyStop": ["Upcountry Maui setting", "Access to summit roads", "Quieter lodging base"],
+    "note": "Confirm summit road conditions and reservation requirements before you arrive."
+  },
+  "lee-vining-ca": {
+    "intro": "Lee Vining sits near Mono Lake on the eastern Sierra, a base for visiting Yosemite National Park. You can enter the park through Tioga Pass in season, then return to town for lodging and supplies.",
+    "whyStop": ["Eastern Sierra gateway", "Seasonal Tioga Pass access", "Lodging and supplies"],
+    "note": "Confirm seasonal road openings and lodging availability before you arrive."
+  },
+  "lone-pine-ca": {
+    "intro": "Lone Pine sits in the Owens Valley below the Sierra Nevada, a base for visiting Death Valley National Park. You can drive into the park for desert scenery, then return to town for lodging and supplies.",
+    "whyStop": ["Owens Valley gateway", "Desert park access", "Lodging and supplies"],
+    "note": "Confirm seasonal road conditions and lodging availability before you arrive."
+  },
+  "luray-va": {
+    "intro": "Luray sits in the Shenandoah Valley, a base for visiting Shenandoah National Park. You can reach Skyline Drive and hiking trails from town, then return to lodging and supplies each evening.",
+    "whyStop": ["Shenandoah Valley town", "Skyline Drive access", "Lodging and supplies"],
+    "note": "Confirm seasonal road conditions and lodging availability before you arrive."
+  },
+  "mancos-co": {
+    "intro": "Mancos sits in southwest Colorado, a base for visiting Mesa Verde National Park. You can explore cliff dwellings and mesa trails from town, then return to lodging and supplies each evening.",
+    "whyStop": ["Southwest Colorado gateway", "Cliff dwelling access", "Lodging and supplies"],
+    "note": "Confirm seasonal road conditions and lodging availability before you arrive."
+  },
+  "marathon-tx": {
+    "intro": "Marathon is a small West Texas town, a base for visiting Big Bend National Park. You can drive into the park for desert and river scenery, then return to town for lodging and supplies.",
+    "whyStop": ["West Texas gateway", "Desert and river access", "Lodging and supplies"],
+    "note": "Confirm seasonal road conditions and lodging availability before you arrive."
+  },
+  "marblemount-wa": {
+    "intro": "Marblemount sits at the western edge of the North Cascades, a base for visiting North Cascades National Park. You can reach mountain trails and scenic byways from town, then return to lodging and supplies.",
+    "whyStop": ["North Cascades gateway", "Mountain trail access", "Lodging and supplies"],
+    "note": "Confirm seasonal road openings and lodging availability before you arrive."
+  },
+  "mariposa-ca": {
+    "intro": "Mariposa sits in the Sierra Nevada foothills, a base for visiting Yosemite National Park. You can drive into the valley and high country in season, then return to town for lodging and supplies.",
+    "whyStop": ["Sierra foothills gateway", "Valley and high country access", "Lodging and supplies"],
+    "note": "Confirm seasonal road openings and lodging availability before you arrive."
+  },
+  "mccarthy-ak": {
+    "intro": "McCarthy sits inside Wrangell-St. Elias country in Alaska, a base for visiting Wrangell-St. Elias National Park. You can reach glacier views and historic mining sites from town, then return to lodging and supplies.",
+    "whyStop": ["Remote Alaska gateway", "Glacier and mine access", "Lodging and supplies"],
+    "note": "Confirm road access, seasonal services and lodging availability before you arrive."
+  },
+  "medora-nd": {
+    "intro": "Medora sits in the badlands of western North Dakota, a base for visiting Theodore Roosevelt National Park. You can drive the scenic loop and hike among buttes, then return to town for lodging and supplies.",
+    "whyStop": ["Badlands gateway town", "Scenic loop access", "Lodging and supplies"],
+    "note": "Confirm seasonal road conditions and lodging availability before you arrive."
+  },
+  "mineral-ca": {
+    "intro": "Mineral sits near the southern entrance to Lassen Volcanic National Park in California. You can reach volcanic trails and hydrothermal areas from town, then return to lodging and supplies each evening.",
+    "whyStop": ["Volcanic park gateway", "Trail and hydrothermal access", "Lodging and supplies"],
+    "note": "Confirm seasonal road openings and lodging availability before you arrive."
+  },
+  "moab-ut": {
+    "intro": "Moab sits in Utah's red rock canyon country, a base for visiting both Arches and Canyonlands National Parks. You can reach arches, mesas and river overlooks from town, then return to lodging and supplies.",
+    "whyStop": ["Red rock gateway town", "Access to two parks", "Lodging and supplies"],
+    "note": "Confirm seasonal shuttle schedules and lodging availability before you arrive."
+  },
+  "monticello-ut": {
+    "intro": "Monticello sits on a high plateau in southeast Utah, a base for visiting Canyonlands National Park. You can reach canyon overlooks and backcountry roads from town, then return to lodging and supplies.",
+    "whyStop": ["High plateau gateway", "Canyon overlook access", "Lodging and supplies"],
+    "note": "Confirm seasonal road conditions and lodging availability before you arrive."
+  },
+  "montrose-co": {
+    "intro": "Montrose sits in western Colorado's Uncompahgre Valley, a base for visiting Black Canyon of the Gunnison National Park. You can reach rim drives and canyon overlooks from town, then return to lodging and supplies.",
+    "whyStop": ["Western Colorado gateway", "Rim drive access", "Lodging and supplies"],
+    "note": "Confirm seasonal road conditions and lodging availability before you arrive."
+  },
+  "mosca-co": {
+    "intro": "Mosca sits in Colorado's San Luis Valley, a base for visiting Great Sand Dunes National Park. You can reach the dunes and mountain trails from town, then return to lodging and supplies.",
+    "whyStop": ["San Luis Valley gateway", "Dune and trail access", "Lodging and supplies"],
+    "note": "Confirm seasonal road conditions and lodging availability before you arrive."
+  },
+  "oxnard-ca": {
+    "intro": "Oxnard sits along the Southern California coast, a base for visiting Channel Islands National Park. You can join boat trips from the harbor, then return to town for lodging and supplies.",
+    "whyStop": ["Southern California harbor town", "Boat access to islands", "Lodging and supplies"],
+    "note": "Confirm boat schedules, weather plans and lodging availability before you arrive."
+  },
+  "pago-pago-as": {
+    "intro": "Pago Pago sits on the main island of American Samoa, a base for visiting the National Park of American Samoa. You can reach tropical trails and coastal areas from town, then return to lodging and supplies.",
+    "whyStop": ["Tropical island gateway", "Park trail access", "Lodging and supplies"],
+    "note": "Confirm seasonal weather, transport and lodging availability before you arrive."
+  },
+  "park-city-ky": {
+    "intro": "Park City sits near Mammoth Cave in Kentucky, a base for visiting Mammoth Cave National Park. You can reach cave tours and surface trails from town, then return to lodging and supplies.",
+    "whyStop": ["Kentucky cave country gateway", "Cave tour access", "Lodging and supplies"],
+    "note": "Confirm tour reservations, seasonal schedules and lodging availability before you arrive."
+  },
+  "peninsula-oh": {
+    "intro": "Peninsula sits within Cuyahoga Valley in Ohio, a base for visiting Cuyahoga Valley National Park. You can reach river trails and historic sites from town, then return to lodging and supplies.",
+    "whyStop": ["Valley village setting", "Trail and historic access", "Lodging and supplies"],
+    "note": "Confirm seasonal trail conditions and lodging availability before you arrive."
+  },
+  "pigeon-forge-tn": {
+    "intro": "Pigeon Forge sits at the edge of the Smoky Mountains in Tennessee, a base for visiting Great Smoky Mountains National Park. You can reach mountain roads and trails from town, then return to lodging and supplies.",
+    "whyStop": ["Smoky Mountains gateway", "Mountain road access", "Lodging and supplies"],
+    "note": "Confirm seasonal road conditions and lodging availability before you arrive."
+  },
+  "port-alsworth-ak": {
+    "intro": "Port Alsworth sits on Lake Clark in Alaska, a base for visiting Lake Clark National Park. You can arrange flights to park areas and lakes, then return to town for lodging and supplies.",
+    "whyStop": ["Remote lake gateway", "Flight access to park", "Lodging and supplies"],
+    "note": "Confirm flight schedules, weather plans and lodging availability before you arrive."
+  },
+  "port-angeles-wa": {
+    "intro": "Port Angeles sits on the Olympic Peninsula, a base for visiting Olympic National Park. You can reach mountain, forest and coast trails from town, then return to lodging and supplies.",
+    "whyStop": ["Olympic Peninsula gateway", "Mountain and coast access", "Lodging and supplies"],
+    "note": "Confirm seasonal road conditions and lodging availability before you arrive."
+  },
+  "porter-in": {
+    "intro": "Porter sits near the southern shore of Lake Michigan, a base for visiting Indiana Dunes National Park. You can reach dunes and lakeshore trails from town, then return to lodging and supplies.",
+    "whyStop": ["Lake Michigan gateway", "Dune and shore access", "Lodging and supplies"],
+    "note": "Confirm seasonal beach conditions and lodging availability before you arrive."
+  },
+  "prospect-or": {
+    "intro": "Prospect sits in the Cascade foothills of Oregon, a base for visiting Crater Lake National Park. You can reach rim drives and lake viewpoints from town, then return to lodging and supplies.",
+    "whyStop": ["Cascade foothills gateway", "Rim drive access", "Lodging and supplies"],
+    "note": "Confirm seasonal road openings and lodging availability before you arrive."
+  },
+  "seward-ak": {
+    "intro": "Seward sits on Resurrection Bay in Alaska, a base for visiting Kenai Fjords National Park. You can join boat tours to glaciers and fjords, then return to town for lodging and supplies.",
+    "whyStop": ["Resurrection Bay port", "Glacier boat tours", "Lodging and supplies"],
+    "note": "Confirm boat schedules, weather plans and lodging availability before you arrive."
+  },
+  "soledad-ca": {
+    "intro": "Soledad sits in California's Salinas Valley, a base for visiting Pinnacles National Park. You can reach rock formations and cave trails from town, then return to town for lodging and supplies.",
+    "whyStop": ["Salinas Valley gateway", "Rock formation access", "Lodging and supplies"],
+    "note": "Confirm seasonal trail conditions and lodging availability before you arrive."
+  },
+  "southwest-harbor-me": {
+    "intro": "Southwest Harbor sits on Mount Desert Island, a base for visiting Acadia National Park. You can reach coastal trails and carriage roads from town, then return to lodging and supplies.",
+    "whyStop": ["Quieter island gateway", "Coastal trail access", "Lodging and supplies"],
+    "note": "Confirm seasonal services, road access and lodging availability before you arrive."
+  },
+  "springdale-ut": {
+    "intro": "Springdale sits at the entrance to Zion Canyon in Utah, a base for visiting Zion National Park. You can reach canyon trails and scenic drives from town, then return to lodging and supplies.",
+    "whyStop": ["Canyon entrance town", "Trail and shuttle access", "Lodging and supplies"],
+    "note": "Confirm seasonal shuttle schedules and lodging availability before you arrive."
+  },
+  "st-louis-mo": {
+    "intro": "St. Louis sits along the Mississippi River, a base for visiting Gateway Arch National Park. You can explore the arch grounds and riverfront from town, then return to lodging and supplies.",
+    "whyStop": ["Riverfront city gateway", "Arch grounds access", "Lodging and supplies"],
+    "note": "Confirm seasonal hours, transit options and lodging availability before you arrive."
+  },
+  "st-mary-mt": {
+    "intro": "St. Mary sits on the east side of Glacier National Park in Montana. You can reach mountain roads and lakes from town, then return to lodging and supplies each evening.",
+    "whyStop": ["East side gateway", "Mountain road access", "Lodging and supplies"],
+    "note": "Confirm seasonal road openings and lodging availability before you arrive."
+  },
+  "terlingua-tx": {
+    "intro": "Terlingua sits in the Chihuahuan Desert of West Texas, a base for visiting Big Bend National Park. You can reach desert trails and river overlooks from town, then return to lodging and supplies.",
+    "whyStop": ["Desert gateway town", "Trail and river access", "Lodging and supplies"],
+    "note": "Confirm seasonal road conditions and lodging availability before you arrive."
+  },
+  "three-rivers-ca": {
+    "intro": "Three Rivers sits at the gateway to Sequoia and Kings Canyon National Parks in California. You can reach giant trees and canyon drives from town, then return to lodging and supplies.",
+    "whyStop": ["Twin park gateway", "Giant tree access", "Lodging and supplies"],
+    "note": "Confirm seasonal road conditions and lodging availability before you arrive."
+  },
+  "torrey-ut": {
+    "intro": "Torrey sits near Capitol Reef in Utah's red rock country, a base for visiting Capitol Reef National Park. You can reach scenic drives and orchard areas from town, then return to lodging and supplies.",
+    "whyStop": ["Red rock gateway town", "Scenic drive access", "Lodging and supplies"],
+    "note": "Confirm seasonal road conditions and lodging availability before you arrive."
+  },
+  "tropic-ut": {
+    "intro": "Tropic sits near Bryce Canyon in southern Utah, a base for visiting Bryce Canyon National Park. You can reach hoodoo viewpoints and rim trails from town, then return to lodging and supplies.",
+    "whyStop": ["Southern Utah gateway", "Hoodoo viewpoint access", "Lodging and supplies"],
+    "note": "Confirm seasonal road conditions and lodging availability before you arrive."
+  },
+  "tucson-az": {
+    "intro": "Tucson sits in the Sonoran Desert of Arizona, a base for visiting Saguaro National Park. You can reach desert trails and saguaro forests from town, then return to lodging and supplies.",
+    "whyStop": ["Sonoran Desert city", "Desert trail access", "Lodging and supplies"],
+    "note": "Confirm seasonal heat precautions and lodging availability before you arrive."
+  },
+  "tusayan-az": {
+    "intro": "Tusayan sits just south of the Grand Canyon, a base for visiting Grand Canyon National Park. You can reach rim viewpoints and shuttle routes from town, then return to lodging and supplies.",
+    "whyStop": ["Grand Canyon gateway", "Rim viewpoint access", "Lodging and supplies"],
+    "note": "Confirm seasonal shuttle schedules and lodging availability before you arrive."
+  },
+  "twentynine-palms-ca": {
+    "intro": "Twentynine Palms sits at the north edge of Joshua Tree, a base for visiting Joshua Tree National Park. You can reach desert trails and rock formations from town, then return to lodging and supplies.",
+    "whyStop": ["Desert gateway town", "Trail and formation access", "Lodging and supplies"],
+    "note": "Confirm seasonal road conditions and lodging availability before you arrive."
+  },
+  "vail-az": {
+    "intro": "Vail sits southeast of Tucson in the Sonoran Desert, a base for visiting Saguaro National Park. You can reach desert trails and mountain views from town, then return to lodging and supplies.",
+    "whyStop": ["Sonoran Desert gateway", "Desert trail access", "Lodging and supplies"],
+    "note": "Confirm seasonal heat precautions and lodging availability before you arrive."
+  },
+  "ventura-ca": {
+    "intro": "Ventura sits along the Southern California coast, a base for visiting Channel Islands National Park. You can join boat trips from the harbor, then return to town for lodging and supplies.",
+    "whyStop": ["Coastal harbor city", "Boat access to islands", "Lodging and supplies"],
+    "note": "Confirm boat schedules, weather plans and lodging availability before you arrive."
+  },
+  "visalia-ca": {
+    "intro": "Visalia sits in California's Central Valley, a base for visiting Sequoia National Park. You can reach giant trees and mountain roads from town, then return to town for lodging and supplies.",
+    "whyStop": ["Central Valley gateway", "Giant tree access", "Lodging and supplies"],
+    "note": "Confirm seasonal road conditions and lodging availability before you arrive."
+  },
+  "volcano-hi": {
+    "intro": "Volcano sits near the summit of Kilauea on Hawaii Island, a base for visiting Hawaii Volcanoes National Park. You can reach volcanic trails and craters from town, then return to lodging and supplies.",
+    "whyStop": ["Volcanic highland gateway", "Crater trail access", "Lodging and supplies"],
+    "note": "Confirm current volcanic conditions and lodging availability before you arrive."
+  },
+  "wall-sd": {
+    "intro": "Wall sits near the Badlands in South Dakota, a base for visiting Badlands National Park. You can reach layered buttes and scenic drives from town, then return to lodging and supplies.",
+    "whyStop": ["Badlands gateway town", "Scenic drive access", "Lodging and supplies"],
+    "note": "Confirm seasonal road conditions and lodging availability before you arrive."
+  },
+  "waynesboro-va": {
+    "intro": "Waynesboro sits at the southern end of Shenandoah National Park in Virginia. You can reach Skyline Drive and hiking trails from town, then return to town for lodging and supplies each evening.",
+    "whyStop": ["Shenandoah gateway town", "Skyline Drive access", "Lodging and supplies"],
+    "note": "Confirm seasonal road conditions and lodging availability before you arrive."
+  },
+  "west-glacier-mt": {
+    "intro": "West Glacier sits at the west entrance to Glacier National Park in Montana. You can reach mountain roads and lakes from town, then return to lodging and supplies each evening.",
+    "whyStop": ["West entrance gateway", "Mountain road access", "Lodging and supplies"],
+    "note": "Confirm seasonal road openings and lodging availability before you arrive."
+  },
+  "west-yellowstone-mt": {
+    "intro": "West Yellowstone sits at the west entrance to Yellowstone National Park in Montana. You can reach geysers and wildlife areas from town, then return to lodging and supplies each evening.",
+    "whyStop": ["West entrance gateway", "Geyser and wildlife access", "Lodging and supplies"],
+    "note": "Confirm seasonal road openings and lodging availability before you arrive."
+  },
+  "whitefish-mt": {
+    "intro": "Whitefish sits in northwest Montana, a base for visiting Glacier National Park. You can reach mountain trails and lakes from town, then return to town for lodging and supplies each evening.",
+    "whyStop": ["Northwest Montana gateway", "Mountain and lake access", "Lodging and supplies"],
+    "note": "Confirm seasonal road conditions and lodging availability before you arrive."
+  },
+  "whites-city-nm": {
+    "intro": "Whites City sits near Carlsbad Caverns in New Mexico, a base for visiting Carlsbad Caverns and Guadalupe Mountains National Parks. You can reach cave tours and mountain trails from town, then return to lodging and supplies.",
+    "whyStop": ["Twin park gateway", "Cave and mountain access", "Lodging and supplies"],
+    "note": "Confirm cave tour reservations and lodging availability before you arrive."
+  },
+  "willcox-az": {
+    "intro": "Willcox sits in southeast Arizona's high desert, a base for visiting Chiricahua National Monument. You can reach rock pinnacles and canyon trails from town, then return to lodging and supplies.",
+    "whyStop": ["High desert gateway", "Pinnacle and trail access", "Lodging and supplies"],
+    "note": "Confirm seasonal road conditions and lodging availability before you arrive."
+  },
+  "williams-az": {
+    "intro": "Williams sits on historic Route 66, a base for visiting Grand Canyon National Park. You can reach rim viewpoints and train excursions from town, then return to lodging and supplies.",
+    "whyStop": ["Route 66 gateway", "Rim viewpoint access", "Lodging and supplies"],
+    "note": "Confirm seasonal shuttle schedules and lodging availability before you arrive."
+  },
+  "winslow-az": {
+    "intro": "Winslow sits in northern Arizona, a base for visiting Petrified Forest National Park. You can reach painted desert and petrified wood trails from town, then return to lodging and supplies.",
+    "whyStop": ["Northern Arizona gateway", "Painted desert access", "Lodging and supplies"],
+    "note": "Confirm seasonal road conditions and lodging availability before you arrive."
+  },
+  "winthrop-wa": {
+    "intro": "Winthrop sits in the Methow Valley, a base for visiting North Cascades National Park. You can reach mountain trails and scenic byways from town, then return to lodging and supplies.",
+    "whyStop": ["Methow Valley gateway", "Mountain trail access", "Lodging and supplies"],
+    "note": "Confirm seasonal road openings and lodging availability before you arrive."
+  }
+}
