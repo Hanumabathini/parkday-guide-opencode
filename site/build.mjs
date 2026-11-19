@@ -70,6 +70,9 @@ const money = (n) => {
   return `$${Number.isInteger(n) ? n : n.toFixed(2)}`;
 };
 
+// A zero in the NPS fee feed usually marks a waiver category, not free entry.
+const feeCost = (n) => (n === 0 ? "No charge listed" : money(n));
+
 // The NPS fee feed uses internal labels such as "Timed Entry Reservation - Location".
 // Show a plain description instead of the raw export title.
 const feeTitle = (title) => {
@@ -657,7 +660,7 @@ function pageHome() {
             (r) => `
           <a class="region-card" href="${url("parks/")}?region=${encodeURIComponent(r)}">
             <strong>${esc(r)}</strong>
-            <span>${regionCount[r]} parks</span>
+            <span>${regionCount[r]} ${regionCount[r] === 1 ? "park" : "parks"}</span>
           </a>`,
           )
           .join("")}
@@ -733,14 +736,14 @@ function pageParksIndex() {
   <section class="section section--tight">
     <div class="wrap">
       <div class="filter-bar">
-        <label class="sr-only" for="park-search" style="position:absolute;left:-9999px;">Search parks</label>
+        <label class="sr-only" for="park-search">Search parks</label>
         <input type="search" id="park-search" placeholder="Search by park, state or region" data-park-search />
-        <label class="sr-only" for="region-filter" style="position:absolute;left:-9999px;">Filter by region</label>
+        <label class="sr-only" for="region-filter">Filter by region</label>
         <select id="region-filter" data-park-region>
           <option value="">All regions</option>
           ${regions.map((r) => `<option value="${esc(r)}">${esc(r)} (${regionCount[r]})</option>`).join("")}
         </select>
-        <label class="sr-only" for="state-filter" style="position:absolute;left:-9999px;">Filter by state</label>
+        <label class="sr-only" for="state-filter">Filter by state</label>
         <select id="state-filter" data-park-state>
           <option value="">All states</option>
           ${states.map((s) => `<option value="${esc(s)}">${esc(s)}</option>`).join("")}
@@ -884,7 +887,7 @@ function pagePark(p) {
           ${
             reservations.length
               ? `<div class="callout" style="margin-bottom:22px"><strong>Reservation or timed entry fee listed</strong>
-                 ${reservations.map((r) => `${esc(feeTitle(r.title))}: ${esc(r.costUsd != null ? money(r.costUsd) : "varies")}.`).join(" ")}
+                 ${reservations.map((r) => `${esc(feeTitle(r.title))}: ${esc(r.costUsd != null ? feeCost(r.costUsd) : "varies")}.`).join(" ")}
                  Check the official page for when it applies.</div>`
               : ""
           }
@@ -895,12 +898,12 @@ function pagePark(p) {
                   <tbody>
                   ${entrance
                     .map(
-                      (f) => `<tr><td>${esc(f.title)}</td><td class="num">${f.costUsd != null ? esc(money(f.costUsd)) : "Varies"}</td><td>${esc(firstSentence(f.description, 180))}</td></tr>`,
+                      (f) => `<tr><td>${esc(f.title)}</td><td class="num">${f.costUsd != null ? esc(feeCost(f.costUsd)) : "Varies"}</td><td>${esc(firstSentence(f.description, 180))}</td></tr>`,
                     )
                     .join("")}
                   ${other
                     .map(
-                      (f) => `<tr><td>${esc(f.title)}</td><td class="num">${f.costUsd != null ? esc(money(f.costUsd)) : "Varies"}</td><td>${esc(firstSentence(f.description, 180))}</td></tr>`,
+                      (f) => `<tr><td>${esc(f.title)}</td><td class="num">${f.costUsd != null ? esc(feeCost(f.costUsd)) : "Varies"}</td><td>${esc(firstSentence(f.description, 180))}</td></tr>`,
                     )
                     .join("")}
                   </tbody>
@@ -1005,9 +1008,9 @@ function pageTownsIndex() {
   <section class="section section--tight">
     <div class="wrap">
       <div class="filter-bar">
-        <label class="sr-only" for="town-search" style="position:absolute;left:-9999px;">Search towns</label>
+        <label class="sr-only" for="town-search">Search towns</label>
         <input type="search" id="town-search" placeholder="Search towns or park" data-town-search />
-        <label class="sr-only" for="town-park" style="position:absolute;left:-9999px;">Filter by park</label>
+        <label class="sr-only" for="town-park">Filter by park</label>
         <select id="town-park" data-town-park>
           <option value="">All parks</option>
           ${parks.map((p) => `<option value="${esc(p.id)}">${esc(p.name)}</option>`).join("")}
@@ -1301,10 +1304,10 @@ function buildSearchIndex() {
     const townsFor = (townsByPark.get(p.id) || []).map((t) => t.name).join(", ");
     const feeLines = (p.fees?.entrance || [])
       .filter((f) => f.costUsd != null)
-      .map((f) => `${f.title}: ${money(f.costUsd)}`)
+      .map((f) => `${f.title}: ${feeCost(f.costUsd)}`)
       .join("; ");
     const resLines = (p.fees?.reservation || [])
-      .map((f) => `${feeTitle(f.title)}: ${f.costUsd != null ? money(f.costUsd) : "varies"}`)
+      .map((f) => `${feeTitle(f.title)}: ${f.costUsd != null ? feeCost(f.costUsd) : "varies"}`)
       .join("; ");
     docs.push({
       id: `park:${p.id}`,
