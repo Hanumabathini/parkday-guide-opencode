@@ -21,6 +21,7 @@
  *   SITE_URL    canonical origin           (default https://parkdayguide.com)
  */
 
+import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -251,6 +252,13 @@ const townEditorial = parkEditorial; // same merged store: editorial files hold 
 
 const byId = new Map(parks.map((p) => [p.id, p]));
 // Official facts the NPS parks API omits (e.g. the Smokies parking tag), sourced per entry.
+// Content hash of the CSS and JS, so a new deploy never serves a stale cached stylesheet.
+const ASSET_VERSION = crypto
+  .createHash("sha1")
+  .update(fs.readFileSync(path.join(ROOT, "site", "assets", "styles.css")))
+  .update(fs.readFileSync(path.join(ROOT, "site", "assets", "app.js")))
+  .digest("hex")
+  .slice(0, 10);
 const officialNotes = readJson(path.join(ROOT, "data", "official-notes.json"), {});
 // Flagship research facts and prebuilt itineraries, one file per park.
 const flagship = readDirJson(path.join(ROOT, "data", "flagship"), { byFile: true });
@@ -492,7 +500,7 @@ function layout({ title, description, body, active = "", canonical = "", ogImage
   <meta name="theme-color" content="#f7f3ea" />
   ${schema ? `<script type="application/ld+json">${JSON.stringify(schema).replace(/</g, "\\u003c")}</script>` : ""}
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2316211c'/%3E%3Cpath d='M6 24l7-12 5 8 3-5 5 9z' fill='%23f7f3ea'/%3E%3Ccircle cx='23' cy='9' r='2.4' fill='%23b9482a'/%3E%3C/svg%3E" />
-  <link rel="stylesheet" href="${url("assets/styles.css")}" />
+  <link rel="stylesheet" href="${url("assets/styles.css")}?v=${ASSET_VERSION}" />
   <script>window.PARKDAY_BASE = ${JSON.stringify(BASE)};</script>
   ${ga4Id ? `<script async src="https://www.googletagmanager.com/gtag/js?id=${esc(ga4Id)}"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${esc(ga4Id)}');window.PARKDAY_GA4='${esc(ga4Id)}';</script>` : ""}
 </head>
@@ -503,7 +511,7 @@ ${body}
 </main>
 ${footer()}
 ${chatDialog()}
-<script src="${url("assets/app.js")}" defer></script>
+<script src="${url("assets/app.js")}?v=${ASSET_VERSION}" defer></script>
 </body>
 </html>
 `;
