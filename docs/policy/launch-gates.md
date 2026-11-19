@@ -18,9 +18,11 @@ concerns only if the concern is written down here with an owner and a date.
 ## 1. Fact-check
 
 - 64/64 park records synced from the NPS API with a retrieval date.
+- 64/64 park pages and 119/119 gateway town pages carry editorial.
 - Fee fields classified into entrance, reservation and other.
 - The sync refuses a scope that is not 64.
 - Editorial is reviewed against the park's official page before release.
+- `node scripts/validate_content.mjs` passes with no errors or warnings.
 
 Concerns: the NPS API is the source of record, and a fee can change between the
 retrieval date and the reader's visit. The page states the retrieval date and
@@ -49,11 +51,12 @@ agreement before the checklist form is enabled.
 ## 4. Links and redirects
 
 - Every internal link resolves in the built site; the validator fails on a
-  broken one.
+  broken one, including when the site is built under a GitHub Pages project path.
 - External links are limited to NPS.gov, Recreation.gov, and the official park
   URL from the fact layer.
 - No redirect wrapper, no link shortener, no tracking parameter on an official
   link.
+- 208 pages built, 0 broken internal links, 207 sitemap URLs.
 
 ## 5. Photo licensing
 
@@ -69,10 +72,29 @@ are not blocking launch because they are not rendered.
 - Requires a full read of the home page, one park page per region, the
   methodology page and the privacy page.
 - Requires a signed statement that the guide does not copy competitor text.
-- PENDING until the build is complete and the domain is pointed.
+- PENDING. The founder review has not been recorded; the deployed review build
+  is linked below so that read can happen against the real output.
+
+## Build and deployment evidence
+
+- Repository: `https://github.com/Hanumabathini/parkday-guide-opencode`
+- Review build: `https://hanumabathini.github.io/parkday-guide-opencode/`
+- Build: 208 pages (`parks` 64, `towns` 119, `guides` 10, `posts` 3, `pages` 5,
+  plus directory, 404 and index pages).
+- Content gates: `node scripts/validate_content.mjs` passes with 0 errors and
+  0 warnings.
+- Output gates: `node scripts/validate_content.mjs --dist` passes with the
+  expected single warning that the 404 page has no canonical.
+- Deployment: GitHub Actions workflow "Build and deploy the guide", run
+  `44596679774`, completed success on commit `56b0be5`.
+- Live checks: home, park directory, one park page per region, a town page, the
+  guide index, the methodology page, `search-index.json`, `app.js`,
+  `styles.css`, `sitemap.xml` and `robots.txt` all returned HTTP 200.
 
 ## Domain
 
-`parkdayguide.com` is not purchased. Until it is, the site can be reviewed on a
-GitHub Pages URL with `SITE_URL` set to that origin. Canonical URLs must not
-claim a domain the guide does not control in production.
+`parkdayguide.com` is not purchased. Until it is, the site is reviewed on the
+GitHub Pages project URL and every canonical, sitemap entry and social URL is
+built from that origin, so the build does not claim a domain the guide does not
+control. When the domain is purchased, rebuild with
+`--url=https://parkdayguide.com --base=/` and redeploy.

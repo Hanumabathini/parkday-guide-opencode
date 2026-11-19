@@ -32,7 +32,9 @@ const arg = (name) => {
   return hit ? hit.slice(name.length + 3) : "";
 };
 const BASE = (arg("base") || process.env.SITE_BASE || "/").replace(/\/?$/, "/");
-const SITE_URL = (arg("url") || process.env.SITE_URL || "https://parkdayguide.com").replace(/\/$/, "");
+const SITE_URL = (arg("url") || process.env.SITE_URL || "https://parkdayguide.com")
+  .replace(/\/$/, "")
+  .replace(/^(https?:\/\/)([^/]+)/i, (_, scheme, host) => `${scheme}${host.toLowerCase()}`);
 const BUILD_DATE = new Date().toISOString().slice(0, 10);
 const NPS_RETRIEVED = "2026-11-19";
 

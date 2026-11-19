@@ -60,6 +60,10 @@ node site/build.mjs --base=/ --url=https://parkdayguide.com
 
 `dist/` is a complete static site. Publish it to any static host.
 
+Pushing `main` builds and deploys the GitHub Pages review site through
+`.github/workflows/pages.yml`. The workflow runs the content gates, builds with
+the project base path, runs the output gates and deploys `dist/`.
+
 ## Data
 
 - `data/parks.json` — canonical fact layer, 64 records, NPS source and retrieval
